@@ -1,12 +1,8 @@
-import { ProductModel } from "./productModel";
-import { UserModel } from "./userModel";
+import { BaseModel } from "./BaseModel";
+import { UserModel } from "./UserModel";
 
-
-export class ReviewModel{
-  id?: string = "";
-  product: ProductModel = null;
-  user: UserModel = null;
-  score: number = 0;
-  comment: string = "";
-  dateCreated?: Date;
+export interface ReviewModel extends BaseModel{
+    user: UserModel;
+    comment: string;
+    rating: number;
 }

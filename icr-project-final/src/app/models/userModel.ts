@@ -1,14 +1,14 @@
-import { AddressModel } from "./addressModel";
+import { BaseModel } from "./BaseModel";
+import { ContactModel } from "./ContactModel";
+import { TourModel } from "./TourModel";
+import { ExhibitModel as string } from "./ExhibitModel";
 
-export class UserModel {
-    id?: string = '';
-    firstName?: string = '';
-    lastName?: string = '';
-    email?: string = '';
-    phone?: string = '';
-    address? = new AddressModel();
-    favourites?: string[] = []; //NOTE: niz kategorija koje su omiljene korisniku
-    username: string = '';
-    password: string = '';
-    dateCreated?: Date;
+export interface UserModel extends BaseModel{
+    ime: string;
+    prezime: string;
+    username: string;
+    password: string;
+    kontaktPodaci: ContactModel;
+    omiljenePostavke: string[];
+    planer: TourModel[]; // svaki korisnik ima svoj planer u okviru kojeg vrsi CRUD akcije nad obilascima
 }

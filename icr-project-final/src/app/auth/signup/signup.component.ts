@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, NgModel, FormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { UserModel } from 'src/app/models/userModel';
-import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,44 +10,32 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  constructor(private userService: UserService, private router: Router, private snackBar: MatSnackBar) {}
 
-  errorExists = false;
-  errorText = "";
+  ngOnInit() {}
 
-  constructor(private authService: AuthService, private _snackBar: MatSnackBar, private router: Router) { }
-
-  ngOnInit(): void {
-  }
-
-  onSubmit(form: NgForm) {
-    let user: UserModel = {
-      "username": form.value.username, 
-      "password": form.value.password,
-      "email": form.value.email, 
-      "lastName": form.value.lastName,
-      "firstName": form.value.firstName,
-      "phone": form.value.phone,
-      "address": {
-        "country": form.value.country,
-        "city": form.value.city,
-        "street": form.value.street,
-        "number": form.value.number,
-        "zipCode": form.value.zipCode
+  onSubmit(forma: NgForm) {
+    if(
+    this.userService.insertUser({
+      ime: forma.value.ime,
+      prezime: forma.value.prezime,
+      username: forma.value.username,
+      password: forma.value.password,
+      kontaktPodaci: {
+        adresa: forma.value.adresa,
+        email: forma.value.email,
+        telefon: forma.value.telefon,
       },
-      "dateCreated": new Date()
+      id: 0,
+      omiljenePostavke: [],
+      planer: []
+    })){
+
+      this.router.navigateByUrl('/login');
+    }
+    else{
+      this.snackBar.open("The user already exists!", "", { duration: 2500});
     }
 
-    this.authService.registerUser( user ).subscribe(data => {
-      if(data != null) {
-        this._snackBar.open("Successfully registered! You will be redirected to the login page shortly...", "", {duration: 2500});
-        setTimeout(() => {
-          form.reset();
-          this.router.navigate(["login"]);
-        }, 2500);
-      }
-      else {
-        this._snackBar.open("Username already exists. Please choose another one...", "", {duration: 2500});
-      }
-    });
   }
 }

@@ -14,39 +14,25 @@ import { RatingModule } from 'ng-starrating';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductsComponent } from './products/products.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { CartComponent } from './cart/cart.component';
 
-import { AuthService } from './services/auth.service';
-import { LocalstorageService } from './services/localstorage.service';
-import { UserService } from './services/user.service';
-import { ProductService } from './services/product.service';
-import { AuthguardService } from './services/guards/authguard.service';
-import { ComponentaccessService } from './services/guards/componentaccess.service';
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
-import { ReviewService } from './services/review.service';
-import { CartService } from './services/cart.service';
-import { OrderService } from './services/order.service';
-import { EditReviewComponent } from './userprofile/edit-review/edit-review.component';
-import { CartguardService } from './services/guards/cartguard.service';
-import { EditOrderComponent } from './userprofile/edit-order/edit-order.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PlanerComponent } from './planer/planer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     PagenotfoundComponent,
-    ProductsComponent,
     UserprofileComponent,
     LoginComponent,
     SignupComponent,
-    CartComponent,
-    ProductDetailsComponent,
-    EditReviewComponent,
-    EditOrderComponent
+    ProfileComponent,
+    PlanerComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,18 +47,7 @@ import { EditOrderComponent } from './userprofile/edit-order/edit-order.componen
     RatingModule,
     ReactiveFormsModule
   ],
-  providers: [
-    AuthService,
-    LocalstorageService,
-    UserService,
-    ProductService,
-    AuthguardService,
-    ComponentaccessService,
-    ReviewService,
-    CartService,
-    OrderService,
-    CartguardService
-  ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

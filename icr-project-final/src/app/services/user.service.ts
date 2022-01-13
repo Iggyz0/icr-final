@@ -1,47 +1,38 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { UserModel } from '../models/userModel';
-import { LocalstorageService } from './localstorage.service';
+import { GenericCRUD } from './GenericCrudService';
+import { ReadingJSONService } from './reading-json.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService extends GenericCRUD<UserModel> {
 
-  constructor(private http: HttpClient, private localStorageService: LocalstorageService) { }
+  fajl: string = "users.json";
 
-  user: UserModel;
-  userName = new BehaviorSubject<string>("");
+  constructor(
+    private readingJSON: ReadingJSONService
+  ){
+    super(readingJSON);
 
-  getCurrentUser(): UserModel {
-    return this.user;
+    this.readFromFile();
   }
 
-  setCurrentUser(user: UserModel) {
-    this.user = user;
-    this.setCurrentUsername();
+  public readFromFile(): void{
+    this.readingJSON.getJSON(this.fajl).subscribe(
+      result => this.items = result
+    );
   }
 
-  getCurrentUsername(){
-    return this.userName;
+  public findUserByUsername( username: string) : UserModel | undefined{
+    return this.items.find( (user) => user.username === username);
   }
 
-  setCurrentUsername(){
-    this.userName.next( this.getCurrentUser().username );
+  public insertUser( user: UserModel ){
+    if( !this.findUserByUsername( user.username )){
+      user.id = -1;//setujemo na ovo preventivno zbog genericke metode
+      return this.insertItem(user);
+    }
+    return false;
   }
-
-  getUserByUsernameFromTheServer(username: string): Observable<UserModel> {
-
-    const url = "http://localhost:8080/users/finduserbyusername/" + username;
-
-    return this.http.get<UserModel>(url, { observe: 'body' });
-  }
-
-  updateUser(usermodel: UserModel):Observable<UserModel>{
-    const url = "http://localhost:8080/users/updateuser";
-
-    return this.http.put<UserModel>(url, usermodel, {observe: 'body'});
-  }
-
 }

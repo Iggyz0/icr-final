@@ -8,11 +8,13 @@ import { AuthService } from '../auth.service';
 })
 export class AuthguardService implements CanActivate {
 
-  constructor(private authService: AuthService, private router: Router) { }
-
+  constructor(
+    private AuthService: AuthService,
+    private router: Router
+  ) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if (this.authService.isUserLoggedIn().getValue())
-      return this.router.navigate(["pagenotfound"]);
+    if(this.AuthService.getCurrentUser().getValue())
+      return this.router.navigateByUrl("/pagenotfound");
     return true;
   }
 }

@@ -1,47 +1,36 @@
-import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { UserModel } from '../models/userModel';
-import { LocalstorageService } from './localstorage.service';
+import { LocalStorageService } from './localstorage.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  loggedInUser$: BehaviorSubject<UserModel | null> =
+    new BehaviorSubject<UserModel | null>(null);
 
-  constructor(private localStorageService: LocalstorageService, private http: HttpClient) { }
+  constructor(private localStorageService: LocalStorageService) {}
 
-  isLoggedIn = new BehaviorSubject<boolean>(false);
+  logIn(user: UserModel) {
+    this.loggedInUser$.next(user);
 
-  loginUser(user: UserModel): Observable<UserModel> {
-    const url = "http://localhost:8080/auth/login";
-
-    return this.http.post<UserModel>(url, user, { observe: 'body' });
-  }
-
-  registerUser(user: UserModel): Observable<HttpResponse<any>> {
-    const url = "http://localhost:8080/auth/register";
-
-    return this.http.post<any>(url, user);
-  }
-
-  isUserLoggedIn(): BehaviorSubject<boolean> {
-    if (this.localStorageService.getLocalStorageItem("username") != null && this.localStorageService.getLocalStorageItem("username").length > 0) {
-      this.logTheUserIn();
+    const korisnik = this.loggedInUser$.getValue();
+    if (korisnik) {
+      this.localStorageService.setLocalStorageItem(
+        'username',
+        korisnik.username
+      );
+      this.localStorageService.setLocalStorageItem('id', '' + korisnik.id);
     }
-    return this.isLoggedIn;
   }
 
-  logTheUserIn() {
-    this.isLoggedIn.next(true);
+  getCurrentUser() {
+    return this.loggedInUser$;
   }
 
-  logTheUserOut() {
-    this.isLoggedIn.next(false);
-  }
-
-  logout() {
-    this.localStorageService.removeLocalStorageItem("username");
-    this.logTheUserOut();
+  logOut() {
+    this.loggedInUser$.next(null);
+    this.localStorageService.clearLocalStorage();
   }
 }

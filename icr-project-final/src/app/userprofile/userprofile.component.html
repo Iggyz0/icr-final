@@ -1,348 +1,56 @@
-<div  class="pad-bottom" fxFlex fxLayout="column nowrap" fxLayoutAlign="center center">
-  <mat-tab-group fxFill dynamicHeight mat-stretch-tabs>
-    <mat-tab label="Change user info:">
-      <form
-        fxLayout="column"
-        fxLayoutAlign="center center"
-        fxLayoutGap="10px"
-        #f="ngForm"
-        (ngSubmit)="onSubmit(f)"
-        class="div-container"
-      >
-        <mat-form-field>
-          <input
-            type="email"
-            ngModel
-            matInput
-            placeholder="E-mail"
-            name="email"
-            required
-            email
-            #emailInput="ngModel"
-            [(ngModel)]="user.email"
-          />
-
-          <mat-error *ngIf="emailInput.hasError('required')"
-            >Field cannot be left empty</mat-error
-          >
-        </mat-form-field>
-
-        <mat-form-field hintLabel="Please enter minimum 8 characters">
-          <input
-            type="password"
-            ngModel
-            matInput
-            placeholder="Password"
-            name="password"
-            minlength="8"
-            #userInputPassword="ngModel"
-          />
-          <mat-hint align="end"
-            >{{ userInputPassword.value?.length }} / 8</mat-hint>
-
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="password"
-            ngModel
-            matInput
-            placeholder="Confirm password . . ."
-            name="passwordConfirm"
-            minlength="8"
-            #userInputPasswordConfirm="ngModel"
-          />
-          <mat-error
-            *ngIf="userInputPasswordConfirm.value != userInputPassword.value"
-            >Passwords do not match!</mat-error
-          >
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="First name"
-            name="firstName"
-            required
-            [(ngModel)]="user.firstName"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Last name"
-            name="lastName"
-            required
-            [(ngModel)]="user.lastName"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Phone number"
-            name="phone"
-            required
-            [(ngModel)]="user.phone"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Country"
-            name="country"
-            required
-            [(ngModel)]="user.address.country"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="City"
-            name="city"
-            required
-            [(ngModel)]="user.address.city"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Street"
-            name="street"
-            required
-            [(ngModel)]="user.address.street"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Street number"
-            name="number"
-            required
-            [(ngModel)]="user.address.number"
-          />
-        </mat-form-field>
-
-        <mat-form-field>
-          <input
-            type="text"
-            ngModel
-            matInput
-            placeholder="Zip code"
-            name="zipCode"
-            required
-            [(ngModel)]="user.address.zipCode"
-          />
-        </mat-form-field>
-
-        <mat-form-field class="example-chip-list" appearance="fill">
-          <mat-label>Favorite categories</mat-label>
-          <mat-chip-list  #chipList aria-label="Favorite category selection . . .">
-            <mat-chip
-              *ngFor="let favorCategory of user.favourites"
-              [selectable]="true"
-              [removable]="true"
-              (removed)="remove(favorCategory)">
-              {{favorCategory}}
-              <mat-icon matChipRemove >cancel</mat-icon>
-            </mat-chip>
-            <input
-              placeholder="New favorite category..."
-              #categoryInput
-              [formControl] = "categoryControl"
-              [matAutocomplete]="auto"
-              [matChipInputFor]="chipList"
-              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-              (matChipInputTokenEnd)="add($event)"
-              />
-
-          </mat-chip-list>
-          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-            <mat-option *ngFor="let filteredCategory of filteredCategories | async" [value]="filteredCategory">
-              {{filteredCategory}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-        <button
-          type="submit"
-          mat-raised-button
-          color="warn"
-          [disabled]="f.invalid"
-        >
-          Submit
-        </button>
-      </form>
-    </mat-tab>
-
-    <mat-tab label="View my orders:">
-      <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" >
-
-        <div fxFlex fxFill>
-          <mat-table [dataSource]="orders" matSort>
-            <ng-container matColumnDef="No.">
-              <mat-header-cell *matHeaderCellDef mat-sort-header disabled>No.</mat-header-cell>
-              <mat-cell *matCellDef="let element; let i = index">{{ (paginatorRefOrders.pageIndex * paginatorRefOrders.pageSize) + (i + 1) }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="id">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Order id:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="dateCreated">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Date created: </mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="totalPrice">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.totalPrice | currency }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="paymentOption">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Payment option:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.paymentOption }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="status">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Order status:</mat-header-cell>
-              <mat-cell *matCellDef="let element" name="status" #status>{{ element.status }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="minEta">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>ETA:</mat-header-cell>
-              <mat-cell *matCellDef="let element" name="minEta" >{{ element.minEta }}-{{ maxEta }} days</mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="viewItems">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>View items</mat-header-cell>
-              <mat-cell *matCellDef="let element" name="viewItems" #status>
-                <button *ngIf="element.status == 'ongoing'" color="accent" mat-raised-button (click)="editOrder(element)">View items</button>
-              </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="complete">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Complete order?</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button *ngIf="element.status == 'ongoing'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
-              </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="cancel">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel order?</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button *ngIf="element.status == 'ongoing'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
-              </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="delete">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Delete order</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button *ngIf="element.status == 'cancelled'" color="warn" mat-raised-button (click)="delete(element.id)">Delete</button>
-              </mat-cell>
-            </ng-container>
-
-            <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
-            <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
-          </mat-table>
-        </div>
-
-        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-between center">
-          <div>
-            <p>Ongoing: {{numberOfOngoing || 0}}  &nbsp;|&nbsp;  Completed: {{numberOfCompleted || 0}}  &nbsp;|&nbsp;  Cancelled: {{numberOfCancelled || 0}}</p>
-          </div>
-          <mat-form-field>
-            <input matInput name="filterOrders" type="text" (keyup)="doFilterOrders($any($event.target).value)" placeholder="Search filter...">
-          </mat-form-field>
-          <mat-paginator #paginatorRefOrders [pageSize]="10" [pageSizeOptions]="[5, 10, 15, 25]"></mat-paginator>
-        </div>
-
-        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="start center">
-          <p>Total number of orders: {{ orders.data.length }}</p>
-        </div>
-
-      </div>
-
-    </mat-tab>
-
-    <mat-tab label="View my reviews: ">
-       <!-- 'dateCreated' -->
-      <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" >
-
-        <div fxFlex fxFill>
-          <mat-table [dataSource]="myReviews" matSort>
-            <ng-container matColumnDef="Numero">
-              <mat-header-cell *matHeaderCellDef mat-sort-header disabled>No.</mat-header-cell>
-              <mat-cell *matCellDef="let element; let j = index">{{ (paginatorRefReview.pageIndex * paginatorRefReview.pageSize) + (j + 1) }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="product.name">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Product name:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.product.name }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="comment">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Review content:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.comment }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="score">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Rating: </mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <div fxLayoutAlign="center center">
-                  <star-rating fxFlex
-                  [value]="element.score"
-                  [totalstars]="5"
-                  checkedcolor="#ffd740"
-                  uncheckedcolor="gray"
-                  size="24px"
-                  readonly="true"
-                  ></star-rating>
-                </div>
-                &nbsp; ({{ element.score | number: '1.0-1' }})
-              </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="dateCreated">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Date created:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.dateCreated }}</mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="edit">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Edit your review?</mat-header-cell>
-              <mat-cell *matCellDef="let element">
-                <button mat-raised-button color="primary" (click)="editReview(element)">Edit</button>
-              </mat-cell>
-            </ng-container>
-
-
-            <mat-header-row *matHeaderRowDef="displayedColumnsReviews"></mat-header-row>
-            <mat-row *matRowDef="let rows; columns: displayedColumnsReviews;"></mat-row>
-          </mat-table>
-        </div>
-
-        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-between center">
-          <div>
-            <p>Total number of reviews written: {{ myReviews.data.length }}</p>
-          </div>
-          <mat-form-field>
-            <input matInput type="text" (keyup)="doFilterReviews($any($event.target).value)" placeholder="Search reviews...">
-          </mat-form-field>
-          <mat-paginator #paginatorRefReview [pageSize]="10" [pageSizeOptions]="[5, 10, 15, 25]"></mat-paginator>
-        </div>
-
-      </div>
-
-
-
-
-    </mat-tab>
-  </mat-tab-group>
-</div>
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+  <form
+    #forma="ngForm"
+    (ngSubmit)="update(forma)"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="5px"
+  >
+    <mat-form-field>
+      <input type="text" matInput [(ngModel)]="userData.ime" name="ime" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="userData.prezime"
+        name="prezime"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        [(ngModel)]="userData.password"
+        name="password"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        [(ngModel)]="userData.kontaktPodaci.email"
+        name="email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="tel"
+        matInput
+        [(ngModel)]="userData.kontaktPodaci.telefon"
+        name="telefon"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="userData.kontaktPodaci.adresa"
+        name="adresa"
+      />
+    </mat-form-field>
+    <!-- <input type="text" matInput [(ngModel)]="userData." name="ime" /> -->
+    <!-- NOTE: postavke ^ -->
+    <button mat-raised-button type="submit">Update info</button>
+  </form>
+</section>

@@ -1,0 +1,10 @@
+<!-- <div fxFlex fxFlexFill fxLayout="column nowrap" fxLayoutAlign="center center"> -->
+  <mat-tab-group fxFill dynamicHeight mat-stretch-tabs>
+    <mat-tab label="Personal information"> 
+      <app-userprofile [userData]="user" (userDataChange)="updateUserValue($event)"></app-userprofile>
+    </mat-tab>
+    <mat-tab label="Planner"> 
+      <app-planer [tours]="user.planer" (toursUpdate)="updateUserPlaner($event)"></app-planer> 
+    </mat-tab>
+  </mat-tab-group>
+<!-- </div> -->

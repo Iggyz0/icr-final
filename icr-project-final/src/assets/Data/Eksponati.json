@@ -1,0 +1,1743 @@
+[
+  {
+    "id": 1,
+    "naziv": "Ines",
+    "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+    "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+    "vrsta": "Jacinthe",
+    "cena": 199,
+    "vremeObilaska": 59,
+    "zemljaPorekla": "China",
+    "recenzije": [
+      {
+        "id": 1,
+        "user": {
+          "id": 1,
+          "ime": "Felicia",
+          "prezime": "Stapylton",
+          "username": "fstapylton0",
+          "password": "BoA8ELhMPVS",
+          "kontaktPodaci": {
+            "email": "fstapylton0@nyu.edu",
+            "telefon": "909-810-7777",
+            "adresa": "0716 Independence Court"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.",
+        "rating": 5
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 2,
+          "ime": "Glenine",
+          "prezime": "Askwith",
+          "username": "gaskwith1",
+          "password": "DdZ0Ov9Ck3",
+          "kontaktPodaci": {
+            "email": "gaskwith1@homestead.com",
+            "telefon": "866-470-3724",
+            "adresa": "86 Havey Trail"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea.",
+        "rating": 4
+      },
+      {
+        "id": 3,
+        "user": {
+          "id": 3,
+          "ime": "Anallese",
+          "prezime": "Pettus",
+          "username": "apettus2",
+          "password": "WwILWao",
+          "kontaktPodaci": {
+            "email": "apettus2@is.gd",
+            "telefon": "873-151-3692",
+            "adresa": "19985 Esker Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+        "rating": 3
+      },
+      {
+        "id": 4,
+        "user": {
+          "id": 4,
+          "ime": "Donnamarie",
+          "prezime": "Wainman",
+          "username": "dwainman3",
+          "password": "ATdFhF",
+          "kontaktPodaci": {
+            "email": "dwainman3@artisteer.com",
+            "telefon": "721-326-4563",
+            "adresa": "20 Welch Point"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+        "rating": 1
+      },
+      {
+        "id": 5,
+        "user": {
+          "id": 5,
+          "ime": "Anders",
+          "prezime": "Whitehair",
+          "username": "awhitehair4",
+          "password": "w5RCiVLvrQ",
+          "kontaktPodaci": {
+            "email": "awhitehair4@yellowpages.com",
+            "telefon": "173-189-0090",
+            "adresa": "4886 Northfield Park"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "naziv": "Zita",
+    "opis": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
+    "slika": "http://dummyimage.com/163x100.png/cc0000/ffffff",
+    "vrsta": "Orlando",
+    "cena": 723,
+    "vremeObilaska": 253,
+    "zemljaPorekla": "Ecuador",
+    "recenzije": []
+  },
+  {
+    "id": 3,
+    "naziv": "Gannie",
+    "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+    "slika": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+    "vrsta": "Cosetta",
+    "cena": 767,
+    "vremeObilaska": 454,
+    "zemljaPorekla": "Japan",
+    "recenzije": [
+      {
+        "id": 6,
+        "user": {
+          "id": 6,
+          "ime": "Emmeline",
+          "prezime": "Langlands",
+          "username": "elanglands0",
+          "password": "BoepNAwJ",
+          "kontaktPodaci": {
+            "email": "elanglands0@delicious.com",
+            "telefon": "413-868-0660",
+            "adresa": "890 Pankratz Way"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "rating": 4
+      },
+      {
+        "id": 7,
+        "user": {
+          "id": 7,
+          "ime": "Trenton",
+          "prezime": "Eul",
+          "username": "teul1",
+          "password": "aUsSVw",
+          "kontaktPodaci": {
+            "email": "teul1@chronoengine.com",
+            "telefon": "605-680-4628",
+            "adresa": "0816 Crest Line Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Phasellus sit amet erat. Nulla tempus.",
+        "rating": 1
+      },
+      {
+        "id": 8,
+        "user": {
+          "id": 8,
+          "ime": "Herta",
+          "prezime": "Doyle",
+          "username": "hdoyle2",
+          "password": "I6309nHfUZw",
+          "kontaktPodaci": {
+            "email": "hdoyle2@reverbnation.com",
+            "telefon": "747-923-1737",
+            "adresa": "3 Ohio Plaza"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
+        "rating": 3
+      },
+      {
+        "id": 9,
+        "user": {
+          "id": 9,
+          "ime": "Cody",
+          "prezime": "Doe",
+          "username": "cdoe3",
+          "password": "hqNN4JqPUh",
+          "kontaktPodaci": {
+            "email": "cdoe3@phoca.cz",
+            "telefon": "176-264-6510",
+            "adresa": "2 Namekagon Street"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "naziv": "Holden",
+    "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+    "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+    "vrsta": "Danya",
+    "cena": 946,
+    "vremeObilaska": 57,
+    "zemljaPorekla": "Kazakhstan",
+    "recenzije": [
+      {
+        "id": 10,
+        "user": {
+          "id": 10,
+          "ime": "Frasier",
+          "prezime": "Kovalski",
+          "username": "fkovalski0",
+          "password": "ZHn7K0lpd6O",
+          "kontaktPodaci": {
+            "email": "fkovalski0@independent.co.uk",
+            "telefon": "586-945-1744",
+            "adresa": "4 Graceland Place"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aenean auctor gravida sem.",
+        "rating": 4
+      },
+      {
+        "id": 11,
+        "user": {
+          "id": 11,
+          "ime": "Perice",
+          "prezime": "Simnel",
+          "username": "psimnel1",
+          "password": "i2B9QO8A",
+          "kontaktPodaci": {
+            "email": "psimnel1@cmu.edu",
+            "telefon": "481-114-3710",
+            "adresa": "016 Laurel Parkway"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti.",
+        "rating": 3
+      },
+      {
+        "id": 12,
+        "user": {
+          "id": 12,
+          "ime": "Wallis",
+          "prezime": "Gairdner",
+          "username": "wgairdner2",
+          "password": "XRuNtC9dWNW",
+          "kontaktPodaci": {
+            "email": "wgairdner2@marketwatch.com",
+            "telefon": "453-197-7370",
+            "adresa": "7058 Arkansas Plaza"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "naziv": "Judi",
+    "opis": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
+    "slika": "http://dummyimage.com/199x100.png/ff4444/ffffff",
+    "vrsta": "Hogan",
+    "cena": 1235,
+    "vremeObilaska": 50,
+    "zemljaPorekla": "Uruguay",
+    "recenzije": []
+  },
+  {
+    "id": 6,
+    "naziv": "Hynda",
+    "opis": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
+    "slika": "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
+    "vrsta": "Emmye",
+    "cena": 376,
+    "vremeObilaska": 329,
+    "zemljaPorekla": "Tanzania",
+    "recenzije": [
+      {
+        "id": 13,
+        "user": {
+          "id": 13,
+          "ime": "Easter",
+          "prezime": "Mapson",
+          "username": "emapson0",
+          "password": "4qCcyxaU8W",
+          "kontaktPodaci": {
+            "email": "emapson0@yandex.ru",
+            "telefon": "780-668-3308",
+            "adresa": "440 Elka Park"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "naziv": "Eloisa",
+    "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+    "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+    "vrsta": "Portia",
+    "cena": 961,
+    "vremeObilaska": 187,
+    "zemljaPorekla": "Greece",
+    "recenzije": [
+      {
+        "id": 14,
+        "user": {
+          "id": 14,
+          "ime": "Renata",
+          "prezime": "Danaher",
+          "username": "rdanaher0",
+          "password": "7z8TjNGndkdr",
+          "kontaktPodaci": {
+            "email": "rdanaher0@soup.io",
+            "telefon": "197-291-9801",
+            "adresa": "50493 Menomonie Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
+        "rating": 2
+      },
+      {
+        "id": 15,
+        "user": {
+          "id": 15,
+          "ime": "Bernadina",
+          "prezime": "Smedmore",
+          "username": "bsmedmore1",
+          "password": "Mij9dhdgyi",
+          "kontaktPodaci": {
+            "email": "bsmedmore1@illinois.edu",
+            "telefon": "489-251-8041",
+            "adresa": "75 Oriole Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+        "rating": 4
+      },
+      {
+        "id": 16,
+        "user": {
+          "id": 16,
+          "ime": "Alistair",
+          "prezime": "Shirer",
+          "username": "ashirer2",
+          "password": "7gZVfwaNMzX",
+          "kontaktPodaci": {
+            "email": "ashirer2@1und1.de",
+            "telefon": "603-283-8856",
+            "adresa": "7 Esch Place"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+        "rating": 2
+      },
+      {
+        "id": 17,
+        "user": {
+          "id": 17,
+          "ime": "Christian",
+          "prezime": "Jarrad",
+          "username": "cjarrad3",
+          "password": "LHO78VZ1ZWii",
+          "kontaktPodaci": {
+            "email": "cjarrad3@imgur.com",
+            "telefon": "268-718-6243",
+            "adresa": "1 Forest Plaza"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Curabitur gravida nisi at nibh.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "naziv": "Gardner",
+    "opis": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "slika": "http://dummyimage.com/167x100.png/ff4444/ffffff",
+    "vrsta": "Allison",
+    "cena": 738,
+    "vremeObilaska": 81,
+    "zemljaPorekla": "Brazil",
+    "recenzije": [
+      {
+        "id": 18,
+        "user": {
+          "id": 18,
+          "ime": "Tallou",
+          "prezime": "MacKettrick",
+          "username": "tmackettrick0",
+          "password": "TgZ63bCiay",
+          "kontaktPodaci": {
+            "email": "tmackettrick0@theatlantic.com",
+            "telefon": "270-978-5870",
+            "adresa": "3 Rockefeller Alley"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nulla mollis molestie lorem.",
+        "rating": 4
+      },
+      {
+        "id": 19,
+        "user": {
+          "id": 19,
+          "ime": "Charlene",
+          "prezime": "Niessen",
+          "username": "cniessen1",
+          "password": "IJIywyba5",
+          "kontaktPodaci": {
+            "email": "cniessen1@tiny.cc",
+            "telefon": "971-395-6399",
+            "adresa": "2 Pierstorff Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "naziv": "Agustin",
+    "opis": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
+    "slika": "http://dummyimage.com/179x100.png/5fa2dd/ffffff",
+    "vrsta": "Tudor",
+    "cena": 782,
+    "vremeObilaska": 96,
+    "zemljaPorekla": "Thailand",
+    "recenzije": [
+      {
+        "id": 20,
+        "user": {
+          "id": 20,
+          "ime": "Ted",
+          "prezime": "Kinsey",
+          "username": "tkinsey0",
+          "password": "mRiRNKtR1v",
+          "kontaktPodaci": {
+            "email": "tkinsey0@nasa.gov",
+            "telefon": "769-535-0432",
+            "adresa": "8 High Crossing Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "naziv": "Alayne",
+    "opis": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "slika": "http://dummyimage.com/116x100.png/cc0000/ffffff",
+    "vrsta": "Wolfgang",
+    "cena": 1488,
+    "vremeObilaska": 376,
+    "zemljaPorekla": "Ukraine",
+    "recenzije": [
+      {
+        "id": 21,
+        "user": {
+          "id": 21,
+          "ime": "Garv",
+          "prezime": "Wyllie",
+          "username": "gwyllie0",
+          "password": "S83Cnd1Bc",
+          "kontaktPodaci": {
+            "email": "gwyllie0@auda.org.au",
+            "telefon": "156-629-0328",
+            "adresa": "9 Scott Hill"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "naziv": "Gavrielle",
+    "opis": "Maecenas ut massa quis augue luctus tincidunt.",
+    "slika": "http://dummyimage.com/174x100.png/cc0000/ffffff",
+    "vrsta": "Gale",
+    "cena": 1293,
+    "vremeObilaska": 577,
+    "zemljaPorekla": "China",
+    "recenzije": []
+  },
+  {
+    "id": 12,
+    "naziv": "Ambrose",
+    "opis": "Sed sagittis.",
+    "slika": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+    "vrsta": "Burtie",
+    "cena": 595,
+    "vremeObilaska": 576,
+    "zemljaPorekla": "China",
+    "recenzije": []
+  },
+  {
+    "id": 13,
+    "naziv": "Phillie",
+    "opis": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+    "slika": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
+    "vrsta": "Kristel",
+    "cena": 1140,
+    "vremeObilaska": 177,
+    "zemljaPorekla": "Philippines",
+    "recenzije": [
+      {
+        "id": 22,
+        "user": {
+          "id": 22,
+          "ime": "Deb",
+          "prezime": "Lamblot",
+          "username": "dlamblot0",
+          "password": "B4IvK0zWyyDF",
+          "kontaktPodaci": {
+            "email": "dlamblot0@apple.com",
+            "telefon": "417-436-5592",
+            "adresa": "2072 Fairfield Drive"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis.",
+        "rating": 2
+      },
+      {
+        "id": 23,
+        "user": {
+          "id": 23,
+          "ime": "Loren",
+          "prezime": "Terrett",
+          "username": "lterrett1",
+          "password": "t9Uco21BJMnY",
+          "kontaktPodaci": {
+            "email": "lterrett1@cornell.edu",
+            "telefon": "492-594-6069",
+            "adresa": "3 Starling Road"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, Nonea pede ullamcorper augue, a suscipit Nonea elit ac Nonea. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet Nonea. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+        "rating": 5
+      },
+      {
+        "id": 24,
+        "user": {
+          "id": 24,
+          "ime": "Germain",
+          "prezime": "Sculpher",
+          "username": "gsculpher2",
+          "password": "Hjs37ZCl",
+          "kontaktPodaci": {
+            "email": "gsculpher2@netvibes.com",
+            "telefon": "209-820-8078",
+            "adresa": "673 Scofield Way"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "naziv": "Andria",
+    "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+    "slika": "http://dummyimage.com/133x100.png/dddddd/000000",
+    "vrsta": "Binnie",
+    "cena": 117,
+    "vremeObilaska": 522,
+    "zemljaPorekla": "Colombia",
+    "recenzije": [
+      {
+        "id": 25,
+        "user": {
+          "id": 25,
+          "ime": "Monah",
+          "prezime": "MacCroary",
+          "username": "mmaccroary0",
+          "password": "67Svi3inM5G",
+          "kontaktPodaci": {
+            "email": "mmaccroary0@goo.ne.jp",
+            "telefon": "641-194-2098",
+            "adresa": "74 Everett Center"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
+        "rating": 5
+      },
+      {
+        "id": 26,
+        "user": {
+          "id": 26,
+          "ime": "Lindy",
+          "prezime": "Radsdale",
+          "username": "lradsdale1",
+          "password": "p564445gauXP",
+          "kontaktPodaci": {
+            "email": "lradsdale1@nba.com",
+            "telefon": "912-944-1068",
+            "adresa": "2 Bay Park"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at Nonea.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "naziv": "Ralph",
+    "opis": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+    "slika": "http://dummyimage.com/115x100.png/ff4444/ffffff",
+    "vrsta": "Danya",
+    "cena": 685,
+    "vremeObilaska": 137,
+    "zemljaPorekla": "Philippines",
+    "recenzije": [
+      {
+        "id": 27,
+        "user": {
+          "id": 27,
+          "ime": "Kerstin",
+          "prezime": "Rollingson",
+          "username": "krollingson0",
+          "password": "dsIhDjUT",
+          "kontaktPodaci": {
+            "email": "krollingson0@histats.com",
+            "telefon": "755-786-4458",
+            "adresa": "841 Hooker Parkway"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+        "rating": 2
+      },
+      {
+        "id": 28,
+        "user": {
+          "id": 28,
+          "ime": "Sande",
+          "prezime": "Twinn",
+          "username": "stwinn1",
+          "password": "dzU1ZU224",
+          "kontaktPodaci": {
+            "email": "stwinn1@timesonline.co.uk",
+            "telefon": "490-568-9938",
+            "adresa": "99 Maryland Terrace"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "naziv": "Audrie",
+    "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+    "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+    "vrsta": "Cheslie",
+    "cena": 961,
+    "vremeObilaska": 583,
+    "zemljaPorekla": "Czech Republic",
+    "recenzije": [
+      {
+        "id": 29,
+        "user": {
+          "id": 29,
+          "ime": "Farand",
+          "prezime": "De Ambrosis",
+          "username": "fdeambrosis0",
+          "password": "sF8LSMmuGD",
+          "kontaktPodaci": {
+            "email": "fdeambrosis0@pen.io",
+            "telefon": "740-990-5924",
+            "adresa": "8338 Longview Point"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at Nonea. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien.",
+        "rating": 1
+      },
+      {
+        "id": 30,
+        "user": {
+          "id": 30,
+          "ime": "Ahmed",
+          "prezime": "Ferneyhough",
+          "username": "aferneyhough1",
+          "password": "hYGgKzLIbo",
+          "kontaktPodaci": {
+            "email": "aferneyhough1@seattletimes.com",
+            "telefon": "254-500-3584",
+            "adresa": "6337 Westend Drive"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nulla facilisi.",
+        "rating": 5
+      },
+      {
+        "id": 31,
+        "user": {
+          "id": 31,
+          "ime": "Lauree",
+          "prezime": "Rosewarne",
+          "username": "lrosewarne2",
+          "password": "UKr4TyxYBPU",
+          "kontaktPodaci": {
+            "email": "lrosewarne2@epa.gov",
+            "telefon": "435-758-4105",
+            "adresa": "5512 Old Shore Terrace"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+        "rating": 1
+      },
+      {
+        "id": 32,
+        "user": {
+          "id": 32,
+          "ime": "Dedra",
+          "prezime": "Francescuccio",
+          "username": "dfrancescuccio3",
+          "password": "mZNJZNEeVLEZ",
+          "kontaktPodaci": {
+            "email": "dfrancescuccio3@unicef.org",
+            "telefon": "704-598-7802",
+            "adresa": "50738 Gina Park"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "naziv": "Clovis",
+    "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+    "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+    "vrsta": "Fanya",
+    "cena": 1329,
+    "vremeObilaska": 272,
+    "zemljaPorekla": "France",
+    "recenzije": [
+      {
+        "id": 33,
+        "user": {
+          "id": 33,
+          "ime": "Elmore",
+          "prezime": "Gilbride",
+          "username": "egilbride0",
+          "password": "3Um4Nk",
+          "kontaktPodaci": {
+            "email": "egilbride0@ca.gov",
+            "telefon": "848-164-8297",
+            "adresa": "80 Dayton Lane"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+        "rating": 5
+      },
+      {
+        "id": 34,
+        "user": {
+          "id": 34,
+          "ime": "Corri",
+          "prezime": "Demange",
+          "username": "cdemange1",
+          "password": "gLKFu9cU",
+          "kontaktPodaci": {
+            "email": "cdemange1@friendfeed.com",
+            "telefon": "755-824-7053",
+            "adresa": "56296 Anniversary Alley"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
+        "rating": 5
+      },
+      {
+        "id": 35,
+        "user": {
+          "id": 35,
+          "ime": "Demetria",
+          "prezime": "Beinke",
+          "username": "dbeinke2",
+          "password": "DXuW6vO",
+          "kontaktPodaci": {
+            "email": "dbeinke2@webnode.com",
+            "telefon": "642-667-4769",
+            "adresa": "78 Mcbride Street"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "rating": 5
+      },
+      {
+        "id": 36,
+        "user": {
+          "id": 36,
+          "ime": "Teddy",
+          "prezime": "Emney",
+          "username": "temney3",
+          "password": "4Cy9bd",
+          "kontaktPodaci": {
+            "email": "temney3@yellowpages.com",
+            "telefon": "735-390-7438",
+            "adresa": "2 International Street"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "rating": 1
+      },
+      {
+        "id": 37,
+        "user": {
+          "id": 37,
+          "ime": "Cynthea",
+          "prezime": "Bernardy",
+          "username": "cbernardy4",
+          "password": "DBIv20KghUNZ",
+          "kontaktPodaci": {
+            "email": "cbernardy4@google.ru",
+            "telefon": "840-944-1391",
+            "adresa": "63 Moland Point"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "naziv": "Charlie",
+    "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
+    "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+    "vrsta": "Emery",
+    "cena": 673,
+    "vremeObilaska": 482,
+    "zemljaPorekla": "Ukraine",
+    "recenzije": [
+      {
+        "id": 38,
+        "user": {
+          "id": 38,
+          "ime": "Felipe",
+          "prezime": "Pirdue",
+          "username": "fpirdue0",
+          "password": "dHSwnoPG",
+          "kontaktPodaci": {
+            "email": "fpirdue0@wikia.com",
+            "telefon": "805-920-1029",
+            "adresa": "920 Commercial Way"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+        "rating": 1
+      },
+      {
+        "id": 39,
+        "user": {
+          "id": 39,
+          "ime": "Shelby",
+          "prezime": "Hurd",
+          "username": "shurd1",
+          "password": "nT2Mr1",
+          "kontaktPodaci": {
+            "email": "shurd1@discuz.net",
+            "telefon": "600-856-2548",
+            "adresa": "3 Artisan Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Morbi a ipsum. Integer a nibh. In quis justo.",
+        "rating": 4
+      },
+      {
+        "id": 40,
+        "user": {
+          "id": 40,
+          "ime": "Romy",
+          "prezime": "Bayldon",
+          "username": "rbayldon2",
+          "password": "BmuEtP",
+          "kontaktPodaci": {
+            "email": "rbayldon2@goo.gl",
+            "telefon": "778-622-6720",
+            "adresa": "059 Center Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "rating": 4
+      },
+      {
+        "id": 41,
+        "user": {
+          "id": 41,
+          "ime": "Barry",
+          "prezime": "Petrie",
+          "username": "bpetrie3",
+          "password": "NCAcEGzMc",
+          "kontaktPodaci": {
+            "email": "bpetrie3@hp.com",
+            "telefon": "160-667-7682",
+            "adresa": "0 Burrows Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "naziv": "Arny",
+    "opis": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+    "slika": "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+    "vrsta": "Betsy",
+    "cena": 1413,
+    "vremeObilaska": 199,
+    "zemljaPorekla": "Indonesia",
+    "recenzije": [
+      {
+        "id": 42,
+        "user": {
+          "id": 42,
+          "ime": "Jacquelyn",
+          "prezime": "Blevin",
+          "username": "jblevin0",
+          "password": "vwI2vGmP10bz",
+          "kontaktPodaci": {
+            "email": "jblevin0@altervista.org",
+            "telefon": "852-266-1296",
+            "adresa": "63138 Commercial Alley"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.",
+        "rating": 1
+      },
+      {
+        "id": 43,
+        "user": {
+          "id": 43,
+          "ime": "Fayette",
+          "prezime": "Nattrass",
+          "username": "fnattrass1",
+          "password": "DODZrh1",
+          "kontaktPodaci": {
+            "email": "fnattrass1@nasa.gov",
+            "telefon": "558-131-9454",
+            "adresa": "8 Dryden Junction"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
+        "rating": 5
+      },
+      {
+        "id": 44,
+        "user": {
+          "id": 44,
+          "ime": "Cindi",
+          "prezime": "Vasler",
+          "username": "cvasler2",
+          "password": "LVg4Pi",
+          "kontaktPodaci": {
+            "email": "cvasler2@nydailynews.com",
+            "telefon": "725-439-4713",
+            "adresa": "76 Dahle Court"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "naziv": "Louisette",
+    "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+    "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "vrsta": "Corrianne",
+    "cena": 303,
+    "vremeObilaska": 206,
+    "zemljaPorekla": "China",
+    "recenzije": [
+      {
+        "id": 45,
+        "user": {
+          "id": 45,
+          "ime": "Mommy",
+          "prezime": "Hallows",
+          "username": "mhallows0",
+          "password": "ilti4ito",
+          "kontaktPodaci": {
+            "email": "mhallows0@so-net.ne.jp",
+            "telefon": "608-711-0077",
+            "adresa": "996 Trailsway Crossing"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
+        "rating": 3
+      },
+      {
+        "id": 46,
+        "user": {
+          "id": 46,
+          "ime": "Verena",
+          "prezime": "Kimbley",
+          "username": "vkimbley1",
+          "password": "bkKgraLIR3Mo",
+          "kontaktPodaci": {
+            "email": "vkimbley1@va.gov",
+            "telefon": "156-579-5107",
+            "adresa": "7204 Hanover Court"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
+        "rating": 4
+      },
+      {
+        "id": 47,
+        "user": {
+          "id": 47,
+          "ime": "Cairistiona",
+          "prezime": "Scopham",
+          "username": "cscopham2",
+          "password": "L3pzjK",
+          "kontaktPodaci": {
+            "email": "cscopham2@flavors.me",
+            "telefon": "663-292-2690",
+            "adresa": "11 Moulton Hill"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, Nonea pede ullamcorper augue, a suscipit Nonea elit ac Nonea. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+        "rating": 3
+      },
+      {
+        "id": 48,
+        "user": {
+          "id": 48,
+          "ime": "Walton",
+          "prezime": "McKeon",
+          "username": "wmckeon3",
+          "password": "Ebe6icE",
+          "kontaktPodaci": {
+            "email": "wmckeon3@va.gov",
+            "telefon": "492-123-8103",
+            "adresa": "35 Eagan Street"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "naziv": "Virgilio",
+    "opis": "Fusce consequat. Nulla nisl.",
+    "slika": "http://dummyimage.com/247x100.png/dddddd/000000",
+    "vrsta": "Ax",
+    "cena": 581,
+    "vremeObilaska": 558,
+    "zemljaPorekla": "Ukraine",
+    "recenzije": [
+      {
+        "id": 49,
+        "user": {
+          "id": 49,
+          "ime": "Bebe",
+          "prezime": "Jakovijevic",
+          "username": "bjakovijevic0",
+          "password": "o5VY1E2qpV",
+          "kontaktPodaci": {
+            "email": "bjakovijevic0@indiatimes.com",
+            "telefon": "781-507-2554",
+            "adresa": "55858 Mitchell Hill"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "naziv": "Katerine",
+    "opis": "Etiam justo.",
+    "slika": "http://dummyimage.com/208x100.png/5fa2dd/ffffff",
+    "vrsta": "Woodie",
+    "cena": 905,
+    "vremeObilaska": 73,
+    "zemljaPorekla": "Indonesia",
+    "recenzije": []
+  },
+  {
+    "id": 23,
+    "naziv": "Diego",
+    "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+    "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+    "vrsta": "Gasparo",
+    "cena": 84,
+    "vremeObilaska": 600,
+    "zemljaPorekla": "Poland",
+    "recenzije": [
+      {
+        "id": 50,
+        "user": {
+          "id": 50,
+          "ime": "Jacenta",
+          "prezime": "Menicomb",
+          "username": "jmenicomb0",
+          "password": "MA38hd6z1WJ",
+          "kontaktPodaci": {
+            "email": "jmenicomb0@lulu.com",
+            "telefon": "965-562-2444",
+            "adresa": "57 Oriole Plaza"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "rating": 3
+      },
+      {
+        "id": 51,
+        "user": {
+          "id": 51,
+          "ime": "Barth",
+          "prezime": "Cunnington",
+          "username": "bcunnington1",
+          "password": "ErPJCmvo",
+          "kontaktPodaci": {
+            "email": "bcunnington1@blogs.com",
+            "telefon": "603-309-5238",
+            "adresa": "8 Summit Way"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+        "rating": 4
+      },
+      {
+        "id": 52,
+        "user": {
+          "id": 52,
+          "ime": "Bebe",
+          "prezime": "Cuncarr",
+          "username": "bcuncarr2",
+          "password": "OitEWcdusHI",
+          "kontaktPodaci": {
+            "email": "bcuncarr2@apache.org",
+            "telefon": "344-173-4193",
+            "adresa": "68 4th Point"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+        "rating": 2
+      },
+      {
+        "id": 53,
+        "user": {
+          "id": 53,
+          "ime": "Alic",
+          "prezime": "Oosthout de Vree",
+          "username": "aoosthoutdevree3",
+          "password": "z0njsc",
+          "kontaktPodaci": {
+            "email": "aoosthoutdevree3@wikimedia.org",
+            "telefon": "520-587-4578",
+            "adresa": "26 International Center"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+        "rating": 1
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "naziv": "Georgia",
+    "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+    "vrsta": "Hamid",
+    "cena": 35,
+    "vremeObilaska": 110,
+    "zemljaPorekla": "Colombia",
+    "recenzije": [
+      {
+        "id": 54,
+        "user": {
+          "id": 54,
+          "ime": "King",
+          "prezime": "Lathleiffure",
+          "username": "klathleiffure0",
+          "password": "8xEsiOS8PC",
+          "kontaktPodaci": {
+            "email": "klathleiffure0@themeforest.net",
+            "telefon": "455-664-5200",
+            "adresa": "0869 Harbort Avenue"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis.",
+        "rating": 5
+      },
+      {
+        "id": 55,
+        "user": {
+          "id": 55,
+          "ime": "Alma",
+          "prezime": "Keeves",
+          "username": "akeeves1",
+          "password": "v9nkw8",
+          "kontaktPodaci": {
+            "email": "akeeves1@bbc.co.uk",
+            "telefon": "521-651-4602",
+            "adresa": "755 Coleman Terrace"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+        "rating": 4
+      },
+      {
+        "id": 56,
+        "user": {
+          "id": 56,
+          "ime": "Fielding",
+          "prezime": "Detoc",
+          "username": "fdetoc2",
+          "password": "fnPdZgtVwcT",
+          "kontaktPodaci": {
+            "email": "fdetoc2@elpais.com",
+            "telefon": "710-562-7275",
+            "adresa": "7653 Cherokee Terrace"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien.",
+        "rating": 5
+      },
+      {
+        "id": 57,
+        "user": {
+          "id": 57,
+          "ime": "Dunstan",
+          "prezime": "Balam",
+          "username": "dbalam3",
+          "password": "zg7M2dP",
+          "kontaktPodaci": {
+            "email": "dbalam3@friendfeed.com",
+            "telefon": "179-186-6155",
+            "adresa": "21 Mockingbird Lane"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Fusce consequat. Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
+        "rating": 1
+      },
+      {
+        "id": 58,
+        "user": {
+          "id": 58,
+          "ime": "Al",
+          "prezime": "Prowse",
+          "username": "aprowse4",
+          "password": "V4Q47i5kfVWl",
+          "kontaktPodaci": {
+            "email": "aprowse4@blogtalkradio.com",
+            "telefon": "171-670-8516",
+            "adresa": "32 Autumn Leaf Circle"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "naziv": "Ellery",
+    "opis": "Proin at turpis a pede posuere nonummy.",
+    "slika": "http://dummyimage.com/133x100.png/5fa2dd/ffffff",
+    "vrsta": "Myrtie",
+    "cena": 486,
+    "vremeObilaska": 361,
+    "zemljaPorekla": "China",
+    "recenzije": [
+      {
+        "id": 59,
+        "user": {
+          "id": 59,
+          "ime": "Korie",
+          "prezime": "Marusik",
+          "username": "kmarusik0",
+          "password": "JRA1Af5gqp",
+          "kontaktPodaci": {
+            "email": "kmarusik0@hud.gov",
+            "telefon": "123-577-8531",
+            "adresa": "757 Victoria Parkway"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+        "rating": 4
+      },
+      {
+        "id": 60,
+        "user": {
+          "id": 60,
+          "ime": "Alain",
+          "prezime": "Dennington",
+          "username": "adennington1",
+          "password": "7XF2czyZP1",
+          "kontaktPodaci": {
+            "email": "adennington1@fema.gov",
+            "telefon": "877-230-8524",
+            "adresa": "49 Petterle Drive"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "naziv": "Susette",
+    "opis": "Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
+    "slika": "http://dummyimage.com/245x100.png/dddddd/000000",
+    "vrsta": "Guthrey",
+    "cena": 451,
+    "vremeObilaska": 222,
+    "zemljaPorekla": "Namibia",
+    "recenzije": [
+      {
+        "id": 61,
+        "user": {
+          "id": 61,
+          "ime": "Aldin",
+          "prezime": "Durante",
+          "username": "adurante0",
+          "password": "5kyZ8hM",
+          "kontaktPodaci": {
+            "email": "adurante0@pagesperso-orange.fr",
+            "telefon": "402-785-1849",
+            "adresa": "1 Reindahl Circle"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "naziv": "Janos",
+    "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+    "slika": "http://dummyimage.com/221x100.png/dddddd/000000",
+    "vrsta": "Kori",
+    "cena": 480,
+    "vremeObilaska": 224,
+    "zemljaPorekla": "Indonesia",
+    "recenzije": [
+      {
+        "id": 62,
+        "user": {
+          "id": 62,
+          "ime": "Perren",
+          "prezime": "Deverell",
+          "username": "pdeverell0",
+          "password": "6Fa3jIoxJ",
+          "kontaktPodaci": {
+            "email": "pdeverell0@marketwatch.com",
+            "telefon": "379-942-3168",
+            "adresa": "41 Donald Junction"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+        "rating": 4
+      },
+      {
+        "id": 63,
+        "user": {
+          "id": 63,
+          "ime": "Catherina",
+          "prezime": "Mathews",
+          "username": "cmathews1",
+          "password": "pN3YOw",
+          "kontaktPodaci": {
+            "email": "cmathews1@geocities.com",
+            "telefon": "194-136-5369",
+            "adresa": "14955 Grasskamp Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+        "rating": 1
+      },
+      {
+        "id": 64,
+        "user": {
+          "id": 64,
+          "ime": "Anett",
+          "prezime": "McCusker",
+          "username": "amccusker2",
+          "password": "gowBp3XXzQsi",
+          "kontaktPodaci": {
+            "email": "amccusker2@gov.uk",
+            "telefon": "991-783-2650",
+            "adresa": "75 School Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at Nonea. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "rating": 2
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "naziv": "Jody",
+    "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+    "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+    "vrsta": "Roana",
+    "cena": 239,
+    "vremeObilaska": 294,
+    "zemljaPorekla": "Armenia",
+    "recenzije": [
+      {
+        "id": 65,
+        "user": {
+          "id": 65,
+          "ime": "Carol",
+          "prezime": "Rosellini",
+          "username": "crosellini0",
+          "password": "SQlQ8SJo",
+          "kontaktPodaci": {
+            "email": "crosellini0@spiegel.de",
+            "telefon": "762-163-4633",
+            "adresa": "1723 Gale Way"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Integer ac neque. Duis bibendum.",
+        "rating": 1
+      },
+      {
+        "id": 66,
+        "user": {
+          "id": 66,
+          "ime": "Gregoire",
+          "prezime": "Olexa",
+          "username": "golexa1",
+          "password": "Zdn1qh",
+          "kontaktPodaci": {
+            "email": "golexa1@webeden.co.uk",
+            "telefon": "483-759-5821",
+            "adresa": "3577 Golf Pass"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.",
+        "rating": 4
+      },
+      {
+        "id": 67,
+        "user": {
+          "id": 67,
+          "ime": "Edeline",
+          "prezime": "Haddick",
+          "username": "ehaddick2",
+          "password": "qPVo4L8fvh7h",
+          "kontaktPodaci": {
+            "email": "ehaddick2@newyorker.com",
+            "telefon": "618-928-4558",
+            "adresa": "16 Grayhawk Place"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+        "rating": 3
+      },
+      {
+        "id": 68,
+        "user": {
+          "id": 68,
+          "ime": "Franky",
+          "prezime": "Crossgrove",
+          "username": "fcrossgrove3",
+          "password": "EHjLlhY",
+          "kontaktPodaci": {
+            "email": "fcrossgrove3@weebly.com",
+            "telefon": "709-201-1953",
+            "adresa": "0 Corscot Drive"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+        "rating": 2
+      },
+      {
+        "id": 69,
+        "user": {
+          "id": 69,
+          "ime": "Cord",
+          "prezime": "Bayles",
+          "username": "cbayles4",
+          "password": "mNOipY2pzN",
+          "kontaktPodaci": {
+            "email": "cbayles4@google.co.uk",
+            "telefon": "793-983-5960",
+            "adresa": "431 Corry Hill"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat. Nulla nisl. Nunc nisl.",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "naziv": "Donetta",
+    "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+    "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+    "vrsta": "Arliene",
+    "cena": 1282,
+    "vremeObilaska": 307,
+    "zemljaPorekla": "China",
+    "recenzije": [
+      {
+        "id": 70,
+        "user": {
+          "id": 70,
+          "ime": "Ula",
+          "prezime": "Haddrell",
+          "username": "uhaddrell0",
+          "password": "cNf0xRkW9",
+          "kontaktPodaci": {
+            "email": "uhaddrell0@about.com",
+            "telefon": "629-755-0607",
+            "adresa": "0617 Steensland Road"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+        "rating": 4
+      },
+      {
+        "id": 71,
+        "user": {
+          "id": 71,
+          "ime": "Anna-maria",
+          "prezime": "Branch",
+          "username": "abranch1",
+          "password": "LttItGRagT",
+          "kontaktPodaci": {
+            "email": "abranch1@nasa.gov",
+            "telefon": "255-935-7028",
+            "adresa": "62656 Carioca Road"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo.",
+        "rating": 1
+      },
+      {
+        "id": 72,
+        "user": {
+          "id": 72,
+          "ime": "Basia",
+          "prezime": "Fettiplace",
+          "username": "bfettiplace2",
+          "password": "5a8uDpvD",
+          "kontaktPodaci": {
+            "email": "bfettiplace2@google.es",
+            "telefon": "272-164-2305",
+            "adresa": "8 Becker Point"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.",
+        "rating": 3
+      },
+      {
+        "id": 73,
+        "user": {
+          "id": 73,
+          "ime": "Ganny",
+          "prezime": "Sweet",
+          "username": "gsweet3",
+          "password": "3qtHYcrrMBoa",
+          "kontaktPodaci": {
+            "email": "gsweet3@usda.gov",
+            "telefon": "637-933-9015",
+            "adresa": "645 Garrison Park"
+          },
+          "omiljenePostavke": [],
+          "planer": []
+        },
+        "comment": "Praesent blandit. Nam Nonea. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "naziv": "Linda",
+    "opis": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+    "slika": "http://dummyimage.com/123x100.png/ff4444/ffffff",
+    "vrsta": "Leroi",
+    "cena": 1490,
+    "vremeObilaska": 414,
+    "zemljaPorekla": "Poland",
+    "recenzije": []
+  }
+]
