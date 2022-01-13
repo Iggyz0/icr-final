@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import '@google/model-viewer';
 
 @Component({
   selector: 'app-welcome',
@@ -8,12 +7,13 @@ import '@google/model-viewer';
 })
 export class WelcomeComponent implements OnInit {
 
-  isLoggedIn$: any;
+  images = [1,2,3].map(n => { return `../../../assets/Slider/slider-${n}.jpg` });
 
   constructor(){} 
 
   ngOnInit(): void {
+        
   }
-
+  
 
 }

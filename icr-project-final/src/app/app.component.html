@@ -9,44 +9,60 @@
     <mat-toolbar
       class="transparentBg"
       color="primary"
+      fxLayout="row nowrap"
       fxLayoutGap="1em"
-      fxLayoutAlign="end center"
+      fxLayoutAlign="start center"
+      (scroll)="onScroll()"
+      [ngClass]="navbarfixed ? 'fixedToolbar' : 'notFixedToolbar' "
+      [ngClass]="isWelcomePage? '' : 'fixedToolbar' "
     >
       <!-- <span fxHide.gt-md (click)="sidenav.open()" fxLayoutAlign="center center">
         <mat-icon class="hoverPointer">menu</mat-icon>
       </span> -->
-      <div class="logo">
-        <a routerLink="/"><img src="../assets/logo-2-him.png" /></a>
+      <div fxFlex="33%" fxLayout="row nowrap" fxLayoutAlign="center center">
+        <div class="logo">
+          <a routerLink="/"><img src="../assets/logo-2-him.png" /></a>
+        </div>
+        <!-- <div class="logo">
+          <img src="../assets/title-logo-style.png" />
+        </div> -->
+        <span class="titleInToolbar"> Historically Inaccurate Museum </span>
       </div>
-      <span class="titleInToolbar"> Historically Inaccurate Museum </span>
+      
+      
       <span class="example-spacer"></span>
 
-      <span fxHide.lt-md fxLayoutGap="1em" fxLayoutAlign="center center">
-        <a class="borderTopHover" routerLink="/"> Home </a>
+      <div fxFlex class="heightHundred" fxHide.lt-md fxLayoutGap="1em" fxLayoutAlign="center center">
+        <a class="borderTopHover toolbarLinks" routerLink="/"> Home </a>
         <a
-          class="borderTopHover"
+          class="borderTopHover toolbarLinks"
+          routerLink="/catalogue"
+          >Catalogue</a
+        >
+        <a
+          class="borderTopHover toolbarLinks"
           routerLink="/signup"
           *ngIf="(korisnik$ | async) == null"
           >Register</a
         >
         <a
-          class="borderTopHover"
+          class="borderTopHover toolbarLinks"
           *ngIf="(korisnik$ | async) == null as korisnik"
           routerLink="/login"
           >Login</a
         >
-        <a class="borderTopHover" routerLink="/aboutUs">About us</a>
+        <a class="borderTopHover toolbarLinks" routerLink="/aboutUs">About us</a>
         <span *ngIf="(korisnik$ | async) != null">
           Welcome, {{ (korisnik$ | async)?.username }}
         </span>
         <a
-          class="borderTopHover"
+          class="borderTopHover toolbarLinks"
           *ngIf="(korisnik$ | async) != null"
           routerLink="/profile"
           >Profile</a
         >
         <a
-          class="borderTopHover"
+          class="borderTopHover toolbarLinks"
           class="hoverPointer"
           *ngIf="(korisnik$ | async) != null as korisnik"
           (click)="logout()"
@@ -58,14 +74,14 @@
             <mat-icon *ngIf="!isDarkTheme">light_mode</mat-icon>
           </mat-slide-toggle>
         </div>
-      </span>
+      </div>
     </mat-toolbar>
     <div>
       <router-outlet></router-outlet>
     </div>
     <span class="example-spacer"></span>
     <!-- footer -->
-    <mat-toolbar id="footer" color="primary" fxLayoutAlign="center center">
+    <mat-toolbar id="footer" fxLayoutAlign="center center">
       <footer>
         Copyright &copy; Stefan Dimitrijević | Igor Marković - IČR project
       </footer>

@@ -25,6 +25,16 @@ a{
     z-index: 2 !important;
 }
 
+.heightHundred {
+    height: 100%;
+}
+
+.toolbarLinks {
+    align-items: center;
+    display: flex;
+    height: 97%;
+}
+
 .logo > a > img {
     height: 64px;
 }
@@ -37,15 +47,47 @@ a{
     border-top: 2px solid transparent;
 }
 
+@keyframes goldenLinks {
+    from {color: white;}
+    to {color: coral;}
+}
+
 .borderTopHover:hover {
     border-top: 2px solid coral;
+    color: coral;
+    animation-name: goldenLinks;
+    animation-duration: 0.3s;
 }
 
 mat-toolbar a, .titleInToolbar {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-transform: uppercase;
     color: white;
-    -webkit-text-fill-color: white;
+    /* -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: salmon;
+    -webkit-text-stroke-color: salmon; */
+}
+
+#footer{
+    text-align: center;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #3f3c47 !important;
+}
+
+.fixedToolbar {
+    position: sticky;
+    width: 100%;
+    transition: 0.1s linear;
+    top: 0px;
+    background-color: #3f3c47 !important;
+}
+
+.notFixedToolbar {
+    position: static;
+    transition: 0.1s linear;
+    background-color: transparent;
 }

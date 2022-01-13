@@ -1,8 +1,51 @@
-<img
-    class="app-bg"
-    src="../../assets/Slider/slider-1.jpg"
-    alt="background-image"
-/>
-<div class="welcome-content" fxFlex fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="20px">
-    <h1>TEST WELCOMEN SIE</h1>
+<div fxFill fxLayout="column nowrap" fxLayoutAlign="center center">
+    <div id="section1" class="carousel slide welcome-content sliderContainer" data-bs-ride="carousel" data-bs-pause="false">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#section1" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#section1" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#section1" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{images[0]}}" alt="slide1" class="d-block w-100">
+            <div class="carousel-caption">
+                <h3 class="fs-1 text-warning">Flying Empiror</h3>
+                <p class="fs-5 fst-italic">Get Free Pass Today</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{images[1]}}" alt="slide2" class="d-block w-100" runat="server">
+            <div class="carousel-caption">
+                <h3 class="fs-1 text-warning">Have A</h3>
+                <pre class="fs-5 fst-italic">"Safe Flight Back Home"</pre>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{images[2]}}" alt="slide3" class="d-block w-100">
+            <div class="carousel-caption">
+                <h3 class="fs-1 text-warning">Life Is Journey</h3>
+                <pre class="fs-5 fst-italic">Enjoy The Flight</pre>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#section1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#section1" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button> -->
+        
+    </div>
+    <!-- <span class="example-spacer"></span> -->
+    <div class="welcome-content" fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxLayoutGap="20px" style="margin-top: 100vh;">
+        <h1>TEST WELCOMEN SIE</h1>
+        
+    </div>
+    
 </div>

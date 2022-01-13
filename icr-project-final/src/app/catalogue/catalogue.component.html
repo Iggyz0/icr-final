@@ -1,0 +1,106 @@
+<div fxFlex fxLayout="column wrap" fxLayoutGap="10px">
+    <div fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <!-- search and sort -->
+        <mat-form-field color="primary" fxFlexAlign="center">
+            <input
+              type="text"
+              ngModel
+              matInput
+              placeholder="Search products..."
+              name="search"
+              search
+              #searchInput="ngModel"
+              [(ngModel)]="searchValue"
+              (keyup)="search()"
+            />
+          </mat-form-field>
+          <span> &nbsp; | &nbsp; </span>
+          <div>
+            <table matSort (matSortChange)="sortData($event)">
+              <tr>
+                <th mat-sort-header="name">Name</th>&nbsp;
+                <th mat-sort-header="score">Score</th>&nbsp;
+                <th mat-sort-header="price">Price</th>
+              </tr>
+            </table>
+          </div>
+    </div>
+
+    <!-- <div fxLayoutAlign="center center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div> -->
+
+    <div fxFlex fxLayout="row wrap">
+        
+        <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
+            <!-- kriterijumi -->
+            <span>kriterijumi</span>
+        </div>
+
+        <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">
+            <!-- postavke itd. MAT KARTICE -->
+            <!-- <app-item *ngFor="let showpiece of items" [item]="showpiece" ></app-item> -->
+
+            <mat-card
+                class="example-card"
+                *ngFor="let item of items | paginate: { itemsPerPage: 8, currentPage: p }"
+                fxFlex
+                fxLayout="column wrap"
+                fxLayoutAlign="center center"
+            >
+                <mat-card-content style="border-bottom: 1px solid lightgray;"
+                fxFlex
+                fxLayout="column wrap"
+                fxLayoutAlign="end center"
+                >
+                <img
+                    mat-card-image
+                    src="{{ item.slika }}"
+                    alt="{{ item.naziv }}"
+                    class="matCardImage"
+                />
+                </mat-card-content>
+                <mat-card-header fxFill fxLayout="column nowrap" fxLayoutAlign="center start">
+                <div fxFill fxLayoutAlign="center center">
+                    <mat-card-title fxFlex="100%" fxFill fxLayoutAlign="center start" class="dont-break-out truncate text-align-center">
+                    <div fxFlex fxLayoutAlign="center center">
+                        {{item.naziv}}
+                    </div>
+                    </mat-card-title>
+                </div>
+                <div fxFill fxLayoutAlign="center center">
+                    <mat-card-subtitle fxFlex="90%" fxFill fxLayoutAlign="space-between center" fxLayout="row nowrap" class="text-align-center" style="border-top: 1px solid lightgray;">
+                    <div fxLayoutAlign="row nowrap"> 
+
+                        <!-- <div fxLayoutAlign="center center">
+                        <star-rating fxFlex
+                        [value]="product.score"
+                        [totalstars]="5"
+                        checkedcolor="#ffd740"
+                        uncheckedcolor="gray"
+                        size="24px"
+                        readonly="true"
+                        ></star-rating>
+                        </div>
+                        <div fxLayoutAlign="center center" class="text-align-center">
+                        ({{ product.score | number: '1.0-1' }})
+                        </div> -->
+
+                    </div>
+                    <div>
+                        <b>{{ item.cena | currency }}</b>
+                    </div>
+                    </mat-card-subtitle>
+                </div>
+                </mat-card-header>
+            </mat-card>
+
+        </div>
+
+    </div>
+
+    <div fxLayoutAlign="center center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+</div>

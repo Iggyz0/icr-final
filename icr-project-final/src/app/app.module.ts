@@ -21,6 +21,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PlanerComponent } from './planer/planer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     SignupComponent,
     ProfileComponent,
     PlanerComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,

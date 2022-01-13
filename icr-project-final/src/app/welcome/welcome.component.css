@@ -1,15 +1,22 @@
-.app-bg {
-    opacity: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* height: calc(100%-400px); */
-    height: 100vh;
-    z-index: 0;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1));
-}
-
 .welcome-content * {
     z-index: 1;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.sliderContainer {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.7));
+    z-index: 0;
+}
+
+.carousel-item > img {
+    width: 100%;
+    /* height: calc(100vh - 64px); */
+    height: 100vh;
 }

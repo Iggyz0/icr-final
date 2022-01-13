@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserModel } from './models/userModel';
 import { AuthService } from './services/auth.service';
@@ -16,6 +16,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'icr-project';
 
   isDarkTheme: boolean = true;
+  navbarfixed: boolean = false;
+  isWelcomePage: boolean = true;
+
+  @HostListener('window:scroll',['$event']) onScroll() {
+    if(window.scrollY > 100) {
+      this.navbarfixed = true;
+    } else {
+      this.navbarfixed = false;
+    }
+  }
 
   korisnik$: BehaviorSubject<UserModel | null> = new BehaviorSubject<UserModel | null>(null);
 
@@ -32,6 +42,15 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.korisnik$ = this.authService.getCurrentUser();
     this.getThemePreferenceFromLocalStorage();
+
+    this.router.events.subscribe((event) => {
+      if (this.router.url == "/" || this.router.url == "/welcome") {
+        this.isWelcomePage = true;
+      }
+      else {
+        this.isWelcomePage = false;
+      }
+    });
   }
 
   logout(){
