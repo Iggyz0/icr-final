@@ -1,0 +1,67 @@
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px"
+    #f="ngForm" (ngSubmit)="onSubmit(f)">
+        
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Username" name="username"
+            required #usernameInput="ngModel">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <input type="email" ngModel matInput placeholder="E-mail" name="email"
+            required email #emailInput="ngModel">
+            
+            <mat-error *ngIf="emailInput.hasError('required')">Field cannot be left empty</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">Please use the correct email format</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field hintLabel="Please enter minimum 8 characters">
+            <input type="password" ngModel matInput placeholder="Password" name="password" required minlength="8" #userInput="ngModel">
+            <mat-hint align="end">{{ userInput.value?.length }} / 8</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="First name" name="firstName" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Last name" name="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Phone number" name="phone" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Country" name="country" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="City" name="city" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Street" name="street" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Street number" name="number" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Zip code" name="zipCode" required>
+        </mat-form-field>
+
+        <div>
+            <mat-checkbox #checkTerms>I accept terms and conditions.</mat-checkbox>
+            <p>&nbsp;</p>
+        </div>
+  
+        <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid || !checkTerms.checked ">Submit</button>
+    </form>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <p>Already have an account?</p>
+        <p>You can log-in <a class="auth-link" routerLink="/login">here</a>!</p>
+    </div>
+    
+</section>

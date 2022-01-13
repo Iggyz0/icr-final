@@ -1,0 +1,22 @@
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px"
+    #f="ngForm" (ngSubmit)="onSubmit(f)">
+  
+        <mat-form-field>
+            <input type="text" ngModel matInput placeholder="Username" name="username"
+            required #usernameInput="ngModel">
+            
+        </mat-form-field>
+  
+        <mat-form-field>
+            <input type="password" ngModel matInput placeholder="Password" name="password"
+            required #userInput="ngModel">
+        </mat-form-field>
+  
+        <button type="submit" mat-raised-button color="warn" [disabled]="f.invalid">Submit</button>
+    </form>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <p>Don't have an account?</p>
+        <p>You can register <a class="auth-link" routerLink="/signup">here</a>!</p>
+    </div>
+</section>

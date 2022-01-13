@@ -1,0 +1,41 @@
+.appcomp {
+    min-height: 120vh;
+    /* background-image: url(https://i.imgur.com/zuugiTD.jpeg);
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* overflow: auto; */
+    position: relative;
+}
+
+.appcomp * {
+    z-index: 1;
+}
+
+.app-content {
+    position: relative;
+}
+
+.tool-bar {
+    background: transparent !important;
+    z-index: 5 !important;
+}
+
+.logo > a > img {
+    height: 64px;
+}
+  
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.logoutLink {
+    cursor: pointer;
+}
+
+#footer{
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}

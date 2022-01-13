@@ -1,0 +1,116 @@
+<!-- <div class="dialog-top">
+    <button mat-button [mat-dialog-close]="true">
+      <mat-icon matListIcon>close</mat-icon>
+    </button>
+</div> -->
+
+<mat-dialog-content fxFlex="100%">
+
+    <div class="cart-wrapper" fxFlex="100%" fxLayout="column" fxLayoutAlign="start center">
+        <div class="cart-content-wrapper" fxFlex="90%" fxFill fxLayout="row nowrap" fxLayoutAlign="center start">
+      
+          <div class="cart-table" fxFlex="100%" fxFill>
+      
+            <mat-table [dataSource]="cartSource" matSort class="mat-elevation-z8">
+              <ng-container matColumnDef="nummero">
+                <mat-header-cell *matHeaderCellDef mat-sort-header disabled>No.</mat-header-cell>
+                <mat-cell *matCellDef="let element; let i = index">{{ (pag.pageIndex * pag.pageSize) + (i + 1) }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="imagePath">
+                <mat-header-cell *matHeaderCellDef mat-sort-header disabled>Image</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <div class="cart-image-container" fxFlex fxLayout="column" fxLayoutAlign="center start">
+                    <img src="{{ element.product.imagePath }}"/>
+                  </div>
+                </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.name }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="category">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Category</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.category }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="subCategory">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Subcategory</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.subCategory }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="manufacturer">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Manufacturer</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.manufacturer }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="address.city">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>City</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.address.city }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="score">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Score</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.score | number: '1.0-1' }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="price">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.price }}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="leftInStock">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Left in stock</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.product.leftInStock }}</mat-cell>
+              </ng-container>
+      
+              <ng-container matColumnDef="quantity">
+                <mat-header-cell class="padding-left-right" *matHeaderCellDef mat-sort-header >Quantity</mat-header-cell>
+                <mat-cell class="padding-left-right" *matCellDef="let element" fxFlex >
+      
+                  <div fxFlex="100%" style="overflow: hidden;">
+                    <div fxFlex="50%">
+                      <mat-form-field fxFlex="100%">
+                        <input
+                          #qValue
+                          disabled
+                          type="number"
+                          matInput
+                          name="quantity"
+                          min="1"
+                          max="element.product.leftInStock"
+                          [value]="element.quantity"
+                          />
+                      </mat-form-field>
+                    </div>
+                  </div>
+      
+                </mat-cell>
+              </ng-container>
+      
+              <ng-container matColumnDef="remove">
+                <mat-header-cell *matHeaderCellDef mat-sort-header disabled>Remove</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <button mat-raised-button color="warn" (click)="removeFromCart(element)"><mat-icon>delete</mat-icon></button>
+                </mat-cell>
+              </ng-container>
+      
+              <ng-container matColumnDef="disclaimer">
+                <mat-footer-cell *matFooterCellDef colspan="12">
+                  <b>Total items in your cart: &nbsp; {{ getCartSize() }}</b>
+                </mat-footer-cell>
+              </ng-container>
+      
+              <mat-header-row *matHeaderRowDef="displayedCartColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedCartColumns;"></mat-row>
+      
+              <mat-footer-row *matFooterRowDef="['disclaimer']"></mat-footer-row>
+      
+      
+            </mat-table>
+            <mat-paginator #pag [pageSize]="3" [pageSizeOptions]="[3, 5, 10]" showFirstLastButtons ></mat-paginator>
+            <div fxLayoutAlign="center start">
+                <button mat-raised-button color="warn" (click)="updateOrderItems()">Update order</button>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+      
+      
+
+</mat-dialog-content>

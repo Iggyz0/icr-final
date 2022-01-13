@@ -1,0 +1,49 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// default 500: #2f5ed7
+// default 700: #1859ff
+
+// #1276bc
+
+$mat-primary-scheme: (
+  100: #d1c4e9,
+  500: #2697e7,
+  700: #1276bc,
+  contrast: (
+    100: rgba(0,0,0,0.87),
+    500: #ffffff,
+    700: #ffffff,
+  )
+);
+$mat-accent-scheme: (
+  100: #ffe57f,
+  500: #ffd740,
+  700: #ffc400,
+  contrast: (
+    100: rgba(0,0,0,0.87),
+    500: rgba(0,0,0,0.87),
+    700: #ffffff,
+  )
+);
+$mat-primary-palette: mat-palette($mat-primary-scheme);
+$mat-accent-palette: mat-palette($mat-accent-scheme);
+
+$app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
+
+@include angular-material-theme($app-light-theme);
+
+// following section is for dark mode.
+// use appropriate class name for darkMode
+$app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
+.darkMode {
+  @include angular-material-theme($app-dark-theme);
+  
+  mat-card-title {
+    // color: rgb(95 163 255) !important;
+    color: white !important;
+  }
+
+  
+}
+

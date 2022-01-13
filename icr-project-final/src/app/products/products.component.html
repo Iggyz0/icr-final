@@ -1,0 +1,193 @@
+<div fxFlex fxLayout="column wrap" fxLayoutGap="10px">
+  <div fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-form-field color="primary" fxFlexAlign="center">
+      <input
+        type="text"
+        ngModel
+        matInput
+        placeholder="Search products..."
+        name="search"
+        search
+        #searchInput="ngModel"
+        [(ngModel)]="searchValue"
+        (keyup)="search()"
+      />
+    </mat-form-field>
+    <span> &nbsp; | &nbsp; </span>
+    <div>
+      <table matSort (matSortChange)="sortData($event)">
+        <tr>
+          <th mat-sort-header="name">Name</th>&nbsp;
+          <th mat-sort-header="score">Score</th>&nbsp;
+          <th mat-sort-header="price">Price</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div fxLayoutAlign="center center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+  <div fxFlex fxLayout="row wrap">
+    <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
+      <h3>Filter search results:</h3>
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Price range:</b></p>
+        <ngx-slider
+          [value]="minValuePrice"
+          (valueChange)="minValuePrice = $event"
+          [highValue]="maxValuePrice"
+          (highValueChange)="maxValuePrice = $event"
+          [options]="optionsPrice"
+          ngModel
+          (ngModelChange)="search()"
+        >
+        </ngx-slider>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Category:</b></p>
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select [(ngModel)]="catValue" (selectionChange)="search()" [disabled]="chekBox.checked">
+            <mat-option value="any">Any</mat-option>
+            <mat-option *ngFor="let test of cat | keyvalue" [value]="test.key">
+              {{ test.key }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <mat-checkbox
+          class="example-margin"
+          [(ngModel)]="isChecked"
+          (change)="search()"
+          #chekBox
+        >
+          Display only favorite categories
+        </mat-checkbox>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Sub-category:</b></p>
+        <mat-form-field appearance="fill">
+          <mat-label>Sub-category</mat-label>
+          <mat-select [(ngModel)]="subCatValue" (selectionChange)="search()" [disabled]="chekBox.checked">
+            <mat-option value="any">Any</mat-option>
+            <mat-option *ngFor="let test of cat.get(catValue)" [value]="test">
+              {{ test }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Score:</b></p>
+        <ngx-slider
+          [(value)]="minValueScore"
+          [(highValue)]="maxValueScore"
+          [options]="optionsScore"
+          ngModel
+          (ngModelChange)="search()"
+        >
+          >
+        </ngx-slider>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Quantity:</b></p>
+        <ngx-slider
+          [value]="minValueStock"
+          (valueChange)="minValueStock = $event"
+          [highValue]="maxValueStock"
+          (highValueChange)="maxValueStock = $event"
+          [options]="optionsStock"
+          ngModel
+          (ngModelChange)="search()"
+        >
+          >
+        </ngx-slider>
+      </div>
+
+      <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+        <p><b>Distance (Cities):</b></p>
+        <mat-form-field appearance="fill">
+          <mat-label>Distance</mat-label>
+          <mat-select [(ngModel)]="cityValue" (selectionChange)="search()">
+            <mat-option value="any">Any</mat-option>
+            <mat-option *ngFor="let city of cities" [value]="city">
+              {{ city }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      
+    </div>
+    <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">
+      
+      <mat-card
+        class="example-card"
+        *ngFor="
+          let product of data | paginate: { itemsPerPage: 8, currentPage: p }
+        "
+        fxFlex
+        fxLayout="column wrap"
+        fxLayoutAlign="center center"
+        (click)="singleProductDetails(product.id)"
+      >
+        <mat-card-content style="border-bottom: 1px solid lightgray;"
+          fxFlex
+          fxLayout="column wrap"
+          fxLayoutAlign="end center"
+        >
+          <img
+            mat-card-image
+            src="{{ product.imagePath }}"
+            alt="{{ product.name }}"
+            class="matCardImage"
+          />
+        </mat-card-content>
+        <mat-card-header fxFill fxLayout="column nowrap" fxLayoutAlign="center start">
+          <div fxFill fxLayoutAlign="center center">
+            <mat-card-title fxFlex="100%" fxFill fxLayoutAlign="center start" class="dont-break-out truncate text-align-center">
+              <div fxFlex fxLayoutAlign="center center">
+                {{product.name}}
+              </div>
+            </mat-card-title>
+          </div>
+          <div fxFill fxLayoutAlign="center center">
+            <mat-card-subtitle fxFlex="90%" fxFill fxLayoutAlign="space-between center" fxLayout="row nowrap" class="text-align-center" style="border-top: 1px solid lightgray;">
+              <div fxLayoutAlign="row nowrap"> 
+
+                <div fxLayoutAlign="center center">
+                  <star-rating fxFlex
+                  [value]="product.score"
+                  [totalstars]="5"
+                  checkedcolor="#ffd740"
+                  uncheckedcolor="gray"
+                  size="24px"
+                  readonly="true"
+                  ></star-rating>
+                </div>
+                <div fxLayoutAlign="center center" class="text-align-center">
+                  ({{ product.score | number: '1.0-1' }})
+                </div>
+
+              </div>
+              <div>
+                <b>{{ product.price | currency }}</b>
+              </div>
+            </mat-card-subtitle>
+          </div>
+        </mat-card-header>
+      </mat-card>
+
+    </div>
+  </div>
+  <div fxLayoutAlign="center center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

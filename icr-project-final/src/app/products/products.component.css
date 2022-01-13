@@ -1,0 +1,84 @@
+.example-card {
+    max-width: 355px;
+    max-height: 500px;
+    border: 1px solid gray;
+}
+
+.example-card:hover {
+    border: 2px solid #2697e7;
+    box-shadow: 1px 1px 20px darkcyan;
+    animation: 0.3s;
+}
+
+mat-card {
+    padding: 0% !important;
+    margin-top: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+mat-card-subtitle{
+    font-size:18px;
+    text-align: center;
+    margin: 0 !important;
+}
+
+mat-icon {
+    font-size: 18px;
+}
+
+mat-card-title{
+    color:rgb(0, 55, 128);
+    font-size:20px;
+    text-align: start;
+}
+
+mat-card-content {
+    min-width: 350px;
+    min-height: 250px;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    /* background-image: url(https://i.imgur.com/s7SDEey.png); */
+    background-image: url('../../assets/img-container-background.png');
+}
+
+mat-card-content > img {
+    width: 350px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.eighty-percent {
+    max-width: 80%;
+    flex: 0 !important;
+}
+
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.truncate {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

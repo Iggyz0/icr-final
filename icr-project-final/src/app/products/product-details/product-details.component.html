@@ -1,0 +1,190 @@
+<div class="dialog-top">
+  <button mat-button [mat-dialog-close]="true">
+    <mat-icon matListIcon>close</mat-icon>
+  </button>
+</div>
+<!-- <div style="height: 10px;"></div> -->
+<mat-dialog-content fxLayout="row nowrap" fxLayoutAlign="start start">
+  <div fxFlex="75%" fxLayout="column wrap" fxLayoutAlign="start center">
+    <div class="top-div model-viewer-wrap">
+      <model-viewer
+        fxFlexFill
+        id="reveal"
+        camera-controls
+        alt="A 3D model of a sphere"
+        loading="eager"
+        autoplay
+        src="{{ data.modelPath }}"
+        auto-rotate
+        shadow-intensity="1"
+        skybox-image="../../../assets/Studio.hdr"
+        rotation-per-second="40deg"
+      >
+      </model-viewer>
+    </div>
+
+    <div class="top-div" >
+      <h2>{{data.name}}</h2>
+    </div>
+
+    <div class="top-div" fxFlex fxLayout="column wrap" fxLayoutAlign="start start">
+      <mat-tab-group dynamicHeight mat-stretch-tabs class="tabovi">
+
+        <mat-tab label="Description">
+          <div >
+            <p>{{data.description}}</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Reviews">
+          <div fxFlex fxLayout="column nowrap" fxLayoutAlign="center start">
+            <!-- Leave a review -->
+            <div class="top-div user-review" *ngIf="canUserWriteReview" fxFlex fxLayout="column nowrap">
+              <div>
+                <p><b>Leave a review:</b></p>
+              </div>
+              <div fxFlex="100%" fxFill>
+                <mat-form-field appearance="fill" fxFlex="100%">
+                  <mat-label>Write your review here...</mat-label>
+                  <textarea #reviewContent class="scroll"
+                    fxFlex="100%"
+                    matInput
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="5"></textarea>
+                </mat-form-field>
+              </div>
+              <div fxFlex="100%" fxLayoutAlign="space-between center">
+                <div fxLayout="row nowrap" fxFlex="30%" fxLayoutAlign="start center" fxLayoutGap="15px">
+                  <div>
+                    <p><b>Your score:</b></p>
+                  </div>
+                  <div>
+                    <star-rating fxFlex #userStarRating
+                    [value]="0"
+                    [totalstars]="5"
+                    checkedcolor="#ffd740"
+                    uncheckedcolor="gray"
+                    size="24px"
+                    readonly="false"
+                    ></star-rating>
+                  </div>
+                </div>
+                <div>
+                  <button mat-raised-button color="primary" (click)="writeAReview(reviewContent.value, userStarRating.value)" [disabled]="reviewContent.value.trim().length == 0 || userStarRating.value == 0">Submit review</button>
+                </div>
+              </div>
+            </div>
+            <div class="top-div" *ngIf="!canUserWriteReview" fxFlex>
+              <p>Cannot write review. Item needs to be bought or you have already written one.</p>
+            </div>
+            <div class="top-div" *ngFor="let review of reviews" fxLayout="column nowrap">
+              <div fxFlex fxLayoutAlign="space-between" fxLayout="row nowrap">
+                <div>
+                  <b><p>{{review.user.username || review.user.id}} &nbsp;|&nbsp; {{ review.dateCreated | date }} </p></b>
+                </div>
+                <div fxLayoutAlign="center center">
+                  <star-rating fxFlex
+                  [value]="review.score"
+                  [totalstars]="5"
+                  checkedcolor="#ffd740"
+                  uncheckedcolor="gray"
+                  size="24px"
+                  readonly="true"
+                  ></star-rating>
+                </div>
+
+              </div>
+              <div id="description">
+                <p>{{review.comment}}</p>
+              </div>
+            </div>
+          </div>
+
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+
+  </div>
+  <span class="example-spacer"></span>
+  <div fxFlex="23%" fxLayout="column nowrap" fxLayoutAlign="start center" fxLayoutGap="5px">
+
+    <div fxFlex="100%" fxLayout="column nowrap" class="product-info" fxLayoutGap="15px">
+      <!-- <h3>Price: &nbsp;&nbsp; {{ data.price | currency }}</h3> -->
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <h3>Price:</h3>
+        <h3>{{ data.price | currency }}</h3>
+      </div>
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Left in stock:</b></div>
+        <div>{{ data.leftInStock }}</div>
+      </div>
+      <div fxFlex fxLayout="row no wrap">
+        <button mat-raised-button color="accent" (click)="addToCart()" [disabled]="data.leftInStock == 0 || isAlreadyInTheCart">
+          <mat-icon>add_shopping_cart</mat-icon>Add to cart
+        </button>
+        <button *ngIf="isAlreadyInTheCart" mat-raised-button color="warn" (click)="removeFromCart()">
+          <mat-icon>remove_shopping_cart</mat-icon>Remove
+        </button>
+      </div>
+      <div *ngIf="isAlreadyInTheCart">
+        <span><i>Already in your cart!</i></span>
+      </div>
+
+    </div>
+
+    <div fxFlex="100%" fxLayout="column nowrap" class="product-info" fxLayoutGap="15px">
+      <div fxFlex fxLayout="row nowrap">
+        <h3>Product details:</h3>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Manufacturer:</b></div>
+        <div>{{ data.manufacturer }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Rating:</b></div>
+        <div>{{ data.score | number: '1.0-1' }}&nbsp;<mat-icon class="golden" inline=true>star</mat-icon></div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Category:</b></div>
+        <div>{{ data.category }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Subcategory:</b></div>
+        <div>{{ data.subCategory }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Country:</b></div>
+        <div>{{ data.address.country }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>City:</b></div>
+        <div>{{ data.address.city }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Street:</b></div>
+        <div>{{ data.address.street }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Number:</b></div>
+        <div>{{ data.address.number }}</div>
+      </div>
+
+      <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+        <div><b>Zip code:</b></div>
+        <div>{{ data.address.zipCode }}</div>
+      </div>
+
+    </div>
+
+  </div>
+</mat-dialog-content>

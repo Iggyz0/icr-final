@@ -1,0 +1,54 @@
+<div class="dialog-top">
+  <button mat-button [mat-dialog-close]="true">
+    <mat-icon matListIcon>close</mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+
+  <div class="top-div user-review" fxFlex fxLayout="column nowrap">
+    <div>
+      <p><b>Update a review:</b></p>
+    </div>
+    <div fxFlex="100%" fxFill>
+      <mat-form-field appearance="fill" fxFlex="100%">
+        <mat-label>Update your review here...</mat-label>
+        <textarea class="scroll"
+          ngModel
+          placeholder="Your comment goes here..."
+          name="comment"
+          required
+          #commentInput="ngModel"
+          [(ngModel)]="data.comment"
+          fxFlex="100%"
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+    </div>
+    <div fxFlex="100%" fxLayoutAlign="space-between center">
+      <div fxLayout="row nowrap" fxFlex="30%" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <div>
+          <p><b>Your score:</b></p>
+        </div>
+        <div>
+          <star-rating
+            fxFlex
+            [value]="data.score"
+            [totalstars]="5"
+            checkedcolor="#ffd740"
+            uncheckedcolor="gray"
+            size="24px"
+            #score
+            name="score"
+          ></star-rating>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="onSubmit(commentInput.value, score.value)" [disabled]="commentInput.value.trim().length == 0 || score.value == 0">Update review</button>
+      </div>
+    </div>
+  </div>
+
+</mat-dialog-content>

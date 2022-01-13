@@ -1,0 +1,46 @@
+<div fxFlex fxFlexFill fxLayout="column wrap" class="mat-app-background appcomp" [ngClass]="isDarkTheme? 'darkMode' : '' ">
+  <div fxFlex fxFlexFill class="app-content" fxLayout="column wrap">
+    <mat-toolbar color="primary" [ngClass]="isWelcomePage? 'tool-bar' : '' ">
+      <div class="logo">
+        <a routerLink="/"><img src="https://user-images.githubusercontent.com/82712969/123667024-0942af00-d83a-11eb-8565-840186886e1c.png"/></a>
+      </div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span><a routerLink="/">KVA shop</a></span>
+      <!-- <span class="example-spacer"></span> -->
+
+      <div fxFlex fxLayoutAlign="end" fxLayoutGap="10px">
+        <a routerLink="/products">Browse products</a>
+        &nbsp;
+        <a routerLink="/cart">
+          <mat-icon [matBadge]="amountInCart$ | async" matBadgeColor="warn">shopping_cart</mat-icon>
+        </a>
+        &nbsp; <div> | </div>
+        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/login">Login</a>
+        &nbsp;
+        <a *ngIf="!(isLoggedIn$ | async) as isLoggedIn" routerLink="/signup">Signup</a>
+        &nbsp;
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" routerLink="/profile">{{ currentUser | async }}</a>
+        &nbsp;
+        <a *ngIf="(isLoggedIn$ | async) as isLoggedIn" class="logoutLink" (click)="logout()">Logout</a>
+      </div>
+      &nbsp;
+      &nbsp;
+      <div>
+        <mat-slide-toggle (change)="toggleTheme()" [checked]="isDarkTheme">
+          <mat-icon>dark_mode</mat-icon>
+        </mat-slide-toggle>
+      </div>
+    </mat-toolbar>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    <span class="example-spacer"></span>
+    <!-- footer -->
+    <mat-toolbar  id="footer" color="primary" fxLayoutAlign="center center">
+      <footer>Copyright &copy; Stefan Dimitrijević | Igor Marković - KVA project</footer>
+    </mat-toolbar>
+  </div>
+
+</div>
