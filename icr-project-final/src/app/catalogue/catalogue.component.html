@@ -1,4 +1,4 @@
-<div fxFlex fxLayout="column wrap" fxLayoutGap="10px">
+<div fxFill fxLayout="column wrap" fxLayoutGap="10px">
     <div fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="10px">
         <!-- search and sort -->
         <mat-form-field color="primary" fxFlexAlign="center">
@@ -30,14 +30,16 @@
         <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div> -->
 
-    <div fxFlex fxLayout="row wrap">
+    <div fxLayout="row wrap">
         
         <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
             <!-- kriterijumi -->
             <span>kriterijumi</span>
         </div>
 
-        <div fxFlex="80%" fxLayout="row wrap" fxLayoutAlign="center start">
+        <mat-divider [vertical]="true"></mat-divider>
+
+        <div fxFlex="78%" fxLayout="row wrap" fxLayoutAlign="center start">
             <!-- postavke itd. MAT KARTICE -->
             <!-- <app-item *ngFor="let showpiece of items" [item]="showpiece" ></app-item> -->
 

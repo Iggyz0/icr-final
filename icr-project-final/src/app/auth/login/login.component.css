@@ -1,3 +1,34 @@
 .auth-link {
     color: #2697e7;
 }
+
+.marginTop {
+    margin-top: 2em;
+}
+
+.marginTopFormElements {
+    margin-top: 1em;
+}
+
+.formDecoration {
+    /* border: 1px solid #ccc!important; */
+    border: 1px solid rgba(204,204,204,0.6);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.loginHeaderTop {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: start;
+}
+
+.loginHeaderBot {
+    font-size: 1em;
+    text-align: center;
+}
+
+.registerLink {
+    text-decoration: none;
+    color: #2697e7;
+}

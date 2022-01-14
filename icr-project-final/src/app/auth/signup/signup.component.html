@@ -1,46 +1,50 @@
-<section fxLayout="column" fxLayoutAlign="center center">
+<section fxLayout="column" fxLayoutAlign="center center" class="marginTop">
   <form
     fxLayout="column"
     fxLayoutAlign="center center"
-    fxLayoutGap="5px"
     #f="ngForm"
     (ngSubmit)="onSubmit(f)"
+    class="formDecoration fixOverlap"
   >
-    <mat-form-field>
+    <div fxFill>
+      <p fxFill class="loginHeaderTop">Please fill out the form:</p>
+      <mat-divider fxFill class="marginTopFormElements"></mat-divider>
+    </div>
+    <mat-form-field fxFill appearance="outline" class="marginTopFormElements">
       <mat-label>First name: </mat-label>
       <input type="text" name="ime" matInput ngModel/> </mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Surname: </mat-label>
       <input type="text" name="prezime" matInput ngModel /> </mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Username: </mat-label>
       <input type="text" name="username" matInput ngModel/></mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Password: </mat-label>
       <input type="password" name="password" matInput ngModel/></mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Address: </mat-label>
       <input type="text" name="adresa" matInput ngModel/></mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Email: </mat-label>
       <input type="email" name="email" matInput ngModel/></mat-form-field
     >
-
-    <mat-form-field>
+    <mat-form-field fxFill appearance="outline">
       <mat-label>Phone number: </mat-label>
       <input type="tel" name="telefon" matInput ngModel/></mat-form-field
     >
 
-    <button mat-raised-button color="primary" type="submit">Register</button>
+    <button fxFill mat-raised-button color="primary" type="submit">Register</button>
+
+    <div fxFill>
+      <mat-divider fxFill class="marginTopFormElements"></mat-divider>
+      <p fxFill class="loginHeaderBot marginTopFormElements">Already have an account?</p>
+      <p fxFill class="loginHeaderBot"><a class="registerLink" routerLink="/login">You may login here.</a></p>
+    </div>
   </form>
 </section>
