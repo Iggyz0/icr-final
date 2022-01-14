@@ -1,15 +1,26 @@
-<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+<div fxLayout="column" fxLayoutAlign="center center" class="marginTop">
+  <div fxLayout="column">
+    <p>You may review and edit your personal information here:</p>
+  </div>
   <form
     #forma="ngForm"
     (ngSubmit)="update(forma)"
     fxLayout="column"
     fxLayoutAlign="center center"
-    fxLayoutGap="5px"
+    class="formDecoration"
   >
-    <mat-form-field>
+
+    <div fxFill>
+      <p fxFill class="loginHeaderTop">Your details:</p>
+      <mat-divider fxFill class="marginTopFormElements"></mat-divider>
+    </div>
+
+    <mat-form-field appearance="standard">
+      <mat-label>First name</mat-label>
       <input type="text" matInput [(ngModel)]="userData.ime" name="ime" />
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Surname</mat-label>
       <input
         type="text"
         matInput
@@ -17,7 +28,8 @@
         name="prezime"
       />
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Password</mat-label>
       <input
         type="password"
         matInput
@@ -25,7 +37,8 @@
         name="password"
       />
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Email</mat-label>
       <input
         type="email"
         matInput
@@ -33,7 +46,8 @@
         name="email"
       />
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Phone number</mat-label>
       <input
         type="tel"
         matInput
@@ -41,7 +55,8 @@
         name="telefon"
       />
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Address</mat-label>
       <input
         type="text"
         matInput
@@ -51,6 +66,6 @@
     </mat-form-field>
     <!-- <input type="text" matInput [(ngModel)]="userData." name="ime" /> -->
     <!-- NOTE: postavke ^ -->
-    <button mat-raised-button type="submit">Update info</button>
+    <button mat-raised-button color="primary" type="submit">Update info</button>
   </form>
-</section>
+</div>

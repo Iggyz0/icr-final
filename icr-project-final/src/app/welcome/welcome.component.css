@@ -20,3 +20,16 @@
     /* height: calc(100vh - 64px); */
     height: 100vh;
 }
+
+.paddingAllAround {
+    padding: 1.5em;
+}
+
+.textInTheMiddle > p {
+    text-align: start;
+    font-size: 1.25em;
+}
+
+.imagesInTheMiddle > img {
+    border-radius: 1em;
+}

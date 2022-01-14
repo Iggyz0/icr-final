@@ -21,7 +21,7 @@ a{
 }
 
 .transparentBg {
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     z-index: 2 !important;
 }
 
@@ -83,11 +83,17 @@ mat-toolbar a, .titleInToolbar {
     width: 100%;
     transition: 0.1s linear;
     top: 0px;
-    background-color: #3f3c47 !important;
 }
 
 .notFixedToolbar {
     position: static;
     transition: 0.1s linear;
+}
+
+.fixedToolbarColor {
+    background-color: #3f3c47 !important;
+}
+
+.notFixedToolbarColor {
     background-color: transparent;
 }
