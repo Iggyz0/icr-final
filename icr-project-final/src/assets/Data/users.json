@@ -11,7 +11,28 @@
       "adresa": "0716 Independence Court"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 1,
+        "eksponat": [
+          {
+            "id": 1,
+            "naziv": "Ines",
+            "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+            "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+            "vrsta": "Jacinthe",
+            "cena": 199,
+            "vremeObilaska": 59,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 59,
+        "ukupnaCena": 199,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 2,
@@ -25,7 +46,28 @@
       "adresa": "86 Havey Trail"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 2,
+        "eksponat": [
+          {
+            "id": 1,
+            "naziv": "Ines",
+            "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+            "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+            "vrsta": "Jacinthe",
+            "cena": 199,
+            "vremeObilaska": 59,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 59,
+        "ukupnaCena": 199,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 3,
@@ -39,7 +81,28 @@
       "adresa": "19985 Esker Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 3,
+        "eksponat": [
+          {
+            "id": 1,
+            "naziv": "Ines",
+            "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+            "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+            "vrsta": "Jacinthe",
+            "cena": 199,
+            "vremeObilaska": 59,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 59,
+        "ukupnaCena": 199,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 4,
@@ -53,7 +116,28 @@
       "adresa": "20 Welch Point"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 4,
+        "eksponat": [
+          {
+            "id": 1,
+            "naziv": "Ines",
+            "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+            "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+            "vrsta": "Jacinthe",
+            "cena": 199,
+            "vremeObilaska": 59,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 59,
+        "ukupnaCena": 199,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 5,
@@ -67,7 +151,28 @@
       "adresa": "4886 Northfield Park"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 5,
+        "eksponat": [
+          {
+            "id": 1,
+            "naziv": "Ines",
+            "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+            "slika": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+            "vrsta": "Jacinthe",
+            "cena": 199,
+            "vremeObilaska": 59,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 59,
+        "ukupnaCena": 199,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 6,
@@ -81,7 +186,28 @@
       "adresa": "890 Pankratz Way"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 6,
+        "eksponat": [
+          {
+            "id": 3,
+            "naziv": "Gannie",
+            "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+            "slika": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+            "vrsta": "Cosetta",
+            "cena": 767,
+            "vremeObilaska": 454,
+            "zemljaPorekla": "Japan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 454,
+        "ukupnaCena": 767,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 7,
@@ -95,7 +221,28 @@
       "adresa": "0816 Crest Line Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 7,
+        "eksponat": [
+          {
+            "id": 3,
+            "naziv": "Gannie",
+            "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+            "slika": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+            "vrsta": "Cosetta",
+            "cena": 767,
+            "vremeObilaska": 454,
+            "zemljaPorekla": "Japan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 454,
+        "ukupnaCena": 767,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 8,
@@ -109,7 +256,28 @@
       "adresa": "3 Ohio Plaza"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 8,
+        "eksponat": [
+          {
+            "id": 3,
+            "naziv": "Gannie",
+            "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+            "slika": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+            "vrsta": "Cosetta",
+            "cena": 767,
+            "vremeObilaska": 454,
+            "zemljaPorekla": "Japan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 454,
+        "ukupnaCena": 767,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 9,
@@ -123,7 +291,28 @@
       "adresa": "2 Namekagon Street"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 9,
+        "eksponat": [
+          {
+            "id": 3,
+            "naziv": "Gannie",
+            "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+            "slika": "http://dummyimage.com/163x100.png/5fa2dd/ffffff",
+            "vrsta": "Cosetta",
+            "cena": 767,
+            "vremeObilaska": 454,
+            "zemljaPorekla": "Japan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 454,
+        "ukupnaCena": 767,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 10,
@@ -137,7 +326,28 @@
       "adresa": "4 Graceland Place"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 10,
+        "eksponat": [
+          {
+            "id": 4,
+            "naziv": "Holden",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Danya",
+            "cena": 946,
+            "vremeObilaska": 57,
+            "zemljaPorekla": "Kazakhstan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 57,
+        "ukupnaCena": 946,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 11,
@@ -151,7 +361,28 @@
       "adresa": "016 Laurel Parkway"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 11,
+        "eksponat": [
+          {
+            "id": 4,
+            "naziv": "Holden",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Danya",
+            "cena": 946,
+            "vremeObilaska": 57,
+            "zemljaPorekla": "Kazakhstan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 57,
+        "ukupnaCena": 946,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 12,
@@ -165,7 +396,28 @@
       "adresa": "7058 Arkansas Plaza"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 12,
+        "eksponat": [
+          {
+            "id": 4,
+            "naziv": "Holden",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Danya",
+            "cena": 946,
+            "vremeObilaska": 57,
+            "zemljaPorekla": "Kazakhstan",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 57,
+        "ukupnaCena": 946,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 13,
@@ -179,7 +431,28 @@
       "adresa": "440 Elka Park"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 13,
+        "eksponat": [
+          {
+            "id": 6,
+            "naziv": "Hynda",
+            "opis": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
+            "slika": "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
+            "vrsta": "Emmye",
+            "cena": 376,
+            "vremeObilaska": 329,
+            "zemljaPorekla": "Tanzania",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 329,
+        "ukupnaCena": 376,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 14,
@@ -193,7 +466,28 @@
       "adresa": "50493 Menomonie Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 14,
+        "eksponat": [
+          {
+            "id": 7,
+            "naziv": "Eloisa",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+            "vrsta": "Portia",
+            "cena": 961,
+            "vremeObilaska": 187,
+            "zemljaPorekla": "Greece",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 187,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 15,
@@ -207,7 +501,28 @@
       "adresa": "75 Oriole Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 15,
+        "eksponat": [
+          {
+            "id": 7,
+            "naziv": "Eloisa",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+            "vrsta": "Portia",
+            "cena": 961,
+            "vremeObilaska": 187,
+            "zemljaPorekla": "Greece",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 187,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 16,
@@ -221,7 +536,28 @@
       "adresa": "7 Esch Place"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 16,
+        "eksponat": [
+          {
+            "id": 7,
+            "naziv": "Eloisa",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+            "vrsta": "Portia",
+            "cena": 961,
+            "vremeObilaska": 187,
+            "zemljaPorekla": "Greece",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 187,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 17,
@@ -235,7 +571,28 @@
       "adresa": "1 Forest Plaza"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 17,
+        "eksponat": [
+          {
+            "id": 7,
+            "naziv": "Eloisa",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+            "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
+            "vrsta": "Portia",
+            "cena": 961,
+            "vremeObilaska": 187,
+            "zemljaPorekla": "Greece",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 187,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 18,
@@ -249,7 +606,28 @@
       "adresa": "3 Rockefeller Alley"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 18,
+        "eksponat": [
+          {
+            "id": 8,
+            "naziv": "Gardner",
+            "opis": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+            "slika": "http://dummyimage.com/167x100.png/ff4444/ffffff",
+            "vrsta": "Allison",
+            "cena": 738,
+            "vremeObilaska": 81,
+            "zemljaPorekla": "Brazil",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 81,
+        "ukupnaCena": 738,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 19,
@@ -263,7 +641,28 @@
       "adresa": "2 Pierstorff Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 19,
+        "eksponat": [
+          {
+            "id": 8,
+            "naziv": "Gardner",
+            "opis": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+            "slika": "http://dummyimage.com/167x100.png/ff4444/ffffff",
+            "vrsta": "Allison",
+            "cena": 738,
+            "vremeObilaska": 81,
+            "zemljaPorekla": "Brazil",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 81,
+        "ukupnaCena": 738,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 20,
@@ -277,7 +676,28 @@
       "adresa": "8 High Crossing Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 20,
+        "eksponat": [
+          {
+            "id": 9,
+            "naziv": "Agustin",
+            "opis": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
+            "slika": "http://dummyimage.com/179x100.png/5fa2dd/ffffff",
+            "vrsta": "Tudor",
+            "cena": 782,
+            "vremeObilaska": 96,
+            "zemljaPorekla": "Thailand",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 96,
+        "ukupnaCena": 782,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 21,
@@ -291,7 +711,28 @@
       "adresa": "9 Scott Hill"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 21,
+        "eksponat": [
+          {
+            "id": 10,
+            "naziv": "Alayne",
+            "opis": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+            "slika": "http://dummyimage.com/116x100.png/cc0000/ffffff",
+            "vrsta": "Wolfgang",
+            "cena": 1488,
+            "vremeObilaska": 376,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 376,
+        "ukupnaCena": 1488,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 22,
@@ -305,7 +746,28 @@
       "adresa": "2072 Fairfield Drive"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 22,
+        "eksponat": [
+          {
+            "id": 13,
+            "naziv": "Phillie",
+            "opis": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+            "slika": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
+            "vrsta": "Kristel",
+            "cena": 1140,
+            "vremeObilaska": 177,
+            "zemljaPorekla": "Philippines",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 177,
+        "ukupnaCena": 1140,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 23,
@@ -319,7 +781,28 @@
       "adresa": "3 Starling Road"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 23,
+        "eksponat": [
+          {
+            "id": 13,
+            "naziv": "Phillie",
+            "opis": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+            "slika": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
+            "vrsta": "Kristel",
+            "cena": 1140,
+            "vremeObilaska": 177,
+            "zemljaPorekla": "Philippines",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 177,
+        "ukupnaCena": 1140,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 24,
@@ -333,7 +816,28 @@
       "adresa": "673 Scofield Way"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 24,
+        "eksponat": [
+          {
+            "id": 13,
+            "naziv": "Phillie",
+            "opis": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+            "slika": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
+            "vrsta": "Kristel",
+            "cena": 1140,
+            "vremeObilaska": 177,
+            "zemljaPorekla": "Philippines",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 177,
+        "ukupnaCena": 1140,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 25,
@@ -347,7 +851,28 @@
       "adresa": "74 Everett Center"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 25,
+        "eksponat": [
+          {
+            "id": 14,
+            "naziv": "Andria",
+            "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+            "slika": "http://dummyimage.com/133x100.png/dddddd/000000",
+            "vrsta": "Binnie",
+            "cena": 117,
+            "vremeObilaska": 522,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 522,
+        "ukupnaCena": 117,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 26,
@@ -361,7 +886,28 @@
       "adresa": "2 Bay Park"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 26,
+        "eksponat": [
+          {
+            "id": 14,
+            "naziv": "Andria",
+            "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+            "slika": "http://dummyimage.com/133x100.png/dddddd/000000",
+            "vrsta": "Binnie",
+            "cena": 117,
+            "vremeObilaska": 522,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 522,
+        "ukupnaCena": 117,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 27,
@@ -375,7 +921,28 @@
       "adresa": "841 Hooker Parkway"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 27,
+        "eksponat": [
+          {
+            "id": 15,
+            "naziv": "Ralph",
+            "opis": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+            "slika": "http://dummyimage.com/115x100.png/ff4444/ffffff",
+            "vrsta": "Danya",
+            "cena": 685,
+            "vremeObilaska": 137,
+            "zemljaPorekla": "Philippines",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 137,
+        "ukupnaCena": 685,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 28,
@@ -389,7 +956,28 @@
       "adresa": "99 Maryland Terrace"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 28,
+        "eksponat": [
+          {
+            "id": 15,
+            "naziv": "Ralph",
+            "opis": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
+            "slika": "http://dummyimage.com/115x100.png/ff4444/ffffff",
+            "vrsta": "Danya",
+            "cena": 685,
+            "vremeObilaska": 137,
+            "zemljaPorekla": "Philippines",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 137,
+        "ukupnaCena": 685,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 29,
@@ -403,7 +991,28 @@
       "adresa": "8338 Longview Point"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 29,
+        "eksponat": [
+          {
+            "id": 16,
+            "naziv": "Audrie",
+            "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Cheslie",
+            "cena": 961,
+            "vremeObilaska": 583,
+            "zemljaPorekla": "Czech Republic",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 583,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 30,
@@ -417,7 +1026,28 @@
       "adresa": "6337 Westend Drive"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 30,
+        "eksponat": [
+          {
+            "id": 16,
+            "naziv": "Audrie",
+            "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Cheslie",
+            "cena": 961,
+            "vremeObilaska": 583,
+            "zemljaPorekla": "Czech Republic",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 583,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 31,
@@ -431,7 +1061,28 @@
       "adresa": "5512 Old Shore Terrace"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 31,
+        "eksponat": [
+          {
+            "id": 16,
+            "naziv": "Audrie",
+            "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Cheslie",
+            "cena": 961,
+            "vremeObilaska": 583,
+            "zemljaPorekla": "Czech Republic",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 583,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 32,
@@ -445,7 +1096,28 @@
       "adresa": "50738 Gina Park"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 32,
+        "eksponat": [
+          {
+            "id": 16,
+            "naziv": "Audrie",
+            "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+            "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
+            "vrsta": "Cheslie",
+            "cena": 961,
+            "vremeObilaska": 583,
+            "zemljaPorekla": "Czech Republic",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 583,
+        "ukupnaCena": 961,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 33,
@@ -459,7 +1131,28 @@
       "adresa": "80 Dayton Lane"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 33,
+        "eksponat": [
+          {
+            "id": 17,
+            "naziv": "Clovis",
+            "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+            "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+            "vrsta": "Fanya",
+            "cena": 1329,
+            "vremeObilaska": 272,
+            "zemljaPorekla": "France",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 272,
+        "ukupnaCena": 1329,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 34,
@@ -473,7 +1166,28 @@
       "adresa": "56296 Anniversary Alley"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 34,
+        "eksponat": [
+          {
+            "id": 17,
+            "naziv": "Clovis",
+            "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+            "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+            "vrsta": "Fanya",
+            "cena": 1329,
+            "vremeObilaska": 272,
+            "zemljaPorekla": "France",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 272,
+        "ukupnaCena": 1329,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 35,
@@ -487,7 +1201,28 @@
       "adresa": "78 Mcbride Street"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 35,
+        "eksponat": [
+          {
+            "id": 17,
+            "naziv": "Clovis",
+            "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+            "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+            "vrsta": "Fanya",
+            "cena": 1329,
+            "vremeObilaska": 272,
+            "zemljaPorekla": "France",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 272,
+        "ukupnaCena": 1329,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 36,
@@ -501,7 +1236,28 @@
       "adresa": "2 International Street"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 36,
+        "eksponat": [
+          {
+            "id": 17,
+            "naziv": "Clovis",
+            "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+            "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+            "vrsta": "Fanya",
+            "cena": 1329,
+            "vremeObilaska": 272,
+            "zemljaPorekla": "France",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 272,
+        "ukupnaCena": 1329,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 37,
@@ -515,7 +1271,28 @@
       "adresa": "63 Moland Point"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 37,
+        "eksponat": [
+          {
+            "id": 17,
+            "naziv": "Clovis",
+            "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
+            "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
+            "vrsta": "Fanya",
+            "cena": 1329,
+            "vremeObilaska": 272,
+            "zemljaPorekla": "France",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 272,
+        "ukupnaCena": 1329,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 38,
@@ -529,7 +1306,28 @@
       "adresa": "920 Commercial Way"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 38,
+        "eksponat": [
+          {
+            "id": 18,
+            "naziv": "Charlie",
+            "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
+            "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+            "vrsta": "Emery",
+            "cena": 673,
+            "vremeObilaska": 482,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 482,
+        "ukupnaCena": 673,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 39,
@@ -543,7 +1341,28 @@
       "adresa": "3 Artisan Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 39,
+        "eksponat": [
+          {
+            "id": 18,
+            "naziv": "Charlie",
+            "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
+            "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+            "vrsta": "Emery",
+            "cena": 673,
+            "vremeObilaska": 482,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 482,
+        "ukupnaCena": 673,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 40,
@@ -557,7 +1376,28 @@
       "adresa": "059 Center Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 40,
+        "eksponat": [
+          {
+            "id": 18,
+            "naziv": "Charlie",
+            "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
+            "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+            "vrsta": "Emery",
+            "cena": 673,
+            "vremeObilaska": 482,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 482,
+        "ukupnaCena": 673,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 41,
@@ -571,7 +1411,28 @@
       "adresa": "0 Burrows Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 41,
+        "eksponat": [
+          {
+            "id": 18,
+            "naziv": "Charlie",
+            "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
+            "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
+            "vrsta": "Emery",
+            "cena": 673,
+            "vremeObilaska": 482,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 482,
+        "ukupnaCena": 673,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 42,
@@ -585,7 +1446,28 @@
       "adresa": "63138 Commercial Alley"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 42,
+        "eksponat": [
+          {
+            "id": 19,
+            "naziv": "Arny",
+            "opis": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+            "slika": "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+            "vrsta": "Betsy",
+            "cena": 1413,
+            "vremeObilaska": 199,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 199,
+        "ukupnaCena": 1413,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 43,
@@ -599,7 +1481,28 @@
       "adresa": "8 Dryden Junction"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 43,
+        "eksponat": [
+          {
+            "id": 19,
+            "naziv": "Arny",
+            "opis": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+            "slika": "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+            "vrsta": "Betsy",
+            "cena": 1413,
+            "vremeObilaska": 199,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 199,
+        "ukupnaCena": 1413,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 44,
@@ -613,7 +1516,28 @@
       "adresa": "76 Dahle Court"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 44,
+        "eksponat": [
+          {
+            "id": 19,
+            "naziv": "Arny",
+            "opis": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+            "slika": "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
+            "vrsta": "Betsy",
+            "cena": 1413,
+            "vremeObilaska": 199,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 199,
+        "ukupnaCena": 1413,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 45,
@@ -627,7 +1551,28 @@
       "adresa": "996 Trailsway Crossing"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 45,
+        "eksponat": [
+          {
+            "id": 20,
+            "naziv": "Louisette",
+            "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+            "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
+            "vrsta": "Corrianne",
+            "cena": 303,
+            "vremeObilaska": 206,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 206,
+        "ukupnaCena": 303,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 46,
@@ -641,7 +1586,28 @@
       "adresa": "7204 Hanover Court"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 46,
+        "eksponat": [
+          {
+            "id": 20,
+            "naziv": "Louisette",
+            "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+            "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
+            "vrsta": "Corrianne",
+            "cena": 303,
+            "vremeObilaska": 206,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 206,
+        "ukupnaCena": 303,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 47,
@@ -655,7 +1621,28 @@
       "adresa": "11 Moulton Hill"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 47,
+        "eksponat": [
+          {
+            "id": 20,
+            "naziv": "Louisette",
+            "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+            "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
+            "vrsta": "Corrianne",
+            "cena": 303,
+            "vremeObilaska": 206,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 206,
+        "ukupnaCena": 303,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 48,
@@ -669,7 +1656,28 @@
       "adresa": "35 Eagan Street"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 48,
+        "eksponat": [
+          {
+            "id": 20,
+            "naziv": "Louisette",
+            "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
+            "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
+            "vrsta": "Corrianne",
+            "cena": 303,
+            "vremeObilaska": 206,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 206,
+        "ukupnaCena": 303,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 49,
@@ -683,7 +1691,28 @@
       "adresa": "55858 Mitchell Hill"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 49,
+        "eksponat": [
+          {
+            "id": 21,
+            "naziv": "Virgilio",
+            "opis": "Fusce consequat. Nulla nisl.",
+            "slika": "http://dummyimage.com/247x100.png/dddddd/000000",
+            "vrsta": "Ax",
+            "cena": 581,
+            "vremeObilaska": 558,
+            "zemljaPorekla": "Ukraine",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 558,
+        "ukupnaCena": 581,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 50,
@@ -697,7 +1726,28 @@
       "adresa": "57 Oriole Plaza"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 50,
+        "eksponat": [
+          {
+            "id": 23,
+            "naziv": "Diego",
+            "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+            "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+            "vrsta": "Gasparo",
+            "cena": 84,
+            "vremeObilaska": 600,
+            "zemljaPorekla": "Poland",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 600,
+        "ukupnaCena": 84,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 51,
@@ -711,7 +1761,28 @@
       "adresa": "8 Summit Way"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 51,
+        "eksponat": [
+          {
+            "id": 23,
+            "naziv": "Diego",
+            "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+            "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+            "vrsta": "Gasparo",
+            "cena": 84,
+            "vremeObilaska": 600,
+            "zemljaPorekla": "Poland",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 600,
+        "ukupnaCena": 84,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 52,
@@ -725,7 +1796,28 @@
       "adresa": "68 4th Point"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 52,
+        "eksponat": [
+          {
+            "id": 23,
+            "naziv": "Diego",
+            "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+            "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+            "vrsta": "Gasparo",
+            "cena": 84,
+            "vremeObilaska": 600,
+            "zemljaPorekla": "Poland",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 600,
+        "ukupnaCena": 84,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 53,
@@ -739,7 +1831,28 @@
       "adresa": "26 International Center"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 53,
+        "eksponat": [
+          {
+            "id": 23,
+            "naziv": "Diego",
+            "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+            "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+            "vrsta": "Gasparo",
+            "cena": 84,
+            "vremeObilaska": 600,
+            "zemljaPorekla": "Poland",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 600,
+        "ukupnaCena": 84,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 54,
@@ -753,7 +1866,28 @@
       "adresa": "0869 Harbort Avenue"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 54,
+        "eksponat": [
+          {
+            "id": 24,
+            "naziv": "Georgia",
+            "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+            "vrsta": "Hamid",
+            "cena": 35,
+            "vremeObilaska": 110,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 110,
+        "ukupnaCena": 35,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 55,
@@ -767,7 +1901,28 @@
       "adresa": "755 Coleman Terrace"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 55,
+        "eksponat": [
+          {
+            "id": 24,
+            "naziv": "Georgia",
+            "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+            "vrsta": "Hamid",
+            "cena": 35,
+            "vremeObilaska": 110,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 110,
+        "ukupnaCena": 35,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 56,
@@ -781,7 +1936,28 @@
       "adresa": "7653 Cherokee Terrace"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 56,
+        "eksponat": [
+          {
+            "id": 24,
+            "naziv": "Georgia",
+            "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+            "vrsta": "Hamid",
+            "cena": 35,
+            "vremeObilaska": 110,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 110,
+        "ukupnaCena": 35,
+        "status": "zavrsen",
+        "ocena": 5.0
+      }
+    ]
   },
   {
     "id": 57,
@@ -795,7 +1971,28 @@
       "adresa": "21 Mockingbird Lane"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 57,
+        "eksponat": [
+          {
+            "id": 24,
+            "naziv": "Georgia",
+            "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+            "vrsta": "Hamid",
+            "cena": 35,
+            "vremeObilaska": 110,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 110,
+        "ukupnaCena": 35,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 58,
@@ -809,7 +2006,28 @@
       "adresa": "32 Autumn Leaf Circle"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 58,
+        "eksponat": [
+          {
+            "id": 24,
+            "naziv": "Georgia",
+            "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
+            "vrsta": "Hamid",
+            "cena": 35,
+            "vremeObilaska": 110,
+            "zemljaPorekla": "Colombia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 110,
+        "ukupnaCena": 35,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 59,
@@ -823,7 +2041,28 @@
       "adresa": "757 Victoria Parkway"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 59,
+        "eksponat": [
+          {
+            "id": 25,
+            "naziv": "Ellery",
+            "opis": "Proin at turpis a pede posuere nonummy.",
+            "slika": "http://dummyimage.com/133x100.png/5fa2dd/ffffff",
+            "vrsta": "Myrtie",
+            "cena": 486,
+            "vremeObilaska": 361,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 361,
+        "ukupnaCena": 486,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 60,
@@ -837,7 +2076,28 @@
       "adresa": "49 Petterle Drive"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 60,
+        "eksponat": [
+          {
+            "id": 25,
+            "naziv": "Ellery",
+            "opis": "Proin at turpis a pede posuere nonummy.",
+            "slika": "http://dummyimage.com/133x100.png/5fa2dd/ffffff",
+            "vrsta": "Myrtie",
+            "cena": 486,
+            "vremeObilaska": 361,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 361,
+        "ukupnaCena": 486,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 61,
@@ -851,7 +2111,28 @@
       "adresa": "1 Reindahl Circle"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 61,
+        "eksponat": [
+          {
+            "id": 26,
+            "naziv": "Susette",
+            "opis": "Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
+            "slika": "http://dummyimage.com/245x100.png/dddddd/000000",
+            "vrsta": "Guthrey",
+            "cena": 451,
+            "vremeObilaska": 222,
+            "zemljaPorekla": "Namibia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 222,
+        "ukupnaCena": 451,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 62,
@@ -865,7 +2146,28 @@
       "adresa": "41 Donald Junction"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 62,
+        "eksponat": [
+          {
+            "id": 27,
+            "naziv": "Janos",
+            "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+            "slika": "http://dummyimage.com/221x100.png/dddddd/000000",
+            "vrsta": "Kori",
+            "cena": 480,
+            "vremeObilaska": 224,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 224,
+        "ukupnaCena": 480,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 63,
@@ -879,7 +2181,28 @@
       "adresa": "14955 Grasskamp Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 63,
+        "eksponat": [
+          {
+            "id": 27,
+            "naziv": "Janos",
+            "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+            "slika": "http://dummyimage.com/221x100.png/dddddd/000000",
+            "vrsta": "Kori",
+            "cena": 480,
+            "vremeObilaska": 224,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 224,
+        "ukupnaCena": 480,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 64,
@@ -893,7 +2216,28 @@
       "adresa": "75 School Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 64,
+        "eksponat": [
+          {
+            "id": 27,
+            "naziv": "Janos",
+            "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+            "slika": "http://dummyimage.com/221x100.png/dddddd/000000",
+            "vrsta": "Kori",
+            "cena": 480,
+            "vremeObilaska": 224,
+            "zemljaPorekla": "Indonesia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 224,
+        "ukupnaCena": 480,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 65,
@@ -907,7 +2251,28 @@
       "adresa": "1723 Gale Way"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 65,
+        "eksponat": [
+          {
+            "id": 28,
+            "naziv": "Jody",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+            "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "vrsta": "Roana",
+            "cena": 239,
+            "vremeObilaska": 294,
+            "zemljaPorekla": "Armenia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 294,
+        "ukupnaCena": 239,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 66,
@@ -921,7 +2286,28 @@
       "adresa": "3577 Golf Pass"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 66,
+        "eksponat": [
+          {
+            "id": 28,
+            "naziv": "Jody",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+            "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "vrsta": "Roana",
+            "cena": 239,
+            "vremeObilaska": 294,
+            "zemljaPorekla": "Armenia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 294,
+        "ukupnaCena": 239,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 67,
@@ -935,7 +2321,28 @@
       "adresa": "16 Grayhawk Place"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 67,
+        "eksponat": [
+          {
+            "id": 28,
+            "naziv": "Jody",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+            "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "vrsta": "Roana",
+            "cena": 239,
+            "vremeObilaska": 294,
+            "zemljaPorekla": "Armenia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 294,
+        "ukupnaCena": 239,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 68,
@@ -949,7 +2356,28 @@
       "adresa": "0 Corscot Drive"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 68,
+        "eksponat": [
+          {
+            "id": 28,
+            "naziv": "Jody",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+            "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "vrsta": "Roana",
+            "cena": 239,
+            "vremeObilaska": 294,
+            "zemljaPorekla": "Armenia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 294,
+        "ukupnaCena": 239,
+        "status": "zavrsen",
+        "ocena": 2.0
+      }
+    ]
   },
   {
     "id": 69,
@@ -963,7 +2391,28 @@
       "adresa": "431 Corry Hill"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 69,
+        "eksponat": [
+          {
+            "id": 28,
+            "naziv": "Jody",
+            "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+            "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+            "vrsta": "Roana",
+            "cena": 239,
+            "vremeObilaska": 294,
+            "zemljaPorekla": "Armenia",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 294,
+        "ukupnaCena": 239,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 70,
@@ -977,7 +2426,28 @@
       "adresa": "0617 Steensland Road"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 70,
+        "eksponat": [
+          {
+            "id": 29,
+            "naziv": "Donetta",
+            "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+            "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+            "vrsta": "Arliene",
+            "cena": 1282,
+            "vremeObilaska": 307,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 307,
+        "ukupnaCena": 1282,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 71,
@@ -991,7 +2461,28 @@
       "adresa": "62656 Carioca Road"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 71,
+        "eksponat": [
+          {
+            "id": 29,
+            "naziv": "Donetta",
+            "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+            "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+            "vrsta": "Arliene",
+            "cena": 1282,
+            "vremeObilaska": 307,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 307,
+        "ukupnaCena": 1282,
+        "status": "zavrsen",
+        "ocena": 1.0
+      }
+    ]
   },
   {
     "id": 72,
@@ -1005,7 +2496,28 @@
       "adresa": "8 Becker Point"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 72,
+        "eksponat": [
+          {
+            "id": 29,
+            "naziv": "Donetta",
+            "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+            "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+            "vrsta": "Arliene",
+            "cena": 1282,
+            "vremeObilaska": 307,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 307,
+        "ukupnaCena": 1282,
+        "status": "zavrsen",
+        "ocena": 3.0
+      }
+    ]
   },
   {
     "id": 73,
@@ -1019,7 +2531,28 @@
       "adresa": "645 Garrison Park"
     },
     "omiljenePostavke": [],
-    "planer": []
+    "planer": [
+      {
+        "id": 73,
+        "eksponat": [
+          {
+            "id": 29,
+            "naziv": "Donetta",
+            "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+            "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
+            "vrsta": "Arliene",
+            "cena": 1282,
+            "vremeObilaska": 307,
+            "zemljaPorekla": "China",
+            "recenzije": []
+          }
+        ],
+        "ukupnoVreme": 307,
+        "ukupnaCena": 1282,
+        "status": "zavrsen",
+        "ocena": 4.0
+      }
+    ]
   },
   {
     "id": 74,
