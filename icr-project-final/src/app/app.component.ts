@@ -29,6 +29,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // @HostListener('df-response-received', ['$event']) update(payload: any){
+  //   const dialogFlowMessenger = document.querySelector('df-messenger');
+  //   const prtljag = payload.detail.response.queryResult.fulfillmentMessages[0].payload;
+  //   dialogFlowMessenger.renderCustomCard(prtljag);
+  // }
+
   korisnik$: BehaviorSubject<UserModel | null> = new BehaviorSubject<UserModel | null>(null);
 
   constructor(
