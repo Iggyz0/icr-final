@@ -1,0 +1,19 @@
+p {
+  word-wrap: break-word;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+    font-family: "Blackwood Castle";
+    src: url("font/Blackwood Castle.ttf");
+}
+
+h2{
+    font-family: Blackwood Castle;
+    font-size: 5em;
+}
