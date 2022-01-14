@@ -1,7 +1,8 @@
 <div fxFill fxLayout="column wrap" fxLayoutGap="10px">
     <div fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="10px">
         <!-- search and sort -->
-        <mat-form-field color="primary" fxFlexAlign="center">
+        <mat-form-field color="primary" fxFlexAlign="center" appearance="standard">
+            <mat-label>Search products...</mat-label>
             <input
               type="text"
               ngModel
@@ -32,9 +33,22 @@
 
     <div fxLayout="row wrap">
         
-        <div fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
+        <div class="custom-slider" fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
             <!-- kriterijumi -->
-            <span>kriterijumi</span>
+            <h3>Filter search results:</h3>
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Price range:</b></p>
+                <ngx-slider
+                [value]="minValuePrice"
+                (valueChange)="minValuePrice = $event"
+                [highValue]="maxValuePrice"
+                (highValueChange)="maxValuePrice = $event"
+                [options]="optionsPrice"
+                ngModel
+                (ngModelChange)="searchByPrice()"
+                >
+                </ngx-slider>
+            </div>
         </div>
 
         <mat-divider [vertical]="true"></mat-divider>
@@ -43,15 +57,14 @@
             <!-- postavke itd. MAT KARTICE -->
             <!-- <app-item *ngFor="let showpiece of items" [item]="showpiece" ></app-item> -->
 
-            <mat-card
+            <!-- <mat-card
                 class="example-card"
-                *ngFor="let item of items | paginate: { itemsPerPage: 8, currentPage: p }"
-                fxFlex
-                fxLayout="column wrap"
+                *ngFor="let item of displayedItems | paginate: { itemsPerPage: 8, currentPage: p }"
+                fxLayout="column nowrap"
                 fxLayoutAlign="center center"
             >
                 <mat-card-content style="border-bottom: 1px solid lightgray;"
-                fxFlex
+                fxFlex="70%"
                 fxLayout="column wrap"
                 fxLayoutAlign="end center"
                 >
@@ -74,19 +87,19 @@
                     <mat-card-subtitle fxFlex="90%" fxFill fxLayoutAlign="space-between center" fxLayout="row nowrap" class="text-align-center" style="border-top: 1px solid lightgray;">
                     <div fxLayoutAlign="row nowrap"> 
 
-                        <!-- <div fxLayoutAlign="center center">
+                        <div fxLayoutAlign="center center">
                         <star-rating fxFlex
-                        [value]="product.score"
+                        [value]="3"
                         [totalstars]="5"
                         checkedcolor="#ffd740"
                         uncheckedcolor="gray"
-                        size="24px"
+                        size="1em"
                         readonly="true"
                         ></star-rating>
                         </div>
                         <div fxLayoutAlign="center center" class="text-align-center">
-                        ({{ product.score | number: '1.0-1' }})
-                        </div> -->
+                        ({{ 3 | number: '1.0-1' }})
+                        </div>
 
                     </div>
                     <div>
@@ -95,14 +108,81 @@
                     </mat-card-subtitle>
                 </div>
                 </mat-card-header>
-            </mat-card>
+            </mat-card> -->
+
+            <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="1em">
+                <div style="width: calc(100% / 4.5); min-width: 329px; height: 450px; max-height: 450px;" class="cardContainer" fxLayout="column nowrap" fxLayoutAlign="center start" *ngFor="let item of displayedItems | paginate: { itemsPerPage: 12, currentPage: p }">
+                    <mat-card fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxFill>
+                        <img fxFlex="60%" fxFill mat-card-image src="{{item.slika}}" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden;">
+    
+                        <mat-card-title fxFlex fxFill fxLayoutAlign="start center">
+                            {{item.naziv}}
+                        </mat-card-title>
+
+                        <mat-card-content fxFlex fxFill fxLayoutAlign="start center">
+                            <p>{{item.vrsta}}</p>
+                        </mat-card-content>
+    
+                        <mat-card-content fxFlex fxFill fxLayoutAlign="end center">
+                            <p class="priceText">{{item.cena | currency}}</p>
+                        </mat-card-content>
+    
+                        <mat-card-content fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+                            <div fxLayoutAlign="row nowrap"> 
+                                <div fxLayoutAlign="center center">
+                                <star-rating fxFlex
+                                [value]="3"
+                                [totalstars]="5"
+                                checkedcolor="#ffd740"
+                                uncheckedcolor="gray"
+                                size="18px"
+                                readonly="true"
+                                ></star-rating>
+                                </div>
+                                <div fxLayoutAlign="center center" class="text-align-center">
+                                ({{ 3 | number: '1.0-1' }})
+                                </div>
+                            </div>
+                            <p>Tour time: <span class="tourTime">{{ item.vremeObilaska/60 | number: '1.0-0' }}min</span></p>
+                        </mat-card-content>
+    
+                        <mat-card-actions fxFlex fxLayoutAlign="center" fxFill>
+                            <button fxFill mat-raised-button color="primary">Details</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>
+
+            <!-- <div class="main" fxFlex fxLayout="column" fxLayoutAlign="center center"   style="width: 100%" >
+                <section fxFlex fxLayout="row wrap" fxLayoutAlign="space-around center" id="main_section">
+                    <mat-card *ngFor="let item of displayedItems | paginate: {itemsPerPage:8,currentPage:p}" class="example-card">
+                        <img fxFlex="65%" fxFill mat-card-image src="{{item.slika}}" alt="Photo" width="200px" height="300px" style="object-fit: contain;">
+    
+                        <mat-card-title fxFlex fxLayoutAlign="center">
+                            {{item.naziv}}
+                        </mat-card-title>
+    
+                        <mat-card-content fxFlex fxLayoutAlign="center">
+                            <h3>Price: {{item.cena}} €</h3>
+                        </mat-card-content>
+    
+                        <mat-card-content fxFlex fxLayoutAlign="center">
+                            <h3>Time: 4min</h3>
+                        </mat-card-content>
+    
+                        <mat-card-actions fxFlex fxLayoutAlign="center">
+                            <button mat-raised-button color="primary">Details</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </section>
+            </div> -->
 
         </div>
 
     </div>
 
-    <div fxLayoutAlign="center center">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <div fxLayoutAlign="center center" >
+        <pagination-controls (pageChange)="p = $event" class="my-pagination" style="margin-top: 2em;"></pagination-controls>
     </div>
 
 </div>

@@ -49,14 +49,15 @@ a{
 
 @keyframes goldenLinks {
     from {color: white;}
-    to {color: coral;}
+    to {color: #ffd740;}
 }
 
 .borderTopHover:hover {
-    border-top: 2px solid coral;
-    color: coral;
-    animation-name: goldenLinks;
-    animation-duration: 0.3s;
+    border-top: 2px solid #ffd740;
+    color: #ffd740;
+    /* animation-name: goldenLinks;
+    animation-duration: 0.3s; */
+    transition: 0.2s ease-in;
 }
 
 mat-toolbar a, .titleInToolbar {
@@ -96,4 +97,9 @@ mat-toolbar a, .titleInToolbar {
 
 .notFixedToolbarColor {
     background-color: transparent;
+}
+
+.activeRouteLink {
+    border-top: 2px solid #ffd740;
+    color: #ffd740 !important;
 }

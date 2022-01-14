@@ -33,34 +33,44 @@
       <span class="example-spacer"></span>
 
       <div fxFlex class="heightHundred" fxHide.lt-md fxLayoutGap="1em" fxLayoutAlign="center center">
-        <a class="borderTopHover toolbarLinks" routerLink="/"> Home </a>
-        <a
+        <a id="welcome" class="borderTopHover toolbarLinks"  routerLink="/"> Home </a>
+        <a  
+          id="catalogue"
           class="borderTopHover toolbarLinks"
           routerLink="/catalogue"
+          
           >Catalogue</a
         >
         <a
+          id="signup"
           class="borderTopHover toolbarLinks"
           routerLink="/signup"
           *ngIf="(korisnik$ | async) == null"
+          
           >Register</a
         >
         <a
+          id="login"
           class="borderTopHover toolbarLinks"
           *ngIf="(korisnik$ | async) == null as korisnik"
           routerLink="/login"
+          
           >Login</a
         >
-        <a class="borderTopHover toolbarLinks" routerLink="/aboutUs">About us</a>
-        <span *ngIf="(korisnik$ | async) != null">
-          Welcome, {{ (korisnik$ | async)?.username }}
-        </span>
+        <a id="aboutUs" class="borderTopHover toolbarLinks" routerLink="/aboutUs" >
+          About us
+        </a>
         <a
+          id="profile"
           class="borderTopHover toolbarLinks"
           *ngIf="(korisnik$ | async) != null"
           routerLink="/profile"
+          
           >Profile</a
         >
+        <span *ngIf="(korisnik$ | async) != null">
+          Welcome, {{ (korisnik$ | async)?.username }}
+        </span>
         <a
           class="borderTopHover toolbarLinks"
           class="hoverPointer"

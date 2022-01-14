@@ -1,12 +1,11 @@
-.example-card {
-    max-width: 355px;
-    max-height: 500px;
-    border: 1px solid gray;
-}
+/* .example-card {
+    max-width: calc(100% / 5);
+    max-height: 450px;
+} */
 
-.example-card:hover {
-    border: 2px solid #2697e7;
-    box-shadow: 1px 1px 20px darkcyan;
+/* .example-card:hover {
+    border: 1px solid #2697e7;
+    box-shadow: 1px 1px 14px darkcyan;
     animation: 0.3s;
 }
 
@@ -16,11 +15,30 @@ mat-card {
     margin-left: 5px;
     cursor: pointer;
 }
-
+ */
 .text-align-center {
     text-align: center;
 }
 
+img.mat-card-image {
+    margin: 0;
+}
+
+.cardContainer {
+    margin-top: 1em;
+}
+
+.tourTime {
+    font: 1.25em sans-serif;
+    font-weight: bold;
+}
+
+.priceText {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*  
 mat-card-subtitle{
     font-size:18px;
     text-align: center;
@@ -35,22 +53,22 @@ mat-card-title{
     color:rgb(0, 55, 128);
     font-size:20px;
     text-align: start;
-}
+} */
 
-mat-card-content {
-    min-width: 350px;
-    min-height: 250px;
-    width: 350px;
-    height: 250px;
+/* mat-card-content {
+    min-width: 250px;
+    min-height: 400px;
+    width: 250px;
+    height: 400px;
     overflow: hidden;
     background-image: url(https://i.imgur.com/s7SDEey.png);
-}
+} */
 
-mat-card-content > img {
+/* mat-card-content > img {
     width: 350px;
     height: 250px;
     object-fit: contain;
-}
+} */
 
 .eighty-percent {
     max-width: 80%;
@@ -80,4 +98,43 @@ mat-card-content > img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.my-pagination /deep/ .ngx-pagination {
+    font-weight: bold;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #ffd740;
+}
+
+/* Search style */
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #ffd740 !important;
+}
+  
+/* ::ng-deep.mat-form-field-underline {
+    background-color: #ffd740 !important;
+}  */
+  
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #ffd740 !important;;
+}
+
+
+/* sort by price style ngx-slider */
+::ng-deep .custom-slider .ngx-slider .ngx-slider-selection {
+    background: #ffd740 !important;
+}
+
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer-min, 
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer-max {
+    background: #ffd740 !important;
+}
+
+::ng-deep .custom-slider .ngx-slider .ngx-slider-model-value,
+::ng-deep .custom-slider .ngx-slider .ngx-slider-model-high {
+    color: #ffd740 !important;
 }
