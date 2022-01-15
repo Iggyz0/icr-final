@@ -12,16 +12,10 @@ export class RouteInfoService {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.previousActiveLink = this.getActiveUrlPath();
     this.currentActiveLink = this.previousActiveLink;
-
-    console.log("konstruktor vrednosti:");
-    console.log("prev: ", this.previousActiveLink);
-    console.log("cur: ", this.currentActiveLink);
-    
   }
 
   monitorRouteChange() {
     // detect active route - works
-    console.log("change deteaacted");
     
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -50,6 +44,11 @@ export class RouteInfoService {
     if (id == '' || id == null) {
       id = "welcome";
     }
+
+    if (id.includes("catalogue")) {
+      id = "catalogue";
+    }
+
     return (<HTMLInputElement>document.getElementById(id));
   }
 }

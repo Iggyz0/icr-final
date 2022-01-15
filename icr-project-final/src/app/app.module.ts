@@ -24,6 +24,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { EditTourComponent } from './planer/edit-tour/edit-tour.component';
 import { ViewTourComponent } from './planer/view-tour/view-tour.component';
+import { ExhibitsComponent } from './catalogue/exhibits/exhibits.component';
+import { ExhibitSinglePageComponent } from './catalogue/exhibit-single-page/exhibit-single-page.component';
+import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +40,9 @@ import { ViewTourComponent } from './planer/view-tour/view-tour.component';
     PlanerComponent,
     AboutUsComponent,
     CatalogueComponent,
-    EditTourComponent,
-    ViewTourComponent
+    ExhibitsComponent,
+    ExhibitSinglePageComponent,
+    AddToTourComponent
   ],
   imports: [
     BrowserModule,

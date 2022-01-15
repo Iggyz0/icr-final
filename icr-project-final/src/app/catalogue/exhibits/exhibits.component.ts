@@ -1,30 +1,46 @@
-import { LabelType, Options } from '@angular-slider/ngx-slider';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
-import { ExhibitModel } from '../models/ExhibitModel';
-import { ExhibitsService } from '../services/exhibits.service';
+import { ShowPieceModel } from 'src/app/models/ShowpieceModel';
+import { ShowpieceService } from 'src/app/services/showpiece.service';
+import { Options } from '@angular-slider/ngx-slider';
+import { ActivatedRoute } from '@angular/router';
+import { ExhibitsService } from 'src/app/services/exhibits.service';
+import { ExhibitModel } from 'src/app/models/ExhibitModel';
+import { ToursService } from 'src/app/services/tours.service';
 
 @Component({
-  selector: 'app-catalogue',
-  templateUrl: './catalogue.component.html',
-  styleUrls: ['./catalogue.component.css']
+  selector: 'app-exhibits',
+  templateUrl: './exhibits.component.html',
+  styleUrls: ['./exhibits.component.css']
 })
-export class CatalogueComponent implements OnInit, AfterViewInit {
+export class ExhibitsComponent implements OnInit {
 
-  items: ExhibitModel[] = [];
-  displayedItems: ExhibitModel[] = [];
+  exhibitionId: string = "";
+
+  exhibition: ExhibitModel = null;
+  items: ShowPieceModel[] = [];
+  displayedItems: ShowPieceModel[] = [];
   p: number = 1; // for pagination
   searchValue: string = '';
 
-  constructor(private exhibitsService: ExhibitsService) { }
+  constructor(private route: ActivatedRoute, private exhibitsService: ExhibitsService, private showpieceService: ShowpieceService, private tourService: ToursService) { }
   
   ngAfterViewInit(): void {
-    this.items = this.exhibitsService.getAllItems();
+    this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
+    this.items = this.exhibition.eksponati;
     this.displayedItems = this.items;
   }
 
   ngOnInit(): void {
-    
+    this.route.params.subscribe(val => { this.exhibitionId = val["id"] });
+  }
+
+  viewExhibitDetails(id: string) {
+    this.showpieceService.viewDetails(id);
+  }
+
+  addShowpieceToTour(showpiece: ShowPieceModel): any {
+    return this.tourService.addToTour(showpiece);
   }
 
   search() {
@@ -32,13 +48,9 @@ export class CatalogueComponent implements OnInit, AfterViewInit {
     if (this.searchValue == '')
       this.displayedItems = this.items;
     else {
-      this.displayedItems = this.items.filter(search => { return search.vrstaPostavke.toLowerCase().includes(this.searchValue); });
+      this.displayedItems = this.items.filter(search => { return search.naziv.toLowerCase().includes(this.searchValue); });
       this.p = 1;
     }
-  }
-
-  viewExhibition(id: string) {
-    this.exhibitsService.viewExhibitionShowpieces(id);
   }
 
   // ------------ SORT START
@@ -60,7 +72,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'name':
-          return this.compare(a.vrstaPostavke, b.vrstaPostavke, isAsc);
+          return this.compare(a.naziv, b.naziv, isAsc);
         case 'price':
           return this.compare(a.cena, b.cena, isAsc);
         default:
@@ -119,7 +131,5 @@ searchByPrice() {
   });
 }
 // -------------- SORT BY PRICE END
-
-
 
 }

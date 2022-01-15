@@ -1,0 +1,36 @@
+.oneReview:last-child {
+    padding-bottom: 10px;
+}
+
+.oneReview {
+    width: calc(100vw / 2 - 3.5em);
+    margin-top: 1em;
+}
+
+#description{
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+    /* box-shadow: 2px 2px 5px #1290eb; */
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left :15px;
+    margin-right: 10px;
+}
+
+.product-info{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: calc(100% - 21px);
+    padding: 15px;
+    z-index: 10;
+}
+
+.bottom-border {
+    border-bottom: 1px solid lightgray;
+}
+
+.golden {
+    color: #ffd740;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-welcome',
@@ -12,7 +13,10 @@ export class WelcomeComponent implements OnInit {
   constructor(){} 
 
   ngOnInit(): void {
-        
+    // carousel needs to be restarted each time the page reloads
+    $(document).ready(function() {
+      $('.carousel').carousel();
+   });
   }
   
 

@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "vrstaPostavke": "Dinos",
+        "eksponati": [
+            {
+                "id": 1,
+                "naziv": "T-rex",
+                "opis": "bigus",
+                "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
+                "vrsta": "dinosaurus",
+                "cena": 50,
+                "vremeObilaska": 300,
+                "zemljaPorekla": "Yugoslavia",
+                "recenzije": [
+                    {
+                        "user": 
+                        {
+                            "id": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "naziv": "Pterodactyl",
+                "opis": "bigusFlapus",
+                "slika": "https://i.natgeofe.com/n/a4c68200-5304-427b-9c85-40d4aac9d48c/79063.jpg",
+                "vrsta": "dinosaurus",
+                "cena": 500,
+                "vremeObilaska": 700,
+                "zemljaPorekla": "Germany",
+                "recenzije": [
+                    {
+                        "user": 
+                        {
+                            "id": 2
+                        }
+                    }
+                ]
+            }
+        ], 
+        "brojEksponata": 2,
+        "cena": 550,
+        "procenjenoVremeObilaska": 1000, 
+        "recenzijePostavke": [],
+        "prosecnaOcena": 4
+    },
+    {
+        "id": 2,
+        "vrstaPostavke": "Weapons",
+        "eksponati": [
+            {
+                "id": 3,
+                "naziv": "Weapon1",
+                "opis": "Sharpus",
+                "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
+                "vrsta": "RustusMaximux",
+                "cena": 50,
+                "vremeObilaska": 300,
+                "zemljaPorekla": "Yugoslavia",
+                "recenzije": [
+                    {
+                        "user": 
+                        {
+                            "id": 3
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "naziv": "Weapon2",
+                "opis": "BluntusTupus",
+                "slika": "https://i.natgeofe.com/n/a4c68200-5304-427b-9c85-40d4aac9d48c/79063.jpg",
+                "vrsta": "Wood",
+                "cena": 500,
+                "vremeObilaska": 700,
+                "zemljaPorekla": "France",
+                "recenzije": [
+                    {
+                        "user": 
+                        {
+                            "id": 2
+                        }
+                    }
+                ]
+            }
+        ], 
+        "brojEksponata": 2,
+        "cena": 550,
+        "procenjenoVremeObilaska": 1000, 
+        "recenzijePostavke": [],
+        "prosecnaOcena": 3
+    }
+]
