@@ -154,17 +154,15 @@ export class UserService extends GenericCRUD<UserModel> {
   public addExhibitToTour( userID: number, exhibit: ExhibitModel, tourID: number){
 
     let user = this.findItemByID(userID);
+    let newTour: TourModel = user.planer.find( obilazak => obilazak.id == tourID);
 
-    let newTour = user.planer.find( obilazak => obilazak.id === tourID);
-    
     exhibit.eksponati.forEach( exponat => {
-      newTour.eksponat.add(exponat)
+      newTour.eksponat.add(exponat);
       newTour.ukupnaCena = newTour.ukupnaCena + exponat.cena;
       newTour.ukupnoVreme = newTour.ukupnoVreme + exponat.vremeObilaska;
     });
 
-
-    user.planer = user.planer.filter((obilazak) => obilazak.id !== tourID);
+    user.planer = user.planer.filter((obilazak) => obilazak.id != tourID);
     user.planer.push(newTour);
     user.planer = user.planer.sort((tour1, tour2) => tour1.id - tour2.id);
 

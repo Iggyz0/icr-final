@@ -25,6 +25,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS} from '@angular/material/chips';
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { COMMA, ENTER } from "@angular/cdk/keycodes";
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule ({
     exports: [
@@ -52,7 +53,8 @@ import { COMMA, ENTER } from "@angular/cdk/keycodes";
         MatDividerModule,
         MatBadgeModule,
         MatChipsModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        MatExpansionModule
     ]
 })
 

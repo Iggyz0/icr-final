@@ -9,8 +9,9 @@ import { TourModel } from 'src/app/models/TourModel';
 })
 export class ViewTourComponent implements OnInit {
 
+  showPiecesToRemove = [];
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: TourModel,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private dialogRef: MatDialogRef<ViewTourComponent>
   ) { }
 
@@ -18,7 +19,14 @@ export class ViewTourComponent implements OnInit {
   }
 
   close(){
-    this.dialogRef.close();
+    this.dialogRef.close(this.showPiecesToRemove);
+  }
+
+  remove(showpieceID: number){
+    this.showPiecesToRemove.push(showpieceID);
+    console.log(this.data.tour);
+    //NOTE: ne radi!
+    // this.data.tour = this.data.tour.eksponat.filter( exponat => exponat.value.id != showpieceID);
   }
 
 }

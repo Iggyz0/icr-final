@@ -1,6 +1,6 @@
 <mat-dialog-content>
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let showpiece of data.eksponat">
+    <mat-expansion-panel *ngFor="let showpiece of data.tour.eksponat">
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{ showpiece.naziv }}
@@ -8,10 +8,13 @@
         <mat-panel-description>{{ showpiece.vrsta }}</mat-panel-description>
       </mat-expansion-panel-header>
       <p>{{ showpiece.opis }}</p>
-    </mat-expansion-panel>
+      <button mat-raised-button *ngIf="data.editingEnabled" color="warn" (click)="remove(showpiece.id)">
+        <mat-icon matListIcon>close</mat-icon>
+      </button>
+    </mat-expansion-panel> 
   </mat-accordion>
 </mat-dialog-content>
 <br />
 <button mat-button [mat-dialog-close]="true">
-  <mat-ico matListIcon>close</mat-ico>
+  <mat-icon matListIcon>close</mat-icon>
 </button>

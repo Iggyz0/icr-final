@@ -2,7 +2,10 @@ import { LabelType, Options } from '@angular-slider/ngx-slider';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ExhibitModel } from '../models/ExhibitModel';
+import { TourModel } from '../models/TourModel';
 import { ExhibitsService } from '../services/exhibits.service';
+import { ToursService } from '../services/tours.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -16,7 +19,9 @@ export class CatalogueComponent implements OnInit, AfterViewInit {
   p: number = 1; // for pagination
   searchValue: string = '';
 
-  constructor(private exhibitsService: ExhibitsService) { }
+  constructor(private exhibitsService: ExhibitsService,
+    private userService: UserService,
+    private toursService: ToursService) { }
   
   ngAfterViewInit(): void {
     this.items = this.exhibitsService.getAllItems();
@@ -120,6 +125,8 @@ searchByPrice() {
 }
 // -------------- SORT BY PRICE END
 
-
+addExhibitToTour(item : ExhibitModel){
+  this.toursService.addExhibitToTour(item);
+}
 
 }

@@ -94,7 +94,7 @@
                         </mat-card-content>
     
                         <mat-card-actions fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxFill fxLayoutGap="0.5em">
-                            <button fxFlex="50%" fxFill mat-raised-button color="accent" #addToTour>Add to tour</button>
+                            <button fxFlex="50%" fxFill mat-raised-button color="accent" (click)="addExhibitToTour(item)">Add to tour</button>
                             <button fxFlex="50%" fxFill mat-raised-button color="primary" (click)="viewExhibition(item.id)">View exhibits</button>
                         </mat-card-actions>
                     </mat-card>

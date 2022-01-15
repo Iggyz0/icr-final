@@ -9,6 +9,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { LocalStorageService } from './localstorage.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddToTourComponent } from '../add-to-tour/add-to-tour.component';
+import { ViewTourComponent } from '../planer/view-tour/view-tour.component';
+import { ExhibitModel } from '../models/ExhibitModel';
+import { AddExhibitDialogComponent } from '../catalogue/add-exhibit-dialog/add-exhibit-dialog.component';
 
 @Injectable({
   providedIn: 'root',
@@ -48,6 +51,97 @@ export class ToursService extends GenericCRUD<TourModel> {
       width: '70vw',
       panelClass: "dialog-responsive",
       data: showpiece
+    });
+
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
+    });
+
+    productDetailsDialog
+    .afterClosed()
+    .subscribe(
+      result => { this.dialogOpen=false;
+      }
+    );
+  }
+
+  public viewTour(tour: TourModel, editingEnabled: boolean) {
+    if (this.authService.getCurrentUser().getValue() == null) {
+      this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});
+      return;
+    }
+
+    this.dialogOpen = true;
+
+    const productDetailsDialog = this.dialog.open(ViewTourComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: "dialog-responsive",
+      data: {
+        "tour": tour,
+        "editingEnabled": editingEnabled
+      } 
+    });
+
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
+    });
+
+    productDetailsDialog
+    .afterClosed()
+    .subscribe(
+      result => { this.dialogOpen=false;
+      }
+    );
+  }
+
+  public editTour(tour: TourModel) {
+    if (this.authService.getCurrentUser().getValue() == null) {
+      this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});
+      return;
+    }
+
+    this.dialogOpen = true;
+
+    const productDetailsDialog = this.dialog.open(ViewTourComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: "dialog-responsive",
+      data: tour 
+    });
+
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
+    });
+
+    productDetailsDialog
+    .afterClosed()
+    .subscribe(
+      result => { this.dialogOpen=false;
+        return result;
+      }
+    );
+  }
+
+  public addExhibitToTour(exhibit: ExhibitModel) {
+    if (this.authService.getCurrentUser().getValue() == null) {
+      this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});
+      return;
+    }
+
+    this.dialogOpen = true;
+
+    const productDetailsDialog = this.dialog.open(AddExhibitDialogComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: "dialog-responsive",
+      data: exhibit 
     });
 
     productDetailsDialog.afterOpened().subscribe(() => {

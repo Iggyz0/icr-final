@@ -8,6 +8,7 @@ import { LocalStorageService } from '../services/localstorage.service';
 import { MatTab } from '@angular/material/tabs';
 import { MatSort } from '@angular/material/sort';
 import { MatAutocomplete } from '@angular/material/autocomplete';
+import { ToursService } from '../services/tours.service';
 
 @Component({
   selector: 'app-planer',
@@ -53,7 +54,8 @@ export class PlanerComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private localStorage: LocalStorageService
+    private localStorage: LocalStorageService,
+    private tourService : ToursService
   ) { }
   
 
@@ -131,11 +133,11 @@ export class PlanerComponent implements OnInit {
   }
 
   viewTour(element){
-
+    this.tourService.viewTour(element, false);
   }
 
   editTour(element){
-    console.log(element);
+    this.tourService.viewTour(element, true);
   }
 
 }

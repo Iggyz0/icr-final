@@ -27,6 +27,7 @@ import { ViewTourComponent } from './planer/view-tour/view-tour.component';
 import { ExhibitsComponent } from './catalogue/exhibits/exhibits.component';
 import { ExhibitSinglePageComponent } from './catalogue/exhibit-single-page/exhibit-single-page.component';
 import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
+import { AddExhibitDialogComponent } from './catalogue/add-exhibit-dialog/add-exhibit-dialog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
     CatalogueComponent,
     ExhibitsComponent,
     ExhibitSinglePageComponent,
-    AddToTourComponent
+    AddToTourComponent,
+    ViewTourComponent,
+    AddExhibitDialogComponent
   ],
   imports: [
     BrowserModule,
