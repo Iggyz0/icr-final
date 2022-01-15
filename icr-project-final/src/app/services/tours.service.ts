@@ -91,44 +91,17 @@ export class ToursService extends GenericCRUD<TourModel> {
       }
     });
 
+    let resultX;
     productDetailsDialog
     .afterClosed()
     .subscribe(
       result => { this.dialogOpen=false;
+        resultX = result;
       }
     );
+
+    return resultX;
   }
-
-  public editTour(tour: TourModel) {
-    if (this.authService.getCurrentUser().getValue() == null) {
-      this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});
-      return;
-    }
-
-    this.dialogOpen = true;
-
-    const productDetailsDialog = this.dialog.open(ViewTourComponent, {
-      disableClose: true,
-      width: '70vw',
-      panelClass: "dialog-responsive",
-      data: tour 
-    });
-
-    productDetailsDialog.afterOpened().subscribe(() => {
-      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
-          productDetailsDialog.addPanelClass('darkMode');
-      }
-    });
-
-    productDetailsDialog
-    .afterClosed()
-    .subscribe(
-      result => { this.dialogOpen=false;
-        return result;
-      }
-    );
-  }
-
   public addExhibitToTour(exhibit: ExhibitModel) {
     if (this.authService.getCurrentUser().getValue() == null) {
       this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});
