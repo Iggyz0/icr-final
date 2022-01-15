@@ -33,7 +33,8 @@ export class PlanerComponent implements OnInit {
     'Edit',
     'complete',
     'cancel',
-    "delete"
+    "delete",
+    "createAsExhibit"
   ];
 
   //brojevi
@@ -46,6 +47,9 @@ export class PlanerComponent implements OnInit {
   @ViewChild(MatPaginator) paginator = new QueryList<MatPaginator>();
   @ViewChild(MatSort) sort = new QueryList<MatSort>();
   @ViewChild('auto') matAutoComplete: MatAutocomplete;
+
+  //dialogInfo
+  // isView
 
   constructor(
     private userService: UserService,
@@ -64,10 +68,6 @@ export class PlanerComponent implements OnInit {
       else if(tour.status == "tekuci")
         this.numberOfOngoing++;
     });
-  }
-
-  onSubmit(f: NgForm){
-
   }
 
   updateParentTours( value: TourModel[]){

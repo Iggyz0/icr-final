@@ -64,7 +64,12 @@
                 <button *ngIf="element.status == 'otkazan'" color="warn" mat-raised-button (click)="delete(element.id)">Delete</button>
               </mat-cell>
             </ng-container>
-
+            <ng-container matColumnDef="createAsExhibit">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Create exhibit</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'zavrsen'" color="warn" mat-raised-button (click)="create(element.id)">Create as exhibit</button>
+              </mat-cell>
+            </ng-container>
             <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
             <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
           </mat-table>

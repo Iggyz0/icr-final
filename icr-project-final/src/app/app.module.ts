@@ -22,6 +22,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { PlanerComponent } from './planer/planer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { EditTourComponent } from './planer/edit-tour/edit-tour.component';
+import { ViewTourComponent } from './planer/view-tour/view-tour.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
     ProfileComponent,
     PlanerComponent,
     AboutUsComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    EditTourComponent,
+    ViewTourComponent
   ],
   imports: [
     BrowserModule,
