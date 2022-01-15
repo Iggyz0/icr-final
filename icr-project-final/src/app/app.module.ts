@@ -22,6 +22,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { PlanerComponent } from './planer/planer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { ExhibitsComponent } from './catalogue/exhibits/exhibits.component';
+import { ExhibitSinglePageComponent } from './catalogue/exhibit-single-page/exhibit-single-page.component';
+import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
     ProfileComponent,
     PlanerComponent,
     AboutUsComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    ExhibitsComponent,
+    ExhibitSinglePageComponent,
+    AddToTourComponent
   ],
   imports: [
     BrowserModule,

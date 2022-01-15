@@ -44,6 +44,11 @@ export class RouteInfoService {
     if (id == '' || id == null) {
       id = "welcome";
     }
+
+    if (id.includes("catalogue")) {
+      id = "catalogue";
+    }
+
     return (<HTMLInputElement>document.getElementById(id));
   }
 }

@@ -1,0 +1,110 @@
+<div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2em" style="padding: 0.5em;">
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxFill>
+        <h2>Exhibit showpiece details:</h2>
+        <mat-divider style="width: 100%;"></mat-divider>
+    </div>
+    
+
+    <!-- row for showpiece info -->
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-around center" fxFill>
+        <div fxFlex="45%" fxLayout="column" fxLayoutAlign="center center" fxFill>
+            <img src="{{showpiece.slika}}" alt="img" width="400px" style="object-fit: contain; overflow: hidden;">
+            <div class="product-info" fxFlex fxLayout="column nowrap" style="margin-top: 0.5em;">
+                <h4>Description:</h4>
+                <mat-divider style="width: 100%;"></mat-divider>
+                <p style="margin-top: 0.25em;">{{ showpiece.opis }}</p>
+              </div>
+        </div>
+        <div fxFlex="35%" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+            <!-- -------------------------------------------------------------------------------------------------------------- -->
+
+            <div fxLayout="column nowrap" class="product-info" fxLayoutGap="1em">
+                <!-- <h3>Price: &nbsp;&nbsp; {{ showpiece.price | currency }}</h3> -->
+                <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                  <h3>Price:</h3>
+                  <h3>{{ showpiece.cena | currency }}</h3>
+                </div>
+                <div fxFlex fxLayout="row no wrap">
+                  <button mat-raised-button color="accent" (click)="addShowpieceToTour(showpiece)">
+                    Add to tour
+                  </button>
+                  <!-- <button *ngIf="isAlreadyInTheCart" mat-raised-button color="warn" (click)="removeFromCart()">
+                    <mat-icon>remove_shopping_cart</mat-icon>Remove
+                  </button> -->
+                </div>
+                <!-- <div *ngIf="isAlreadyInTheCart">
+                  <span><i>Already in your cart!</i></span>
+                </div> -->
+          
+            </div>
+          
+            <div fxLayout="column nowrap" class="product-info" fxLayoutGap="1em">
+              <div fxFlex fxLayout="row nowrap">
+                <h3>Details:</h3>
+              </div>
+          
+              <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                <div><b>Title:</b></div>
+                <div>{{ showpiece.naziv }}</div>
+              </div>
+          
+              <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                <div><b>Rating:</b></div>
+                <div>{{ 3 | number: '1.0-1' }}&nbsp;<mat-icon class="golden" inline=true>star</mat-icon></div>
+              </div>
+          
+              <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                <div><b>Type:</b></div>
+                <div>{{ showpiece.vrsta }}</div>
+              </div>
+          
+              <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                <div><b>Tour time:</b></div>
+                <div>{{ showpiece.vremeObilaska/60 | number: '1.0-0' }}min</div>
+              </div>
+          
+              <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
+                <div><b>Country of origin:</b></div>
+                <div>{{ showpiece.zemljaPorekla }}</div>
+              </div>
+          
+            </div>
+
+            <!-- -------------------------------------------------------------------------------------------------------------- -->
+        </div>
+    </div>
+
+    <!-- showpiece reviews -->
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxFill>
+        <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+            <h3>User reviews</h3>
+        </div>
+        <mat-divider style="width: 100%;"></mat-divider>
+        <!-- one review -->
+        <div fxFill fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="2em">
+            <div class="oneReview" *ngFor="let review of showpiece.recenzije" fxLayout="column wrap">
+                <div fxFlex fxLayoutAlign="space-between" fxLayout="row wrap" fxFill>
+                    <div>
+                        <b><span>{{review.user.ime}}{{ review.user.prezime}}</span></b>
+                    </div>
+                    <div fxLayoutAlign="center center">
+                        <star-rating fxFlex
+                        [value]="review.rating"
+                        [totalstars]="5"
+                        checkedcolor="#ffd740"
+                        uncheckedcolor="gray"
+                        size="24px"
+                        readonly="true"
+                        ></star-rating>
+                    </div>
+                </div>
+                <div id="description">
+                    <p>{{review.comment}}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

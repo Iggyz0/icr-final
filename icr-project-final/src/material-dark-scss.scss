@@ -44,6 +44,9 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     color: white !important;
   }
 
+  .custom-slider .ngx-slider .ngx-slider-pointer {
+    background-color: orange !important;
+  }
   
 }
 
