@@ -41,11 +41,11 @@ export class ProfileComponent implements OnInit {
 
   updateUserValue( user: UserModel){
     this.user = user;
-    console.log(this.user);
+    // console.log(this.user);
   }
 
   updateUserPlaner( planer: TourModel[]){
     this.user.planer = planer;
-    console.log(this.user.planer);
+    // console.log(this.user.planer);
   }
 }

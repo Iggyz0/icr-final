@@ -57,10 +57,4 @@ export class UserprofileComponent implements OnInit {
     this.userDataChange.emit(value);
   }
 
-
-
-
-
-
-
 }

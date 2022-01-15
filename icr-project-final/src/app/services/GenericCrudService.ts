@@ -20,8 +20,20 @@ export abstract class GenericCRUD<T extends BaseModel> {
       return false; //vracamo da nije upisan
     }
     item.id = (this.findMaxID())+1;
+    this.unique_ID = this.findMaxID();
     this.items.push(item);
     return true; //u suprotnom jeste
+  }
+
+  public insertItemReturnID(item: T): number {
+    if (this.findItemByID(item.id)) {
+      //ako nadje predmet, vec postoji u bazi
+      return -1; //vracamo da nije upisan
+    }
+    item.id = (this.findMaxID())+1;
+    this.unique_ID = this.findMaxID();
+    this.items.push(item);
+    return item.id; //u suprotnom jeste
   }
 
   private findMaxID() : number{
