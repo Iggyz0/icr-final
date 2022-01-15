@@ -1,1 +1,87 @@
-<p>planer works!</p>
+ <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" >
+    <div fxLayoutAlign = "center center">
+        <button mat-button color="primary" (click)="createEmptyTour()">Create tour</button>
+    </div>
+        <div fxFlex fxFill>
+          <mat-table #table [dataSource]="toursDataSource" matSort>
+            <ng-container matColumnDef="No.">
+              <mat-header-cell *matHeaderCellDef mat-sort-header disabled>No.</mat-header-cell>
+              <mat-cell *matCellDef="let element; let i = index">{{ (paginatorRefOrders.pageIndex * paginatorRefOrders.pageSize) + (i + 1) }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>ID:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="dateCreated">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Date created:</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
+              </ng-container>
+            <ng-container matColumnDef="ukupnoVreme">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Total time: </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.ukupnoVreme}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="ukupnaCena">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.ukupnaCena | currency }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Status:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.status }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="ocena">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Rating:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.ocena }}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="viewItems">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>View items</mat-header-cell>
+              <mat-cell *matCellDef="let element" name="viewItems" #status>
+                <button color="accent" mat-raised-button (click)="viewTour(element)">View items</button>
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Edit">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Edit items</mat-header-cell>
+              <mat-cell *matCellDef="let element" name="Edit" #status>
+                <button *ngIf="element.status == 'tekuci'" color="accent" mat-raised-button (click)="editTour(element)">Edit items</button>
+              </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="complete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Complete tour</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'tekuci'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
+              </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="cancel">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel tour</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'tekuci'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
+              </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Delete tour</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'otkazan'" color="warn" mat-raised-button (click)="delete(element.id)">Delete</button>
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
+            <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
+          </mat-table>
+        </div>
+
+        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="space-between center">
+          <div>
+            <p>Ongoing: {{numberOfOngoing || 0}}  &nbsp;|&nbsp;  Completed: {{numberOfCompleted || 0}}  &nbsp;|&nbsp;  Cancelled: {{numberOfCancelled || 0}}</p>
+          </div>
+          <mat-form-field>
+            <input matInput name="filterOrders" type="text" (keyup)="doFilterTours($any($event.target).value)" placeholder="Search filter...">
+          </mat-form-field>
+          <mat-paginator #paginatorRefOrders [pageSize]="10" [pageSizeOptions]="[5, 10, 15, 25]"></mat-paginator>
+        </div>
+
+        <div fxFlex fxFill fxLayout="row nowrap" fxLayoutAlign="start center">
+          <p>Total number of orders: {{ toursDataSource.data.length }}</p>
+        </div>
+
+      </div>

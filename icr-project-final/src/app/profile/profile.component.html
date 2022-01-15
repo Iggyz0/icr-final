@@ -4,7 +4,7 @@
       <app-userprofile [userData]="user" (userDataChange)="updateUserValue($event)"></app-userprofile>
     </mat-tab>
     <mat-tab label="Planner"> 
-      <app-planer [tours]="user.planer" (toursUpdate)="updateUserPlaner($event)"></app-planer> 
+      <app-planer [tours]="user.planer" [userID]="user.id" (toursUpdate)="updateUserPlaner($event)"></app-planer> 
     </mat-tab>
   </mat-tab-group>
 <!-- </div> -->

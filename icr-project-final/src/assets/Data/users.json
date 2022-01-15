@@ -2595,5 +2595,19 @@
     },
     "omiljenePostavke": [],
     "planer": []
+  },
+  {
+    "id": 77,
+    "ime": "Museum",
+    "prezime": "Museum",
+    "username": "Museum",
+    "password": "Museum",
+    "kontaktPodaci": {
+      "adresa": "Museum 1",
+      "telefon": "",
+      "email": "museum@mail.com"
+    },
+    "omiljenePostavke": [],
+    "planer": []
   }
 ]
