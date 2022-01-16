@@ -13,9 +13,9 @@
               <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="dateCreated">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>Date created:</mat-header-cell>
-                <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
-              </ng-container>
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Date created:</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{ element.dateCreated | date }}</mat-cell>
+            </ng-container>
             <ng-container matColumnDef="ukupnoVreme">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Total time: </mat-header-cell>
               <mat-cell *matCellDef="let element">{{ element.ukupnoVreme}}</mat-cell>
@@ -26,7 +26,7 @@
             </ng-container>
             <ng-container matColumnDef="status">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Status:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.status }}</mat-cell>
+              <mat-cell *matCellDef="let element"><b>{{ element.status }}</b></mat-cell>
             </ng-container>
             <ng-container matColumnDef="ocena">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Rating:</mat-header-cell>
@@ -41,7 +41,7 @@
 
             <!-- if no data is found -->
             <div fxFill fxLayoutAlign="center center" *matNoDataRow>
-              No tours in your planer yet!
+              <p><b>No tours in your planer yet!</b></p>
             </div>
 
             <ng-container matColumnDef="Edit">

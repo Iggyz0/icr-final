@@ -9,3 +9,7 @@
 .tab-content-wrap {
     padding: 5px;
 }
+
+::ng-deep mat-header-cell {
+    font-weight: bold;
+}
