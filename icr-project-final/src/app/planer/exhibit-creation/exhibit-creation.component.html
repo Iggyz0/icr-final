@@ -1,0 +1,33 @@
+<div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+  <div fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxFlex>
+        <h2>Create your custom user-defined exhibit:</h2>
+    </div>
+    <button mat-raised-button [mat-dialog-close]="false" (click)="close()">
+      <mat-icon matListIcon>close</mat-icon>
+    </button>
+  </div>
+  <mat-divider style="width: 100%;"></mat-divider>
+  <div fxFlex fxFill fxLayout="column" fxLayoutAlign="end center">
+    <mat-dialog-content fxFill>
+        <form
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f)"
+        class="formDecoration fixOverlap"
+      >
+        <div fxFill>
+          <p fxFill class="loginHeaderTop">Please fill out the form:</p>
+          <mat-divider fxFill class="marginTopFormElements"></mat-divider>
+        </div>
+        <mat-form-field fxFill appearance="outline">
+          <mat-label>Type of exhibit: </mat-label>
+          <input type="text" name="vrsta" matInput ngModel required/></mat-form-field
+        >
+        <button fxFill mat-raised-button color="primary" type="submit">Create</button>
+      </form>
+    </mat-dialog-content>
+  </div>
+  
+</div>

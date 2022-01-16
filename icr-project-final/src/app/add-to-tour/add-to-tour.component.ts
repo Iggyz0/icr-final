@@ -27,7 +27,8 @@ export class AddToTourComponent implements OnInit {
   ngOnInit(): void {
     const id = this.localStorage.getLocalStorageItem('id');
     this.user = this.userService.findItemByID(+id);
-    this.user.planer = this.user.planer.filter( tour => !(tour.status == 'tekuci'));
+    //NOTE: baguje - user planeri koji su tekuci se gube
+    // this.user.planer = this.user.planer.filter( tour => !(tour.status == 'tekuci'));
   }
 
   submit() {

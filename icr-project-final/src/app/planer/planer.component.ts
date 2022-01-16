@@ -9,6 +9,8 @@ import { MatTab } from '@angular/material/tabs';
 import { MatSort } from '@angular/material/sort';
 import { MatAutocomplete } from '@angular/material/autocomplete';
 import { ToursService } from '../services/tours.service';
+import { ExhibitsService } from '../services/exhibits.service';
+import { ExhibitModel } from '../models/ExhibitModel';
 
 @Component({
   selector: 'app-planer',
@@ -55,7 +57,8 @@ export class PlanerComponent implements OnInit {
   constructor(
     private userService: UserService,
     private localStorage: LocalStorageService,
-    private tourService : ToursService
+    private tourService : ToursService,
+    private exhibitService: ExhibitsService
   ) { }
   
 
@@ -138,6 +141,13 @@ export class PlanerComponent implements OnInit {
 
   editTour(element){
     this.tourService.viewTour(element, true);
+  }
+
+  create(tour: TourModel){
+    this.exhibitService.createExhibitDialog(tour);
+
+    tour.createdAsExhibit = true;
+    this.tourService.updateItem(tour);
   }
 
 }

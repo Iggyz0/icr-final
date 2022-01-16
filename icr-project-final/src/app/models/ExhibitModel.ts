@@ -4,11 +4,11 @@ import { ShowPieceModel } from './ShowpieceModel';
 
 export interface ExhibitModel extends BaseModel {
   vrstaPostavke: string;
-  // vrstaEksponata: string; //same eksponate da ukljucimo?
-  eksponati: ShowPieceModel[]; // <- ?
-  brojEksponata?: number; // ovo se racuna automatski (?)
-  cena: number; //not sure?
-  procenjenoVremeObilaska: number; //racuna se automatski (?) (na osnovu eksponata koji su deo postavke)
-  recenzijePostavke: ReviewModel[];
-  prosecnaOcena: number; //racuna  se automatski na osnovu recenzija(?)
+  eksponati: ShowPieceModel[]; 
+  brojEksponata?: number; 
+  cena: number; 
+  procenjenoVremeObilaska: number; 
+  recenzijePostavke: ReviewModel[];//Kako cemo recenzirati postavke?
+  prosecnaOcena: number; 
+  createdBy: string;
 }
