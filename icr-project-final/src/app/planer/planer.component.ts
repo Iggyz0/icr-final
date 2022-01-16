@@ -137,8 +137,7 @@ export class PlanerComponent implements OnInit {
   }
 
   editTour(element){
-    let result = this.tourService.viewTour(element, true);
-    console.log(result);
+    this.tourService.viewTour(element, true);
   }
 
 }

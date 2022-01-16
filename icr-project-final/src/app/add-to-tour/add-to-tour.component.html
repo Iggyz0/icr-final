@@ -1,5 +1,29 @@
-<button mat-button [mat-dialog-close]="true">
-    <mat-icon matListIcon>close</mat-icon>
-</button>
-
-<p>{{data.id}}</p>
+<div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+    <div fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxFlex>
+        <span>Showpiece {{data.naziv}} details:</span>
+      </div>
+      <button mat-raised-button [mat-dialog-close]="false" (click)="cancel()">
+        <mat-icon matListIcon>close</mat-icon>
+      </button>
+    </div>
+    <mat-divider style="width: 100%;"></mat-divider>
+    <div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center">
+      <mat-dialog-content fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+        <div fxFlex>
+          <span>Add this showpiece to your tour (choose a tour):</span>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>Select an option</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let tour of user.planer" value="{{tour.id}}">{{tour.dateCreated}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-dialog-content>
+    </div>
+    <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+      <button mat-raised-button color="primary" (click)="submit()">Confirm choice</button>
+      <button mat-raised-button color="accent" (click)="cancel()">Cancel</button>
+    </div>
+  </div>

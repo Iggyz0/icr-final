@@ -1,6 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ShowPieceModel } from '../models/ShowpieceModel';
+import { UserModel } from '../models/userModel';
+import { LocalStorageService } from '../services/localstorage.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-add-to-tour',
@@ -8,11 +12,38 @@ import { ShowPieceModel } from '../models/ShowpieceModel';
   styleUrls: ['./add-to-tour.component.css']
 })
 export class AddToTourComponent implements OnInit {
+  selected: number;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: ShowPieceModel) { }
+  user: UserModel;
+
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: ShowPieceModel, 
+    private dialogRef: MatDialogRef<AddToTourComponent>,
+    private localStorage: LocalStorageService,
+    private userService: UserService,
+    private matSnackBar: MatSnackBar
+    ) { }
 
   ngOnInit(): void {
-    
+    const id = this.localStorage.getLocalStorageItem('id');
+    this.user = this.userService.findItemByID(+id);
   }
 
+  submit() {
+    const id = this.localStorage.getLocalStorageItem('id');
+
+    //NOTE: OVDE JE GRESKA (reading eksponat) - userService 105. linija
+    let user;
+    if (
+      user = this.userService.addShowPieceToTour(+id, this.data, this.selected) !== null
+    ) {
+      this.dialogRef.close(user);
+    } else {
+      this.matSnackBar.open('There was an error', '', { duration: 2500 });
+    }
+  }
+
+  cancel() {
+    this.dialogRef.close();
+  }
 }

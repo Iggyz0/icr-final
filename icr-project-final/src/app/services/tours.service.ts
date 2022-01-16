@@ -91,17 +91,17 @@ export class ToursService extends GenericCRUD<TourModel> {
       }
     });
 
-    let resultX;
     productDetailsDialog
     .afterClosed()
     .subscribe(
-      result => { this.dialogOpen=false;
-        resultX = result;
+      result => { 
+        this.dialogOpen=false;
+        console.log(result);
+        
       }
     );
-
-    return resultX;
   }
+
   public addExhibitToTour(exhibit: ExhibitModel) {
     if (this.authService.getCurrentUser().getValue() == null) {
       this.snackBar.open("You have to login in order to add to a tour.", "OK", {duration: 2500});

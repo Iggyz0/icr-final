@@ -10,7 +10,6 @@ import { TourModel } from 'src/app/models/TourModel';
   styleUrls: ['./view-tour.component.css']
 })
 export class ViewTourComponent implements OnInit {
-
   showPiecesToRemove = [];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -21,7 +20,7 @@ export class ViewTourComponent implements OnInit {
   }
 
   close(){
-    this.dialogRef.close(this.showPiecesToRemove);
+    this.dialogRef.close(this.data.tour);
   }
 
   remove(showpieceID: number){

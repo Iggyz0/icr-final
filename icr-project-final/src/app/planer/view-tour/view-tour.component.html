@@ -1,20 +1,36 @@
-<mat-dialog-content>
-  <mat-accordion>
-    <mat-expansion-panel *ngFor="let showpiece of data.tour.eksponat">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{ showpiece.naziv }}
-        </mat-panel-title>
-        <mat-panel-description>{{ showpiece.vrsta }}</mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>{{ showpiece.opis }}</p>
-      <button mat-raised-button *ngIf="data.editingEnabled" color="warn" (click)="remove(showpiece.id)">
-        <mat-icon matListIcon>close</mat-icon>
-      </button>
-    </mat-expansion-panel> 
-  </mat-accordion>
-</mat-dialog-content>
-<br />
-<button mat-button [mat-dialog-close]="true">
-  <mat-icon matListIcon>close</mat-icon>
-</button>
+<div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+  <div fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxFlex>
+      <span>Tour {{data.tour.id}} details (set for {{data.tour.dateCreated | date}}):</span>
+    </div>
+    <button mat-raised-button [mat-dialog-close]="false" (click)="close()">
+      <mat-icon matListIcon>close</mat-icon>
+    </button>
+  </div>
+  <mat-divider style="width: 100%;"></mat-divider>
+  <div *ngIf="!(data.tour.eksponat?.size > 0)" fxFlex fxFill fxLayout="column" fxLayoutAlign="center center">
+    <p>There are no showpieces in this tour yet!</p>
+  </div>
+  <div fxFlex fxFill fxLayout="column" fxLayoutAlign="end center">
+    <mat-dialog-content fxFill>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let showpiece of data.tour.eksponat">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ showpiece.naziv }}
+            </mat-panel-title>
+            <mat-panel-description>{{ showpiece.vrsta }}</mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>{{ showpiece.opis }}</p>
+          <button mat-raised-button *ngIf="data.editingEnabled" color="warn" (click)="remove(showpiece.id)">
+            <mat-icon matListIcon>close</mat-icon>
+          </button>
+        </mat-expansion-panel> 
+      </mat-accordion>
+    </mat-dialog-content>
+  </div>
+  
+  <button mat-raised-button color="primary" (click)="close()">
+    Confirm
+  </button>
+</div>
