@@ -22,12 +22,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { PlanerComponent } from './planer/planer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
-import { EditTourComponent } from './planer/edit-tour/edit-tour.component';
 import { ViewTourComponent } from './planer/view-tour/view-tour.component';
 import { ExhibitsComponent } from './catalogue/exhibits/exhibits.component';
 import { ExhibitSinglePageComponent } from './catalogue/exhibit-single-page/exhibit-single-page.component';
 import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
 import { AddExhibitDialogComponent } from './catalogue/add-exhibit-dialog/add-exhibit-dialog.component';
+import { MyreviewsComponent } from './myreviews/myreviews.component';
+import { EditreviewComponent } from './myreviews/editreview/editreview.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { AddExhibitDialogComponent } from './catalogue/add-exhibit-dialog/add-ex
     ExhibitSinglePageComponent,
     AddToTourComponent,
     ViewTourComponent,
-    AddExhibitDialogComponent
+    AddExhibitDialogComponent,
+    MyreviewsComponent,
+    EditreviewComponent
   ],
   imports: [
     BrowserModule,

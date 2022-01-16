@@ -6,5 +6,8 @@
     <mat-tab label="Planner"> 
       <app-planer [tours]="user.planer" [userID]="user.id" (toursUpdate)="updateUserPlaner($event)"></app-planer> 
     </mat-tab>
-  </mat-tab-group>
+    <mat-tab label="My reviews"> 
+      <app-myreviews [reviews]="user.planer" [userID]="user.id" (reviewsUpdate)="updateUserReviews($event)"></app-myreviews> 
+    </mat-tab>
+</mat-tab-group>
 <!-- </div> -->

@@ -10,4 +10,5 @@ export interface ShowPieceModel extends BaseModel{
     vremeObilaska: number;
     zemljaPorekla: string;
     recenzije: ReviewModel[];
+    ukupnaOcena: number;
 }
