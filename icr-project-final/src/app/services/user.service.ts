@@ -152,16 +152,29 @@ export class UserService extends GenericCRUD<UserModel> {
   ): boolean {
     let user = this.findItemByID(userID);
 
-    let doesContain;
+    let doesContain = false;
     user.planer.forEach((tour) => {
       if (tour.status == 'zavrsen') {
-        return tour.eksponat.forEach((exponat) => {
-          if (exponat.id == showpiece.id) doesContain = true;
-          doesContain = false;
-        });
+        for (let item of tour.eksponat.values()) {
+          if (item.id == showpiece.id) {
+            doesContain = true;
+          }
+        }
       }
     });
+    
     return doesContain;
+  }
+
+  public hasAlreadyReviewed(userID: number, showpiece: ShowPieceModel): boolean {
+    let hasAlreadyReviewed = false
+    showpiece.recenzije.forEach(review => {
+      if(review.user.id == userID ) {
+        hasAlreadyReviewed = true;
+        return;
+      }
+    });
+    return hasAlreadyReviewed;
   }
 
   public addExhibitToTour(

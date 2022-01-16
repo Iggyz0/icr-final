@@ -52,7 +52,7 @@
           
               <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
                 <div><b>Rating:</b></div>
-                <div>{{ 3 | number: '1.0-1' }}&nbsp;<mat-icon class="golden" inline=true>star</mat-icon></div>
+                <div>{{ showpiece.ukupnaOcena||0 | number: '1.0-1' }}&nbsp;<mat-icon class="golden" inline=true>star</mat-icon></div>
               </div>
           
               <div class="bottom-border" fxFlex fxLayout="row nowrap" fxLayoutAlign="space-between center">
@@ -75,6 +75,42 @@
             <!-- -------------------------------------------------------------------------------------------------------------- -->
         </div>
     </div>
+    <mat-divider *ngIf="canReview" style="width: 100%;"></mat-divider>
+    <!-- leave a review -->
+    <div class="oneReview" *ngIf="canReview" fxFlex fxLayout="column" fxLayoutAlign="center start" >
+      <div>
+        <p><b>We would love to hear what you think, so please leave a review:</b></p>
+      </div>
+      <div fxFlex fxFill>
+        <mat-form-field appearance="fill" fxFlex="100%">
+          <mat-label>Write your review here...</mat-label>
+          <textarea #reviewContent class="scroll"
+            fxFlex="100%"
+            matInput
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"></textarea>
+        </mat-form-field>
+      </div>
+      <div fxFlex fxLayoutAlign="space-between center" fxFill>
+        <div fxLayout="row wrap" fxFlex fxLayoutAlign="start center" fxLayoutGap="15px">
+          <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+            <p style="margin-bottom: 0;"><b>Your score: &nbsp;</b></p>
+            <star-rating fxFlex #userStarRating
+            [value]="0"
+            [totalstars]="5"
+            checkedcolor="#ffd740"
+            uncheckedcolor="gray"
+            size="24px"
+            readonly="false"
+            ></star-rating>
+          </div>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="writeAReview(reviewContent.value, userStarRating.value)" [disabled]="reviewContent.value.trim().length == 0 || userStarRating.value == 0">Submit review</button>
+        </div>
+      </div>
+    </div>
 
     <!-- showpiece reviews -->
     <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxFill style="padding-top: 1.5em;">
@@ -87,7 +123,7 @@
             <div class="oneReview" *ngFor="let review of showpiece.recenzije" fxLayout="column wrap">
                 <div fxFlex fxLayoutAlign="space-between" fxLayout="row wrap" fxFill>
                     <div>
-                        <b><span>{{review.user.ime}}{{ review.user.prezime}}</span></b>
+                        <b><span>{{review.user.ime}} {{ review.user.prezime}}</span></b>
                     </div>
                     <div fxLayoutAlign="center center">
                         <star-rating fxFlex

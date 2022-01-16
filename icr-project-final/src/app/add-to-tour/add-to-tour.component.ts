@@ -32,7 +32,6 @@ export class AddToTourComponent implements OnInit {
   submit() {
     const id = this.localStorage.getLocalStorageItem('id');
 
-    //NOTE: OVDE JE GRESKA (reading eksponat) - userService 105. linija
     let user;
     if (
       user = this.userService.addShowPieceToTour(+id, this.data, this.selected) !== null

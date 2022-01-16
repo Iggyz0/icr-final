@@ -38,3 +38,7 @@
 .golden {
     color: #ffd740;
 }
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}

@@ -48,4 +48,8 @@ export class ProfileComponent implements OnInit {
     this.user.planer = planer;
     // console.log(this.user.planer);
   }
+
+  updateUserReviews( planer: TourModel[]) {
+    this.user.planer = planer;
+  }
 }

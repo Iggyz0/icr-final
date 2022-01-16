@@ -29,6 +29,12 @@ export class ShowpieceService extends GenericCRUD<ShowPieceModel>{
     this.router.navigateByUrl(url);
   }
 
+  calculateScore(showpieceId) {
+    let showpiece = this.findItemByID(showpieceId);
+    showpiece.ukupnaOcena = showpiece.recenzije.reduce((prev, curr) => { return prev+curr.rating }, 0) / showpiece.recenzije.length;
+    this.updateItem(showpiece);
+  }
+
   // public readFromFile(): void{
   //   this.readingJSON.getJSON(this.fajl).subscribe(
   //     result => this.items = result
