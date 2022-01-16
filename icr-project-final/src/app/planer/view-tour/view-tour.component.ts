@@ -1,6 +1,7 @@
 import { I } from '@angular/cdk/keycodes';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ShowPieceModel } from 'src/app/models/ShowpieceModel';
 import { TourModel } from 'src/app/models/TourModel';
 
@@ -13,7 +14,8 @@ export class ViewTourComponent implements OnInit {
   showPiecesToRemove = [];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef<ViewTourComponent>
+    private dialogRef: MatDialogRef<ViewTourComponent>,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -33,4 +35,9 @@ export class ViewTourComponent implements OnInit {
     }
   }
 
+  goToPage(id: string) {
+    this.close();
+    let url = "/catalogue/exhibits/showpiece/" + id;
+    this.router.navigateByUrl(url);
+  }
 }
