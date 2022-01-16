@@ -41,15 +41,25 @@ export class AppComponent implements OnInit, AfterViewInit {
     private authService: AuthService,
     private router: Router,
     private localStorageService: LocalStorageService,
-    private routeInfo: RouteInfoService
+    private routeInfo: RouteInfoService,
+    private userService: UserService
   ){
 
   }
   ngAfterViewInit(): void {
+    //NOTE: Following code is a security breach, it's only there to keep the user logged in whilst reloading/refreshing the page!
+    let username : string;
+    if( (username = this.localStorageService.getLocalStorageItem('username')) != undefined)
+      this.authService.logIn(this.userService.findUserByUsername(username));
     this.korisnik$ = this.authService.getCurrentUser();
   }
   
   ngOnInit(): void {
+    //NOTE: Following code is a security breach, it's only there to keep the user logged in whilst reloading/refreshing the page!
+    let username : string;
+    if( (username = this.localStorageService.getLocalStorageItem('username')) != undefined)
+      this.authService.logIn(this.userService.findUserByUsername(username));
+
     this.korisnik$ = this.authService.getCurrentUser();
     this.getThemePreferenceFromLocalStorage();
 

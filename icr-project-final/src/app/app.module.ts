@@ -29,6 +29,7 @@ import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
 import { AddExhibitDialogComponent } from './catalogue/add-exhibit-dialog/add-exhibit-dialog.component';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { EditreviewComponent } from './myreviews/editreview/editreview.component';
+import { ExhibitCreationComponent } from './planer/exhibit-creation/exhibit-creation.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { EditreviewComponent } from './myreviews/editreview/editreview.component
     ViewTourComponent,
     AddExhibitDialogComponent,
     MyreviewsComponent,
-    EditreviewComponent
+    EditreviewComponent,
+    ExhibitCreationComponent
   ],
   imports: [
     BrowserModule,

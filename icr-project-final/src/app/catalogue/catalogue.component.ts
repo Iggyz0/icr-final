@@ -1,5 +1,5 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ExhibitModel } from '../models/ExhibitModel';
 import { TourModel } from '../models/TourModel';
@@ -12,7 +12,7 @@ import { UserService } from '../services/user.service';
   templateUrl: './catalogue.component.html',
   styleUrls: ['./catalogue.component.css']
 })
-export class CatalogueComponent implements OnInit, AfterViewInit {
+export class CatalogueComponent implements OnInit  {
 
   items: ExhibitModel[] = [];
   displayedItems: ExhibitModel[] = [];
@@ -23,13 +23,10 @@ export class CatalogueComponent implements OnInit, AfterViewInit {
     private userService: UserService,
     private toursService: ToursService) { }
   
-  ngAfterViewInit(): void {
-    this.items = this.exhibitsService.getAllItems();
-    this.displayedItems = this.items;
-  }
 
   ngOnInit(): void {
-    
+    this.items = this.exhibitsService.getAllItems();
+    this.displayedItems = this.items;
   }
 
   search() {
@@ -85,10 +82,10 @@ export class CatalogueComponent implements OnInit, AfterViewInit {
 
 // -------------- SORT BY PRICE START
 minValuePrice: number = 1;
-maxValuePrice: number = 1000;
+maxValuePrice: number = 100000;
 optionsPrice: Options = {
   floor: 0,
-  ceil: 1000,
+  ceil: 100000,
   // translate: (value: number, label: LabelType): string => {
   //   switch (label) {
   //     case LabelType.Low:

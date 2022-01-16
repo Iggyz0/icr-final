@@ -44,8 +44,6 @@ export class ReviewService extends GenericCRUD<ReviewModel> {
   public handleUpdateReview(review: ReviewModel, showpiece: ShowPieceModel) {
     this.updateItem(review);
 
-    console.log(showpiece);
-    
     let newReviews = showpiece.recenzije.filter((rev) => rev.id != review.id);
     newReviews.push(review);
     newReviews = newReviews.sort((rev1, rev2) => rev1.id - rev2.id);
