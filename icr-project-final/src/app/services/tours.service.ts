@@ -96,10 +96,7 @@ export class ToursService extends GenericCRUD<TourModel> {
     .subscribe(
       result => { 
         this.dialogOpen=false;
-<<<<<<< HEAD
-=======
         
->>>>>>> origin/StefanTex
       }
     );
   }

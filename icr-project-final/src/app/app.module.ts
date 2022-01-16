@@ -29,11 +29,8 @@ import { AddToTourComponent } from './add-to-tour/add-to-tour.component';
 import { AddExhibitDialogComponent } from './catalogue/add-exhibit-dialog/add-exhibit-dialog.component';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { EditreviewComponent } from './myreviews/editreview/editreview.component';
-<<<<<<< HEAD
 import { StringTruncationPipe } from './string-trunc';
-=======
 import { ExhibitCreationComponent } from './planer/exhibit-creation/exhibit-creation.component';
->>>>>>> origin/StefanTex
 
 @NgModule({
   declarations: [
@@ -54,11 +51,8 @@ import { ExhibitCreationComponent } from './planer/exhibit-creation/exhibit-crea
     AddExhibitDialogComponent,
     MyreviewsComponent,
     EditreviewComponent,
-<<<<<<< HEAD
-    StringTruncationPipe
-=======
+    StringTruncationPipe,
     ExhibitCreationComponent
->>>>>>> origin/StefanTex
   ],
   imports: [
     BrowserModule,

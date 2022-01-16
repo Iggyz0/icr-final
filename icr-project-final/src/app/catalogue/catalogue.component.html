@@ -70,7 +70,8 @@
                             <p>{{item.vrstaPostavke}}</p>
                         </mat-card-content>
     
-                        <mat-card-content fxFlex fxFill fxLayoutAlign="end center">
+                        <mat-card-content fxFlex fxFill fxLayoutAlign="space-between center">
+                            <span>Showpieces: {{item.eksponati.length || 0}}</span>
                             <p class="priceText">{{item.cena | currency}}</p>
                         </mat-card-content>
     
@@ -78,7 +79,7 @@
                             <div fxLayoutAlign="row nowrap"> 
                                 <div fxLayoutAlign="center center">
                                 <star-rating fxFlex
-                                [value]="item.prosecnaOcena"
+                                [value]="item.prosecnaOcena || 0"
                                 [totalstars]="5"
                                 checkedcolor="#ffd740"
                                 uncheckedcolor="gray"
@@ -87,7 +88,7 @@
                                 ></star-rating>
                                 </div>
                                 <div fxLayoutAlign="center center" class="text-align-center">
-                                ({{ item.prosecnaOcena | number: '1.0-1' }})
+                                ({{ item.prosecnaOcena || 0 | number: '1.0-1' }})
                                 </div>
                             </div>
                             <p>Tour time: <span class="tourTime">{{ item.procenjenoVremeObilaska/60 | number: '1.0-0' }}min</span></p>
