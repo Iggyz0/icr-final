@@ -52,7 +52,7 @@ export class UserService extends GenericCRUD<UserModel> {
       status: 'tekuci',
       ukupnaCena: 0,
       ukupnoVreme: 0,
-      dateCreated: new Date()
+      dateCreated: new Date(),
     });
 
     if (this.updateItem(user)) {
@@ -71,7 +71,7 @@ export class UserService extends GenericCRUD<UserModel> {
       let planer = user.planer.filter((tour) => tour.id !== tourID);
       user.planer = planer;
 
-      if ( this.updateItem(user) !== undefined) {
+      if (this.updateItem(user) !== undefined) {
         return true;
       }
     }
@@ -101,12 +101,12 @@ export class UserService extends GenericCRUD<UserModel> {
   ): TourModel {
     let user = this.findItemByID(userID);
 
-    let tour = user.planer.find((obilazak) => obilazak.id === tourID);
+    let tour = user.planer.find((obilazak) => obilazak.id == tourID);
     tour.eksponat.add(showpiece);
     tour.ukupnaCena = tour.ukupnaCena + showpiece.cena;
     tour.ukupnoVreme = tour.ukupnoVreme + showpiece.vremeObilaska;
 
-    user.planer = user.planer.filter((obilazak) => obilazak.id !== tourID);
+    user.planer = user.planer.filter((obilazak) => obilazak.id != tourID);
     user.planer.push(tour);
     user.planer = user.planer.sort((tour1, tour2) => tour1.id - tour2.id);
 
@@ -140,23 +140,41 @@ export class UserService extends GenericCRUD<UserModel> {
     return null;
   }
 
-  public findTour( userID: number, tourID: number) : TourModel{
-    return this.findItemByID(userID).planer.find( obilazak => obilazak.id === tourID);
+  public findTour(userID: number, tourID: number): TourModel {
+    return this.findItemByID(userID).planer.find(
+      (obilazak) => obilazak.id === tourID
+    );
   }
 
-  public doesTourContainExhibit( userID: number, exhibit: ExhibitModel, tourID: number){
+  public doesTourContainExhibit(
+    userID: number,
+    showpiece: ShowPieceModel
+  ): boolean {
     let user = this.findItemByID(userID);
 
-    let tour = user.planer.find( obilazak => obilazak.id === tourID);
-
+    let doesContain;
+    user.planer.forEach((tour) => {
+      if (tour.status == 'zavrsen') {
+        return tour.eksponat.forEach((exponat) => {
+          if (exponat.id == showpiece.id) doesContain = true;
+          doesContain = false;
+        });
+      }
+    });
+    return doesContain;
   }
 
-  public addExhibitToTour( userID: number, exhibit: ExhibitModel, tourID: number){
-
+  public addExhibitToTour(
+    userID: number,
+    exhibit: ExhibitModel,
+    tourID: number
+  ) {
     let user = this.findItemByID(userID);
-    let newTour: TourModel = user.planer.find( obilazak => obilazak.id == tourID);
+    let newTour: TourModel = user.planer.find(
+      (obilazak) => obilazak.id == tourID
+    );
 
-    exhibit.eksponati.forEach( exponat => {
+    exhibit.eksponati.forEach((exponat) => {
       newTour.eksponat.add(exponat);
       newTour.ukupnaCena = newTour.ukupnaCena + exponat.cena;
       newTour.ukupnoVreme = newTour.ukupnoVreme + exponat.vremeObilaska;
@@ -171,21 +189,22 @@ export class UserService extends GenericCRUD<UserModel> {
     }
 
     return null;
-
   }
 
-  public removeExhibitFromTour( userID: number, exhibit: ExhibitModel, tourID: number){
-
+  public removeExhibitFromTour(
+    userID: number,
+    exhibit: ExhibitModel,
+    tourID: number
+  ) {
     let user = this.findItemByID(userID);
 
-    let newTour = user.planer.find( obilazak => obilazak.id === tourID);
-    
-    exhibit.eksponati.forEach( exponat => {
-      newTour.eksponat.delete(exponat)
+    let newTour = user.planer.find((obilazak) => obilazak.id === tourID);
+
+    exhibit.eksponati.forEach((exponat) => {
+      newTour.eksponat.delete(exponat);
       newTour.ukupnaCena = newTour.ukupnaCena - exponat.cena;
       newTour.ukupnoVreme = newTour.ukupnoVreme - exponat.vremeObilaska;
     });
-
 
     user.planer = user.planer.filter((obilazak) => obilazak.id !== tourID);
     user.planer.push(newTour);
@@ -196,7 +215,6 @@ export class UserService extends GenericCRUD<UserModel> {
     }
 
     return null;
-
-  }1
-
+  }
+  1;
 }
