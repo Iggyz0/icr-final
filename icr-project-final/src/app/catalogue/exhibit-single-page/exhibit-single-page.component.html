@@ -15,7 +15,9 @@
                 <p style="margin-top: 0.25em;">{{ showpiece.opis }}</p>
               </div>
         </div>
-        <div fxFlex="35%" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+        <!-- <mat-divider fxFlex="10%" fxFill [vertical]="true"></mat-divider>
+        <span class="example-spacer"></span> -->
+        <div fxFlex="30%" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
             <!-- -------------------------------------------------------------------------------------------------------------- -->
 
             <div fxLayout="column nowrap" class="product-info" fxLayoutGap="1em">
@@ -25,7 +27,7 @@
                   <h3>{{ showpiece.cena | currency }}</h3>
                 </div>
                 <div fxFlex fxLayout="row no wrap">
-                  <button mat-raised-button color="accent" (click)="addShowpieceToTour(showpiece)">
+                  <button fxFill mat-raised-button color="accent" (click)="addShowpieceToTour(showpiece)">
                     Add to tour
                   </button>
                   <!-- <button *ngIf="isAlreadyInTheCart" mat-raised-button color="warn" (click)="removeFromCart()">
@@ -75,7 +77,7 @@
     </div>
 
     <!-- showpiece reviews -->
-    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxFill>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxFill style="padding-top: 1.5em;">
         <div fxFlex fxLayout="column" fxLayoutAlign="center center">
             <h3>User reviews</h3>
         </div>

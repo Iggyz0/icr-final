@@ -1,6 +1,6 @@
- <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" >
-    <div fxLayoutAlign = "center center">
-        <button mat-button color="primary" (click)="createEmptyTour()">Create tour</button>
+ <div class="tab-content-wrap" fxFlex fxLayout="column nowrap" fxLayoutAlign="center start" fxLayoutGap="1em">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary" (click)="createEmptyTour()">Create a tour</button>
     </div>
         <div fxFlex fxFill>
           <mat-table #table [dataSource]="toursDataSource" matSort>
@@ -38,6 +38,11 @@
                 <button color="accent" mat-raised-button (click)="viewTour(element)">View items</button>
               </mat-cell>
             </ng-container>
+
+            <!-- if no data is found -->
+            <div fxFill fxLayoutAlign="center center" *matNoDataRow>
+              No tours in your planer yet!
+            </div>
 
             <ng-container matColumnDef="Edit">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Edit items</mat-header-cell>

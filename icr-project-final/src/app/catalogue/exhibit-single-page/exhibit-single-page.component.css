@@ -7,6 +7,10 @@
     margin-top: 1em;
 }
 
+.example-spacer {
+    flex: 1 1 auto;
+}
+
 #description{
     border: 1px solid gray;
     border-radius: 5px;
@@ -15,7 +19,7 @@
     padding-left: 5px;
     padding-bottom: 10px;
     padding-top: 10px;
-    margin-left :15px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
