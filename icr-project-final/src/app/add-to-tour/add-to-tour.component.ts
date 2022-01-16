@@ -27,12 +27,12 @@ export class AddToTourComponent implements OnInit {
   ngOnInit(): void {
     const id = this.localStorage.getLocalStorageItem('id');
     this.user = this.userService.findItemByID(+id);
+    this.user.planer = this.user.planer.filter( tour => !(tour.status == 'tekuci'));
   }
 
   submit() {
     const id = this.localStorage.getLocalStorageItem('id');
 
-    //NOTE: OVDE JE GRESKA (reading eksponat) - userService 105. linija
     let user;
     if (
       user = this.userService.addShowPieceToTour(+id, this.data, this.selected) !== null
