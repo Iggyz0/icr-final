@@ -1,5 +1,8 @@
 <div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
-    <div fxLayout="row" fxFill fxLayoutAlign="end center">
+    <div fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxFlex>
+          <span>Review details for showpiece '{{data.showpieceId.naziv}}'</span>
+        </div>
         <button mat-raised-button [mat-dialog-close]="false" (click)="cancel()">
             <mat-icon matListIcon>close</mat-icon>
         </button>
@@ -7,7 +10,7 @@
     <mat-dialog-content>
         <div class="oneReview" fxFlex fxLayout="column" fxLayoutAlign="center start" >
             <div>
-            <p><b>We would love to hear what you think, so please leave a review:</b></p>
+            <p><b>You may update your review:</b></p>
             </div>
             <div fxFlex fxFill>
             <mat-form-field appearance="fill" fxFlex="100%">

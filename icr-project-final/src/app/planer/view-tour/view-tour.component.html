@@ -12,8 +12,8 @@
     <p>There are no showpieces in this tour yet!</p>
   </div>
   <div fxFlex fxFill fxLayout="column" fxLayoutAlign="end center">
-    <mat-dialog-content fxFill>
-      <mat-accordion>
+    <mat-dialog-content fxFill class="scroll">
+      <!-- <mat-accordion>
         <mat-expansion-panel *ngFor="let showpiece of data.tour.eksponat">
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -26,7 +26,28 @@
             <mat-icon matListIcon>close</mat-icon>
           </button>
         </mat-expansion-panel> 
-      </mat-accordion>
+      </mat-accordion> -->
+      <mat-list>
+        <mat-list-item *ngFor="let showpiece of data.tour.eksponat" style="padding: 0.25em;">
+          <mat-icon matListIcon>
+            <img fxFlex src="{{showpiece.slika}}" alt="Photo" style="object-fit: contain;">
+          </mat-icon>
+          <h3 matLine> {{showpiece.naziv}} </h3>
+          <p matLine>
+            <span> {{showpiece.vrsta}} </span>
+            <span class="demo-2"> -- {{showpiece.opis | stringTrunc: 60}} </span>
+          </p>
+          <button style="z-index: 5; margin-right: 0.25em;" mat-raised-button color="accent" (click)="goToPage(showpiece.id)">
+            Go to page
+          </button>
+          <span *ngIf="data.editingEnabled">&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+          <button style="z-index: 5;" mat-raised-button *ngIf="data.editingEnabled" color="warn" (click)="remove(showpiece.id)">
+            <mat-icon matListIcon>delete</mat-icon>
+          </button>
+          <mat-divider fxFill></mat-divider>
+        </mat-list-item>
+      </mat-list>
+
     </mat-dialog-content>
   </div>
   

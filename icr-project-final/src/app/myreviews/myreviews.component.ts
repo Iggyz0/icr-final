@@ -68,10 +68,6 @@ export class MyreviewsComponent implements OnInit {
     });
 
     this.reviewDataSource.data = temp;
-
-    console.log(temp);
-    
-    
   }
 
   reviewsUpdateParent() {

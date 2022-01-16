@@ -33,7 +33,7 @@
               <mat-cell *matCellDef="let element">{{ element.ocena }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="viewItems">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>View items</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>View items</mat-header-cell>
               <mat-cell *matCellDef="let element" name="viewItems" #status>
                 <button color="accent" mat-raised-button (click)="viewTour(element)">View items</button>
               </mat-cell>
@@ -45,32 +45,32 @@
             </div>
 
             <ng-container matColumnDef="Edit">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Edit items</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>Edit items</mat-header-cell>
               <mat-cell *matCellDef="let element" name="Edit" #status>
                 <button *ngIf="element.status == 'tekuci'" color="accent" mat-raised-button (click)="editTour(element)">Edit items</button>
               </mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="complete">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Complete tour</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>Complete tour</mat-header-cell>
               <mat-cell *matCellDef="let element">
                 <button *ngIf="element.status == 'tekuci'" color="primary" mat-raised-button (click)="complete(element.id)">Complete</button>
               </mat-cell>
             </ng-container>
             <ng-container matColumnDef="cancel">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Cancel tour</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>Cancel tour</mat-header-cell>
               <mat-cell *matCellDef="let element">
                 <button *ngIf="element.status == 'tekuci'" color="warn" mat-raised-button (click)="cancel(element.id)">Cancel</button>
               </mat-cell>
             </ng-container>
             <ng-container matColumnDef="delete">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Delete tour</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>Delete tour</mat-header-cell>
               <mat-cell *matCellDef="let element">
                 <button *ngIf="element.status == 'otkazan'" color="warn" mat-raised-button (click)="delete(element.id)">Delete</button>
               </mat-cell>
             </ng-container>
             <ng-container matColumnDef="createAsExhibit">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Create exhibit</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>Create exhibit</mat-header-cell>
               <mat-cell *matCellDef="let element">
                 <button *ngIf="element.status == 'zavrsen'" color="warn" mat-raised-button (click)="create(element.id)">Create as exhibit</button>
               </mat-cell>
