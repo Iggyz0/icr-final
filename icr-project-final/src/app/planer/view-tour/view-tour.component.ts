@@ -1,9 +1,7 @@
-import { I } from '@angular/cdk/keycodes';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ShowPieceModel } from 'src/app/models/ShowpieceModel';
-import { TourModel } from 'src/app/models/TourModel';
 
 @Component({
   selector: 'app-view-tour',
@@ -40,4 +38,5 @@ export class ViewTourComponent implements OnInit {
     let url = "/catalogue/exhibits/showpiece/" + id;
     this.router.navigateByUrl(url);
   }
+
 }

@@ -65,11 +65,11 @@
           *ngIf="(korisnik$ | async) != null"
           routerLink="/profile"
           
-          >Profile</a
+          >Profile ({{ ((korisnik$ | async)?.username) | stringTrunc: 7  }})</a
         >
-        <span *ngIf="(korisnik$ | async) != null">
+        <!-- <span *ngIf="(korisnik$ | async) != null">
           Welcome, {{ (korisnik$ | async)?.username }}
-        </span>
+        </span> -->
         <a
           class="borderTopHover toolbarLinks"
           class="hoverPointer"

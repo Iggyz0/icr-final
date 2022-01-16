@@ -28,17 +28,21 @@
         </mat-expansion-panel> 
       </mat-accordion> -->
       <mat-list>
-        <mat-list-item *ngFor="let showpiece of data.tour.eksponat" style="padding: 0.5em;">
+        <mat-list-item *ngFor="let showpiece of data.tour.eksponat" style="padding: 0.25em;">
           <mat-icon matListIcon>
             <img fxFlex src="{{showpiece.slika}}" alt="Photo" style="object-fit: contain;">
           </mat-icon>
           <h3 matLine> {{showpiece.naziv}} </h3>
-          <p matLine fxFlex="40%" style="overflow: hidden;">
+          <p matLine>
             <span> {{showpiece.vrsta}} </span>
-            <span class="demo-2"> -- {{showpiece.opis}} </span>
+            <span class="demo-2"> -- {{showpiece.opis | stringTrunc: 60}} </span>
           </p>
-          <button style="z-index: 5;" mat-raised-button color="accent" (click)="goToPage(showpiece.id)">
+          <button style="z-index: 5; margin-right: 0.25em;" mat-raised-button color="accent" (click)="goToPage(showpiece.id)">
             Go to page
+          </button>
+          <span *ngIf="data.editingEnabled">&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+          <button style="z-index: 5;" mat-raised-button *ngIf="data.editingEnabled" color="warn" (click)="remove(showpiece.id)">
+            <mat-icon matListIcon>delete</mat-icon>
           </button>
           <mat-divider fxFill></mat-divider>
         </mat-list-item>
