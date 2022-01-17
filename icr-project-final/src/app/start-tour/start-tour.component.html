@@ -1,0 +1,61 @@
+<div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em">
+    <div fxFlex fxFill fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxFlex>
+        <span>Tour scheduled on {{data.dateCreated | date}}</span>
+      </div>
+      <button mat-raised-button [mat-dialog-close]="false" (click)="close()">
+        <mat-icon matListIcon>close</mat-icon>
+      </button>
+    </div>
+    <mat-divider style="width: 100%;"></mat-divider>
+    <div fxFlex fxFill fxLayout="column" fxLayoutAlign="center center">
+      <mat-dialog-content fxFill fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+        <div *ngIf="allShowpiecesFromTour.length == 0" fxFlex fxFill fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="1em">
+          <p>
+              <b>
+                  There are no exhibits in this tour!
+              </b>
+          </p>
+        </div>
+        
+        <div id="section1" class="carousel slide sliderContainer" data-bs-ride="false" data-bs-pause="hover" style="width: 100%; height: 100%; object-fit: contain;">
+
+            <!-- Indicators/dots -->
+            <!-- <div class="carousel-indicators" style="z-index: 3;">
+              <button type="button" data-bs-target="#section1" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#section1" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#section1" data-bs-slide-to="2"></button>
+            </div> -->
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner" #carouselInner fxFlex style="width: 100%; height: 100%;">
+
+              <div class="carousel-item" *ngFor="let showpiece of allShowpiecesFromTour; index as i" style="object-fit: contain;" style="width: 100%; height: 100%;">
+                <img src="{{showpiece.slika}}" alt="slide{{i}}" style="object-fit: contain; width: 100%; height: 100%;">
+                <div class="carousel-caption">
+                    <h3 class="fs-1 text-warning">{{showpiece.naziv}}</h3>
+                    <h4 class="fs-2 text-warning">{{showpiece.vrsta}}</h4>
+                    <p class="fs-5 fst-italic">{{showpiece.zemljaPorekla}}</p>
+                </div>
+              </div>
+              
+              
+            </div>
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#section1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#section1" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            
+        </div>
+
+
+      </mat-dialog-content>
+    </div>
+    <div fxFlex fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+      <button mat-raised-button color="primary" (click)="close()">End tour</button>
+    </div>
+</div>

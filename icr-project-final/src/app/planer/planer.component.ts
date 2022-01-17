@@ -11,6 +11,8 @@ import { MatAutocomplete } from '@angular/material/autocomplete';
 import { ToursService } from '../services/tours.service';
 import { ExhibitsService } from '../services/exhibits.service';
 import { ExhibitModel } from '../models/ExhibitModel';
+import { MatDialog } from '@angular/material/dialog';
+import { StartTourComponent } from '../start-tour/start-tour.component';
 
 @Component({
   selector: 'app-planer',
@@ -36,13 +38,16 @@ export class PlanerComponent implements OnInit {
     'complete',
     'cancel',
     "delete",
-    "createAsExhibit"
+    "createAsExhibit",
+    "startTour"
   ];
 
   //brojevi
   numberOfOngoing = 0;
   numberOfCompleted = 0;
   numberOfCancelled = 0;
+
+  dialogOpen: boolean = false;
 
   //viewChildi
   @ViewChild(MatTable) table : MatTable<any>;
@@ -57,7 +62,9 @@ export class PlanerComponent implements OnInit {
     private userService: UserService,
     private localStorage: LocalStorageService,
     private tourService : ToursService,
-    private exhibitService: ExhibitsService
+    private exhibitService: ExhibitsService,
+    private dialog: MatDialog,
+    private localStorageService: LocalStorageService
   ) { }
   
 
@@ -147,5 +154,29 @@ export class PlanerComponent implements OnInit {
   create(tour: TourModel){
     this.exhibitService.createExhibitDialog(tour);
   }
+  
+  // START TOUR DIALOG OPEN
+  startTour(tour: TourModel) {
+    this.dialogOpen = true;
 
+    const productDetailsDialog = this.dialog.open(StartTourComponent, {
+      disableClose: true,
+      width: '70vw',
+      panelClass: "dialog-responsive",
+      data: tour
+    });
+
+    productDetailsDialog.afterOpened().subscribe(() => {
+      if(this.localStorageService.getLocalStorageItem("theme") == "dark") {
+          productDetailsDialog.addPanelClass('darkMode');
+      }
+    });
+
+    productDetailsDialog
+    .afterClosed()
+    .subscribe(
+      result => { this.dialogOpen=false;
+      }
+    );
+  }
 }

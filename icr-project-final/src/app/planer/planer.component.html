@@ -72,9 +72,16 @@
             <ng-container matColumnDef="createAsExhibit">
               <mat-header-cell *matHeaderCellDef>Create exhibit</mat-header-cell>
               <mat-cell *matCellDef="let element">
-                <button *ngIf="element.status == 'zavrsen' && element.createdAsExhibit != true" color="warn" mat-raised-button (click)="create(element)">Create as exhibit</button>
+                <button *ngIf="element.status == 'zavrsen' && element.createdAsExhibit != true" color="warn" mat-raised-button (click)="create(element)">Create exhibit</button>
               </mat-cell>
             </ng-container>
+            <ng-container matColumnDef="startTour">
+              <mat-header-cell *matHeaderCellDef>Start tour</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button *ngIf="element.status == 'zavrsen'" color="primary" mat-raised-button (click)="startTour(element)">Start tour</button>
+              </mat-cell>
+            </ng-container>
+
             <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
             <mat-row *matRowDef="let rows; columns: displayedColumnsOrders;"></mat-row>
           </mat-table>

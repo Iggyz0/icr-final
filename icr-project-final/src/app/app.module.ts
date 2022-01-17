@@ -31,6 +31,7 @@ import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { EditreviewComponent } from './myreviews/editreview/editreview.component';
 import { StringTruncationPipe } from './string-trunc';
 import { ExhibitCreationComponent } from './planer/exhibit-creation/exhibit-creation.component';
+import { StartTourComponent } from './start-tour/start-tour.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ExhibitCreationComponent } from './planer/exhibit-creation/exhibit-crea
     MyreviewsComponent,
     EditreviewComponent,
     StringTruncationPipe,
-    ExhibitCreationComponent
+    ExhibitCreationComponent,
+    StartTourComponent
   ],
   imports: [
     BrowserModule,
