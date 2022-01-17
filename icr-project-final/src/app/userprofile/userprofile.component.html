@@ -64,6 +64,36 @@
         name="adresa"
       />
     </mat-form-field>
+
+    <mat-form-field class="example-chip-list" appearance="fill">
+      <mat-label>Favorite exhibits</mat-label>
+      <mat-chip-list  #chipList aria-label="Favorite exhibit selection . . .">
+        <mat-chip
+          *ngFor="let omiljenaPostavka of userData.omiljenePostavke"
+          [selectable]="true"
+          [removable]="true"
+          (removed)="remove(omiljenaPostavka)">
+          {{omiljenaPostavka}}
+          <mat-icon matChipRemove >cancel</mat-icon>
+        </mat-chip>
+        <input
+          placeholder="New favorite category..."
+          #postavkaInput
+          [formControl] = "postavkaControl"
+          [matAutocomplete]="auto"
+          [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="add($event)"
+          />
+
+      </mat-chip-list>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let filtriranaPostavka of filtriranePostavke | async" [value]="filtriranaPostavka">
+          {{filtriranaPostavka}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
     <!-- <input type="text" matInput [(ngModel)]="userData." name="ime" /> -->
     <!-- NOTE: postavke ^ -->
     <button fxFill mat-raised-button color="primary" type="submit">Update info</button>
