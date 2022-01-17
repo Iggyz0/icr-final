@@ -18,7 +18,7 @@
           </p>
         </div>
         
-        <div id="section1" class="carousel slide sliderContainer" data-bs-ride="false" data-bs-pause="hover" style="width: 100%; height: 100%; object-fit: contain;">
+        <div *ngIf="!(allShowpiecesFromTour.length == 0)"  id="section1" class="carousel slide sliderContainer" data-bs-ride="false" data-bs-pause="hover" style="width: 100%; height: 100%; object-fit: contain;">
 
             <!-- Indicators/dots -->
             <!-- <div class="carousel-indicators" style="z-index: 3;">
