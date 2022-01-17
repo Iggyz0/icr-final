@@ -28,6 +28,15 @@ export class ExhibitsComponent implements OnInit {
 
   tourTimeTotal: number = -1;
 
+  minValueScore = 0;
+  maxValueScore = 5;
+  optionsScore: Options = {
+    floor: 0,
+    ceil: 5,
+    step: 1,
+    showTicks: true
+  };
+
   constructor(private route: ActivatedRoute, private exhibitsService: ExhibitsService, private showpieceService: ShowpieceService, private tourService: ToursService) { }
   
   ngAfterViewInit(): void {
@@ -61,7 +70,7 @@ export class ExhibitsComponent implements OnInit {
     if (search == '')
       this.displayedItems = this.items;
     else {
-      arr = this.items.filter(obj => { return obj.naziv.toLowerCase().includes(search); });
+      arr = arr.filter(obj => { return obj.naziv.toLowerCase().includes(search); });
       this.p = 1;
     }
 
@@ -74,8 +83,20 @@ export class ExhibitsComponent implements OnInit {
     if (this.countryValue.trim() != "") {
       arr = arr.filter((showpiece) => { return showpiece.zemljaPorekla == this.countryValue});
     }
+    
+    arr = arr.filter((product) => {
+      return (
+        product.ukupnaOcena <= this.maxValueScore &&
+        product.ukupnaOcena >= this.minValueScore
+      );
+    });
 
     this.displayedItems = arr;
+
+    // console.log("items: ", this.items);
+    // console.log("displayedItems: ", this.displayedItems);
+    // console.log("arr: ", arr);
+
     this.sortData({
       active: this.sortValue,
       direction: this.sortValueDirection,

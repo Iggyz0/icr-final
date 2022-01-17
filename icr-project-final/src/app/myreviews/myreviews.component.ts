@@ -43,6 +43,10 @@ export class MyreviewsComponent implements OnInit {
   constructor(private showpieceService: ShowpieceService, private reviewService: ReviewService) { }
 
   ngOnInit(): void {
+
+    console.log("reviews na pocetku (tour model): ", this.reviews);
+    
+
     for(let tour of this.reviews) {
       for(let showpiece of tour.eksponat.values()) {
         for (let rev of showpiece.recenzije) {
@@ -52,6 +56,9 @@ export class MyreviewsComponent implements OnInit {
         }
       }
     }
+
+    console.log("all user reviews var: ",this.allUserReviews);
+    
 
     let temp: CustomReview[] = [];
     this.allUserReviews.forEach(review => {
@@ -66,6 +73,9 @@ export class MyreviewsComponent implements OnInit {
         }
       });
     });
+
+    console.log("temp var (custom review)",temp);
+    
 
     this.reviewDataSource.data = temp;
   }

@@ -51,6 +51,20 @@
             </div>
 
             <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Score:</b></p>
+                <ngx-slider
+                  [value]="minValueScore"
+                  (valueChange)="minValueScore = $event"
+                  [highValue]="maxValueScore"
+                  (highValueChange)="maxValueScore = $event"
+                  [options]="optionsScore"
+                  ngModel
+                  (ngModelChange)="search()"
+                >
+                </ngx-slider>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
                 <p><b>Total tour time:</b></p>
                 <mat-form-field appearance="fill">
                   <mat-label>Total tour time</mat-label>
