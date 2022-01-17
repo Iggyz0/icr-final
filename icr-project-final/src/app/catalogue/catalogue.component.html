@@ -49,18 +49,41 @@
                 >
                 </ngx-slider>
             </div>
+
+            
+
+
         </div>
 
         <mat-divider [vertical]="true"></mat-divider>
 
-        <div fxFlex="78%" fxLayout="row wrap" fxLayoutAlign="center start">
+        <div fxFlex="78%" fxLayout="row wrap" fxLayoutAlign="start start">
             <!-- postavke itd. MAT KARTICE -->
-            <!-- https://i.imgur.com/9HPf6AY.png    placeholder image -->
 
-            <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="1em">
-                <div style="width: calc(100% / 4.5); min-width: 329px; height: 450px; max-height: 450px;" class="cardContainer" fxLayout="column nowrap" fxLayoutAlign="center start" *ngFor="let item of displayedItems | paginate: { itemsPerPage: 12, currentPage: p }">
-                    <mat-card fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxFill>
-                        <img fxFlex="60%" fxFill mat-card-image src="https://i.imgur.com/9HPf6AY.png" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden;">
+            <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="1em" style="margin-left: 1em;">
+                <div style="width: calc(100% / 4.5); min-width: 329px; height: 450px; max-height: 450px;" class="cardContainer" fxLayout="column nowrap" fxLayoutAlign="center start" *ngFor="let item of displayedItems | paginate: { itemsPerPage: 12, currentPage: p }; index as i">
+                    <mat-card fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxFill style="overflow: hidden;">
+                        <div fxFlex="60%" fxFill mat-card-image style="object-fit: contain; overflow: hidden; max-width: 100%;">
+                            <div id="section{{i+1}}" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover" fxFlex="100%" fxFill style="object-fit: contain; overflow: hidden;">
+                                
+                                <!-- The slideshow/carousel -->
+                                <div class="carousel-inner" #picContainer fxFlex fxFill style="object-fit: contain; overflow: hidden;">
+                                  <div class="carousel-item" *ngFor="let showp of item.eksponati; index as j" fxFill style="overflow: hidden;">
+                                    <img src="{{showp.slika}}" alt="slide{{j}}" fxFill style="object-fit: contain; overflow: hidden;">
+                                  </div>
+                                </div>
+                                
+                                <!-- Left and right controls/icons -->
+                                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#section1" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#section1" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon"></span>
+                                </button> -->
+                                
+                            </div>
+                        </div>
+                        <!-- <img fxFlex="60%" fxFill mat-card-image src="https://i.imgur.com/9HPf6AY.png" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden;"> -->
     
                         <mat-card-title fxFlex fxFill fxLayoutAlign="start center">
                             {{item.id}}

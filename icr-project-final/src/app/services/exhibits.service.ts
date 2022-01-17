@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ExhibitModel } from '../models/ExhibitModel';
 import { TourModel } from '../models/TourModel';
 import { ShowPieceModel } from '../models/ShowpieceModel';
+import { ToursService } from './tours.service';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,8 @@ export class ExhibitsService extends GenericCRUD<ExhibitModel> {
     private readingJSON: ReadingJSONService,
     private router: Router,
     private localStorageService: LocalStorageService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private tourService: ToursService
   ) {
     super(readingJSON);
 
@@ -54,7 +56,10 @@ export class ExhibitsService extends GenericCRUD<ExhibitModel> {
 
     exhibitCreationDialog.afterClosed().subscribe((result) => {
       this.dialogOpen = false;
-
+      if (result != false) {
+        tour.createdAsExhibit = true;
+        this.tourService.updateItem(tour);
+      }
     });
   }
 

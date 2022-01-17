@@ -16,7 +16,7 @@ export class WelcomeComponent implements OnInit {
     // carousel needs to be restarted each time the page reloads
     $(document).ready(function() {
       $('.carousel').carousel();
-   });
+    });
   }
   
 

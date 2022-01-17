@@ -25,10 +25,13 @@ export class ExhibitCreationComponent implements OnInit {
   }
 
   close(){
-    this.matDialogRef.close();
+    this.matDialogRef.close(false);
   }
 
   onSubmit( form : NgForm){
+
+    console.log("usao u onSubmit()");
+    
 
     let cenaCalc = Array.from(this.data.eksponat).reduce( (prev, curr) => prev+=curr.cena , 0)
     let procenjenoVremeObilaskaCalc = Array.from(this.data.eksponat).reduce( (prev,curr) => prev+=curr.vremeObilaska, 0);

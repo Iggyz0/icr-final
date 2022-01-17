@@ -1,18 +1,19 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import {  Component, OnInit } from '@angular/core';
+import {  AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ExhibitModel } from '../models/ExhibitModel';
-import { TourModel } from '../models/TourModel';
 import { ExhibitsService } from '../services/exhibits.service';
 import { ToursService } from '../services/tours.service';
 import { UserService } from '../services/user.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.component.html',
   styleUrls: ['./catalogue.component.css']
 })
-export class CatalogueComponent implements OnInit  {
+export class CatalogueComponent implements OnInit, AfterViewInit  {
 
   items: ExhibitModel[] = [];
   displayedItems: ExhibitModel[] = [];
@@ -22,11 +23,23 @@ export class CatalogueComponent implements OnInit  {
   constructor(private exhibitsService: ExhibitsService,
     private userService: UserService,
     private toursService: ToursService) { }
+
+  @ViewChild('picContainer') viewElem!: ElementRef<HTMLElement>;
+
+  ngAfterViewInit(): void {
+    const parentElement = this.viewElem.nativeElement;
+    const firstChild = parentElement.children[0];
+    firstChild.classList.add("active");
+  }
   
 
   ngOnInit(): void {
     this.items = this.exhibitsService.getAllItems();
     this.displayedItems = this.items;
+    // carousel needs to be restarted each time the page reloads
+    $(document).ready(function() {
+      $('.carousel').carousel();
+    });
   }
 
   search() {
@@ -86,26 +99,20 @@ maxValuePrice: number = 100000;
 optionsPrice: Options = {
   floor: 0,
   ceil: 100000,
-  // translate: (value: number, label: LabelType): string => {
-  //   switch (label) {
-  //     case LabelType.Low:
-  //       return (
-  //         "<span style='color: orange;'>Min:</span> <span  style='color: orange;'>$</span>" +
-  //         "<span style='color: orange;'>" +
-  //         value +
-  //         '</span>'
-  //       );
-  //     case LabelType.High:
-  //       return (
-  //         "<span style='color: orange;'>Max:</span> <span  style='color: orange;'>$</span>" +
-  //         "<span style='color: orange;'>" +
-  //         value +
-  //         '</span>'
-  //       );
-  //     default:
-  //       return "<span  style='color: orange;'>$</span>" + value;
-  //   }
-  // },
+  translate: (value: number, label: LabelType): string => {
+    switch (label) {
+      case LabelType.Low:
+        return (
+          "<span style='color: orange;'>" + value + '</span>'
+        );
+      case LabelType.High:
+        return (
+          "<span style='color: orange;'>" + value + '</span>'
+        );
+      default:
+        return "<span  style='color: orange;'>" + value + "</span>";
+    }
+  },
 };
 
 searchByPrice() {

@@ -1,19 +1,7 @@
-/* .example-card {
-    max-width: calc(100% / 5);
-    max-height: 450px;
-} */
-
 /* .example-card:hover {
     border: 1px solid #2697e7;
     box-shadow: 1px 1px 14px darkcyan;
     animation: 0.3s;
-}
-
-mat-card {
-    padding: 0% !important;
-    margin-top: 5px;
-    margin-left: 5px;
-    cursor: pointer;
 }
  */
 .text-align-center {
@@ -37,38 +25,6 @@ img.mat-card-image {
     font-weight: bold;
     font-size: 1.5em;
 }
-
-/*  
-mat-card-subtitle{
-    font-size:18px;
-    text-align: center;
-    margin: 0 !important;
-}
-
-mat-icon {
-    font-size: 18px;
-}
-
-mat-card-title{
-    color:rgb(0, 55, 128);
-    font-size:20px;
-    text-align: start;
-} */
-
-/* mat-card-content {
-    min-width: 250px;
-    min-height: 400px;
-    width: 250px;
-    height: 400px;
-    overflow: hidden;
-    background-image: url(https://i.imgur.com/s7SDEey.png);
-} */
-
-/* mat-card-content > img {
-    width: 350px;
-    height: 250px;
-    object-fit: contain;
-} */
 
 .eighty-percent {
     max-width: 80%;

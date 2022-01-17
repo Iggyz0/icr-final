@@ -145,9 +145,6 @@ export class PlanerComponent implements OnInit {
 
   create(tour: TourModel){
     this.exhibitService.createExhibitDialog(tour);
-
-    tour.createdAsExhibit = true;
-    this.tourService.updateItem(tour);
   }
 
 }
