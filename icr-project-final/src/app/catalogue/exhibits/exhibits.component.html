@@ -49,6 +49,35 @@
                 >
                 </ngx-slider>
             </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Total tour time:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Total tour time</mat-label>
+                  <mat-select [(ngModel)]="tourTimeTotal" (selectionChange)="search()">
+                    <mat-option value="-1">Any amount of time</mat-option>
+                    <mat-option value="2">up to 2min</mat-option>
+                    <mat-option value="5">up to 5min</mat-option>
+                    <mat-option value="10">up to 10min</mat-option>
+                    <mat-option value="20">up to 20min</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Country of origin:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Country of origin</mat-label>
+                  <mat-select [(ngModel)]="countryValue" (selectionChange)="search()">
+                    <mat-option value="">Any origin</mat-option>
+                    <mat-option *ngFor="let country of uniqueCountries" [value]="country">
+                        {{country}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+
+
         </div>
 
         <mat-divider [vertical]="true"></mat-divider>

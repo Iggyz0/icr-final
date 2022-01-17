@@ -23,16 +23,26 @@ export class ExhibitsComponent implements OnInit {
   p: number = 1; // for pagination
   searchValue: string = '';
 
+  uniqueCountries: string[] = [];
+  countryValue: string = '';
+
+  tourTimeTotal: number = -1;
+
   constructor(private route: ActivatedRoute, private exhibitsService: ExhibitsService, private showpieceService: ShowpieceService, private tourService: ToursService) { }
   
   ngAfterViewInit(): void {
     this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
     this.items = this.exhibition.eksponati;
     this.displayedItems = this.items;
+    this.findUniqueCountries();
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(val => { this.exhibitionId = val["id"] });
+  }
+
+  findUniqueCountries() {
+    this.uniqueCountries = [...new Set(this.displayedItems.map((item) => item.zemljaPorekla))];
   }
 
   viewExhibitDetails(id: string) {
@@ -44,13 +54,33 @@ export class ExhibitsComponent implements OnInit {
   }
 
   search() {
+    let search = this.searchValue.trim().toLowerCase();
+    let arr = this.items;
     this.p = 1;
-    if (this.searchValue == '')
+
+    if (search == '')
       this.displayedItems = this.items;
     else {
-      this.displayedItems = this.items.filter(search => { return search.naziv.toLowerCase().includes(this.searchValue); });
+      arr = this.items.filter(obj => { return obj.naziv.toLowerCase().includes(search); });
       this.p = 1;
     }
+
+    if (this.tourTimeTotal != -1) {
+      arr = arr.filter((showpiece) => { return showpiece.vremeObilaska <= this.tourTimeTotal*60; });
+    } else {
+      this.tourTimeTotal = -1;
+    }
+
+    if (this.countryValue.trim() != "") {
+      arr = arr.filter((showpiece) => { return showpiece.zemljaPorekla == this.countryValue});
+    }
+
+    this.displayedItems = arr;
+    this.sortData({
+      active: this.sortValue,
+      direction: this.sortValueDirection,
+    });
+
   }
 
   // ------------ SORT START

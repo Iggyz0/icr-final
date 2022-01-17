@@ -3,6 +3,7 @@ import { ReviewModel } from './ReviewModel';
 import { ShowPieceModel } from './ShowpieceModel';
 
 export interface ExhibitModel extends BaseModel {
+  ime?: string;
   vrstaPostavke: string;
   eksponati: ShowPieceModel[]; 
   brojEksponata?: number; 

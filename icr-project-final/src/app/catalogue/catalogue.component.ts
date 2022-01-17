@@ -19,6 +19,24 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
   displayedItems: ExhibitModel[] = [];
   p: number = 1; // for pagination
   searchValue: string = '';
+  
+  isChecked: boolean = false;
+  typeValue: string = 'any';
+  showpieceTypeValue: string = 'any';
+  allTypes: string[];
+  allShowpieceTypes: string[];
+
+  minValueScore: number = 0;
+  maxValueScore: number = 5;
+  optionsScore: Options = {
+    floor: 0,
+    ceil: 5,
+    step: 1,
+    showTicks: true
+  };
+
+  numberOfExhibitsValue: number = -1;
+  tourTimeTotal: number = -1;
 
   constructor(private exhibitsService: ExhibitsService,
     private userService: UserService,
@@ -32,7 +50,6 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     firstChild.classList.add("active");
   }
   
-
   ngOnInit(): void {
     this.items = this.exhibitsService.getAllItems();
     this.displayedItems = this.items;
@@ -40,23 +57,91 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     $(document).ready(function() {
       $('.carousel').carousel();
     });
+    this.findUniqueTypesOfExhibitions();
   }
 
+  findUniqueTypesOfExhibitions() {
+    this.allTypes = [...new Set(this.displayedItems.map((item) => item.vrstaPostavke))];
+
+    let showpiecesFromExhibit = [];
+    this.items.forEach(exModel => showpiecesFromExhibit.push(...exModel.eksponati));
+
+    let uniqueShowpieceTypes = [...new Set(showpiecesFromExhibit.map(showpiece => showpiece.vrsta))];
+
+    this.allShowpieceTypes = uniqueShowpieceTypes;
+    
+  }
+
+  // -----------------------------------------------------------------   BIG SEARCH START  ----------------------------------------------------------------
   search() {
+    let search = this.searchValue.trim().toLowerCase();
+    let arr = this.items;
     this.p = 1;
-    if (this.searchValue == '')
+
+    if (this.isChecked) {
+      this.typeValue = 'any';
+      let currUser = this.userService.getCurrentUser();
+      if (currUser != null) { 
+          if (currUser.omiljenePostavke.length > 0) {
+            arr = arr.filter((exhibition) => { return currUser.omiljenePostavke.includes(exhibition.vrstaPostavke)});
+          }
+      }
+    }
+
+    if (this.numberOfExhibitsValue != -1) {
+      arr = arr.filter((exhibition) => { return exhibition.eksponati.length <= this.numberOfExhibitsValue; });
+    } else {
+      this.numberOfExhibitsValue = -1;
+    }
+
+    if (this.tourTimeTotal != -1) {
+      arr = arr.filter((exhibition) => { return exhibition.procenjenoVremeObilaska <= this.tourTimeTotal*60; });
+    } else {
+      this.tourTimeTotal = -1;
+    }
+    
+    if (search == '')
       this.displayedItems = this.items;
     else {
-      this.displayedItems = this.items.filter(search => { return search.vrstaPostavke.toLowerCase().includes(this.searchValue); });
+      arr = this.items.filter(obj => { return obj.vrstaPostavke.toLowerCase().includes(search); });
       this.p = 1;
     }
+
+    if (this.typeValue != 'any') {
+      arr = arr.filter((product) => {
+        return product.vrstaPostavke == this.typeValue;
+      });
+    } else {
+      this.typeValue = 'any';
+    }
+
+    if (this.showpieceTypeValue != 'any') {
+      arr = arr.filter((exhibitModel) => { return exhibitModel.eksponati.forEach((eksponat) => { return eksponat.vrsta == this.showpieceTypeValue }) });
+    }
+
+    arr = arr.filter((product) => {
+      return (
+        product.prosecnaOcena <= this.maxValueScore &&
+        product.prosecnaOcena >= this.minValueScore
+      );
+    });
+
+    this.displayedItems = arr;
+    this.sortData({
+      active: this.sortValue,
+      direction: this.sortValueDirection,
+    });
+
+    
   }
+
+  // -----------------------------------------------------------------   BIG SEARCH END  ------------------------------------------------------------------
 
   viewExhibition(id: string) {
     this.exhibitsService.viewExhibitionShowpieces(id);
   }
 
-  // ------------ SORT START
+  // ------------ MAT SORT START
 
   sortValue: string = '';
   sortValueDirection: SortDirection = '';
@@ -78,6 +163,8 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
           return this.compare(a.vrstaPostavke, b.vrstaPostavke, isAsc);
         case 'price':
           return this.compare(a.cena, b.cena, isAsc);
+        case 'score':
+          return this.compare(a.cena, b.cena, isAsc);
         default:
           return 0;
       }
@@ -91,7 +178,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
   ) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
   }
-// -------------- SORT END
+// -------------- MAT SORT END
 
 // -------------- SORT BY PRICE START
 minValuePrice: number = 1;

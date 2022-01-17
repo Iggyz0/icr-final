@@ -6,6 +6,7 @@ import dataFile from '../../assets/Data/users.json';
 import { TourModel } from '../models/TourModel';
 import { ShowPieceModel } from '../models/ShowpieceModel';
 import { ExhibitModel } from '../models/ExhibitModel';
+import { LocalStorageService } from './localstorage.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class UserService extends GenericCRUD<UserModel> {
   fajl: string = 'users.json';
   planerID = 1;
 
-  constructor(readingJSON: ReadingJSONService) {
+  constructor(readingJSON: ReadingJSONService, private localStorage: LocalStorageService) {
     super(readingJSON);
 
     this.readFromFile();
@@ -22,6 +23,15 @@ export class UserService extends GenericCRUD<UserModel> {
 
   public readFromFile(): void {
     this.items = dataFile;
+  }
+
+  public getCurrentUser(): UserModel {
+    if (this.localStorage.getLocalStorageItem("id") != "") {
+      return this.findItemByID(+this.localStorage.getLocalStorageItem("id"));
+    }
+    else {
+      return null;
+    }
   }
 
   // public readFromFile(): void{
