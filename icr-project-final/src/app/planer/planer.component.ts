@@ -33,7 +33,6 @@ export class PlanerComponent implements OnInit {
     'status',
     'ocena',
     'viewItems',
-    'Edit',
     'complete',
     'cancel',
     "delete",
@@ -135,8 +134,8 @@ export class PlanerComponent implements OnInit {
     this.updateParentTours(this.userService.findItemByID(this.userID).planer);
   }
 
-  viewTour(element){
-    this.tourService.viewTour(element, false);
+  viewTour(element, editable){
+    this.tourService.viewTour(element, editable);
   }
 
   editTour(element){

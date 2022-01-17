@@ -37,7 +37,7 @@ export class AddExhibitDialogComponent implements OnInit {
 
     let user;
     if (
-      user = this.userService.addExhibitToTour(+id, this.data, this.selected) !== null
+      user = this.userService.addExhibitToTour(+id, this.data, this.selected) != null
     ) {
       this.ref.close(user);
     } else {

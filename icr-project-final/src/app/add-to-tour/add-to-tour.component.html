@@ -17,7 +17,7 @@
           <mat-label>Select an option</mat-label>
           <mat-select [(value)]="selected">
             <mat-option>None</mat-option>
-            <mat-option *ngFor="let tour of user.planer" value="{{tour.id}}">{{tour.dateCreated}}</mat-option>
+            <mat-option *ngFor="let tour of planer" value="{{tour.id}}">{{tour.dateCreated}}</mat-option>
           </mat-select>
         </mat-form-field>
       </mat-dialog-content>

@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ShowPieceModel } from '../models/ShowpieceModel';
+import { TourModel } from '../models/TourModel';
 import { UserModel } from '../models/userModel';
 import { LocalStorageService } from '../services/localstorage.service';
 import { UserService } from '../services/user.service';
@@ -15,6 +16,7 @@ export class AddToTourComponent implements OnInit {
   selected: number;
 
   user: UserModel;
+  planer: TourModel[];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ShowPieceModel, 
@@ -27,8 +29,7 @@ export class AddToTourComponent implements OnInit {
   ngOnInit(): void {
     const id = this.localStorage.getLocalStorageItem('id');
     this.user = this.userService.findItemByID(+id);
-    //NOTE: baguje - user planeri koji su tekuci se gube
-    // this.user.planer = this.user.planer.filter( tour => !(tour.status == 'tekuci'));
+    this.planer = this.user.planer.filter( tour => tour.status == 'tekuci')
   }
 
   submit() {
