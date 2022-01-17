@@ -18,7 +18,7 @@
             </ng-container>
             <ng-container matColumnDef="ukupnoVreme">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Total time: </mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.ukupnoVreme}}</mat-cell>
+              <mat-cell *matCellDef="let element">{{ element.ukupnoVreme/60 | number: '1.0-0'}}min</mat-cell>
             </ng-container>
             <ng-container matColumnDef="ukupnaCena">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Total price: </mat-header-cell>

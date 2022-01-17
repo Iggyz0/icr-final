@@ -19,15 +19,29 @@
             </ng-container>
             <ng-container matColumnDef="cena">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Price:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.showpiece.cena }}</mat-cell>
+              <mat-cell *matCellDef="let element">{{ element.showpiece.cena | currency }}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="vremeObilaska">
               <mat-header-cell *matHeaderCellDef mat-sort-header>Tour time:</mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.showpiece.vremeObilaska/60 | number: '1.0-0' }}</mat-cell>
+              <mat-cell *matCellDef="let element">{{ element.showpiece.vremeObilaska/60 | number: '1.0-0' }}min</mat-cell>
             </ng-container>
             <ng-container matColumnDef="rating">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>Your rating: </mat-header-cell>
-              <mat-cell *matCellDef="let element">{{ element.review.rating}}</mat-cell>
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Your rating:</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <div fxLayoutAlign="row nowrap"> 
+                  <div fxLayoutAlign="center center">
+                  <star-rating fxFlex
+                  [value]="element.review.rating || 0"
+                  [totalstars]="5"
+                  checkedcolor="#ffd740"
+                  uncheckedcolor="gray"
+                  size="18px"
+                  readonly="true"
+                  ></star-rating>
+                  </div>
+                </div>
+                &nbsp;({{ element.review.rating}})
+              </mat-cell>
             </ng-container>
 
             <!-- if no data is found -->
