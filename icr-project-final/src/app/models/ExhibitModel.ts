@@ -9,7 +9,7 @@ export interface ExhibitModel extends BaseModel {
   brojEksponata?: number; 
   cena: number; 
   procenjenoVremeObilaska: number; 
-  recenzijePostavke: ReviewModel[];//Kako cemo recenzirati postavke?
+  recenzijePostavke?: ReviewModel[];//Kako cemo recenzirati postavke?
   prosecnaOcena: number; 
   createdBy: string;
 }
