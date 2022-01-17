@@ -19,7 +19,7 @@ interface CustomReview {
 
 export class MyreviewsComponent implements OnInit {
 
-  @Input() reviews: TourModel[];
+  @Input() showpieces: ShowPieceModel[];
   @Output() reviewsUpdate = new EventEmitter<TourModel[]>();
   @Input() userID!: number;
 
@@ -44,21 +44,14 @@ export class MyreviewsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log("reviews na pocetku (tour model): ", this.reviews);
-    
 
-    for(let tour of this.reviews) {
-      for(let showpiece of tour.eksponat.values()) {
-        for (let rev of showpiece.recenzije) {
-          if(rev.user.id == this.userID) {
-            this.allUserReviews.push(rev);
+    for(let showpiece of this.showpieces) {
+      for(let recenzija of showpiece.recenzije) {
+          if(recenzija.user.id == this.userID) {
+            this.allUserReviews.push(recenzija);
           }
-        }
       }
     }
-
-    console.log("all user reviews var: ",this.allUserReviews);
-    
 
     let temp: CustomReview[] = [];
     this.allUserReviews.forEach(review => {
@@ -73,9 +66,6 @@ export class MyreviewsComponent implements OnInit {
         }
       });
     });
-
-    console.log("temp var (custom review)",temp);
-    
 
     this.reviewDataSource.data = temp;
   }
