@@ -33,9 +33,22 @@
 
     <div fxLayout="row wrap">
         
-        <div class="custom-slider" fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center">
+        <div class="custom-slider" fxFlex="20%" fxLayout="column wrap" fxLayoutAlign="start center" fxLayoutGap="0.5em">
             <!-- kriterijumi -->
             <h3>Filter search results:</h3>
+
+            <mat-divider fxFlex fxFill class="eighty-percent"></mat-divider>
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <mat-checkbox
+                  [(ngModel)]="isChecked"
+                  (change)="search()"
+                  #chekBox
+                >
+                  Display only favorite types
+                </mat-checkbox>
+            </div>
+            <mat-divider fxFlex fxFill class="eighty-percent"></mat-divider>
+
             <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
                 <p><b>Price range:</b></p>
                 <ngx-slider
@@ -48,6 +61,71 @@
                 (ngModelChange)="searchByPrice()"
                 >
                 </ngx-slider>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Score:</b></p>
+                <ngx-slider
+                  [(value)]="minValueScore"
+                  [(highValue)]="maxValueScore"
+                  [options]="optionsScore"
+                  ngModel
+                  (ngModelChange)="search()"
+                >
+                </ngx-slider>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Type of exhibition:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Type of exhibition</mat-label>
+                  <mat-select [(ngModel)]="typeValue" (selectionChange)="search()" [disabled]="chekBox.checked">
+                    <mat-option value="any">Any type</mat-option>
+                    <mat-option *ngFor="let type of allTypes" [value]="type">
+                      {{ type }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Type of exhibits:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Type of exhibits</mat-label>
+                  <mat-select [(ngModel)]="showpieceTypeValue" (selectionChange)="search()" [disabled]="chekBox.checked">
+                    <mat-option value="any">Any type</mat-option>
+                    <mat-option *ngFor="let type of allShowpieceTypes" [value]="type">
+                      {{ type }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Number of exhibits:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Number of exhibits</mat-label>
+                  <mat-select [(ngModel)]="numberOfExhibitsValue" (selectionChange)="search()">
+                    <mat-option value="-1">Any number</mat-option>
+                    <mat-option value="2">up to 2</mat-option>
+                    <mat-option value="5">up to 5</mat-option>
+                    <mat-option value="10">up to 10</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxFlex fxFill fxLayout="column wrap" class="eighty-percent">
+                <p><b>Total tour time:</b></p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Total tour time</mat-label>
+                  <mat-select [(ngModel)]="tourTimeTotal" (selectionChange)="search()">
+                    <mat-option value="-1">Any amount of time</mat-option>
+                    <mat-option value="2">up to 2min</mat-option>
+                    <mat-option value="5">up to 5min</mat-option>
+                    <mat-option value="10">up to 10min</mat-option>
+                    <mat-option value="20">up to 20min</mat-option>
+                  </mat-select>
+                </mat-form-field>
             </div>
 
             
@@ -86,7 +164,7 @@
                         <!-- <img fxFlex="60%" fxFill mat-card-image src="https://i.imgur.com/9HPf6AY.png" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden;"> -->
     
                         <mat-card-title fxFlex fxFill fxLayoutAlign="start center">
-                            {{item.id}}
+                            {{item.ime || item.id}}
                         </mat-card-title>
 
                         <mat-card-content fxFlex fxFill fxLayoutAlign="start center">
