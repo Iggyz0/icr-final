@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { ShowPieceModel } from '../models/ShowpieceModel';
 import { TourModel } from '../models/TourModel';
 import { UserModel } from '../models/userModel';
 import { AuthService } from '../services/auth.service';
 import { LocalStorageService } from '../services/localstorage.service';
+import { ShowpieceService } from '../services/showpiece.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -15,13 +17,15 @@ import { UserService } from '../services/user.service';
 export class ProfileComponent implements OnInit {
 
   user!: UserModel ;
+  showpieces: ShowPieceModel[];
 
   constructor(
     private authService: AuthService,
     private userService: UserService,
     private snackBar: MatSnackBar,
     private localStorage: LocalStorageService,
-    private router: Router
+    private router: Router,
+    private showpieceService: ShowpieceService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +33,7 @@ export class ProfileComponent implements OnInit {
     if( username = this.localStorage.getLocalStorageItem("username")){
       
       const korisnik = this.userService.findUserByUsername(username);
+      this.showpieces = this.showpieceService.getAllItems();
       if(korisnik)
         this.user = korisnik;
 
