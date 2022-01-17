@@ -141,6 +141,8 @@ export class PlanerComponent implements OnInit {
 
   editTour(element){
     this.tourService.viewTour(element, true);
+
+    // this.updateParentTours();
   }
 
   create(tour: TourModel){

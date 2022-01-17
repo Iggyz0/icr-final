@@ -103,8 +103,10 @@ export class UserService extends GenericCRUD<UserModel> {
 
     let tour = user.planer.find((obilazak) => obilazak.id == tourID);
     tour.eksponat.add(showpiece);
-    tour.ukupnaCena = tour.ukupnaCena + showpiece.cena;
-    tour.ukupnoVreme = tour.ukupnoVreme + showpiece.vremeObilaska;
+    
+    const objekat = this.sracunajUkupnuCenuIUkupnoVreme(tour.eksponat);
+    tour.ukupnaCena = objekat.ukupnaCena;
+    tour.ukupnoVreme = objekat.ukupnoVreme;
 
     user.planer = user.planer.filter((obilazak) => obilazak.id != tourID);
     user.planer.push(tour);
@@ -117,6 +119,21 @@ export class UserService extends GenericCRUD<UserModel> {
     return null;
   }
 
+  sracunajUkupnuCenuIUkupnoVreme(eksponati: Set<ShowPieceModel> | ShowPieceModel[]){
+    let ukupnaCena = 0;
+    let ukupnoVreme = 0;
+
+    for(let eksponat of Array.from(eksponati)){
+      ukupnaCena+=eksponat.cena;
+      ukupnoVreme+=eksponat.vremeObilaska;
+    }
+
+    return {
+      "ukupnaCena": ukupnaCena,
+      "ukupnoVreme" : ukupnoVreme
+    };
+  }
+
   public removeShowpieceFromTour(
     userID: number,
     showpiece: ShowPieceModel,
@@ -126,8 +143,10 @@ export class UserService extends GenericCRUD<UserModel> {
 
     let tour = user.planer.find((obilazak) => obilazak.id === tourID);
     tour.eksponat.delete(showpiece);
-    tour.ukupnaCena = tour.ukupnaCena - showpiece.cena;
-    tour.ukupnoVreme = tour.ukupnoVreme + showpiece.vremeObilaska;
+
+    const objekat = this.sracunajUkupnuCenuIUkupnoVreme(tour.eksponat);
+    tour.ukupnaCena = objekat.ukupnaCena;
+    tour.ukupnoVreme = objekat.ukupnoVreme;
 
     user.planer = user.planer.filter((obilazak) => obilazak.id !== tourID);
     user.planer.push(tour);
@@ -189,9 +208,11 @@ export class UserService extends GenericCRUD<UserModel> {
 
     exhibit.eksponati.forEach((exponat) => {
       newTour.eksponat.add(exponat);
-      newTour.ukupnaCena = newTour.ukupnaCena + exponat.cena;
-      newTour.ukupnoVreme = newTour.ukupnoVreme + exponat.vremeObilaska;
     });
+
+    const objekat = this.sracunajUkupnuCenuIUkupnoVreme(newTour.eksponat);
+    newTour.ukupnaCena = objekat.ukupnaCena; 
+    newTour.ukupnoVreme = objekat.ukupnoVreme; 
 
     user.planer = user.planer.filter((obilazak) => obilazak.id != tourID);
     user.planer.push(newTour);
@@ -215,9 +236,11 @@ export class UserService extends GenericCRUD<UserModel> {
 
     exhibit.eksponati.forEach((exponat) => {
       newTour.eksponat.delete(exponat);
-      newTour.ukupnaCena = newTour.ukupnaCena - exponat.cena;
-      newTour.ukupnoVreme = newTour.ukupnoVreme - exponat.vremeObilaska;
     });
+
+    const objekat = this.sracunajUkupnuCenuIUkupnoVreme(exhibit.eksponati);
+    newTour.ukupnaCena = objekat.ukupnaCena; 
+    newTour.ukupnoVreme = objekat.ukupnoVreme;
 
     user.planer = user.planer.filter((obilazak) => obilazak.id !== tourID);
     user.planer.push(newTour);

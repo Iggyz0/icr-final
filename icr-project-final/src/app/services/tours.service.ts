@@ -97,8 +97,29 @@ export class ToursService extends GenericCRUD<TourModel> {
       result => { 
         this.dialogOpen=false;
         
+        const objekat = this.sracunajUkupnuCenuIUkupnoVreme(result.eksponat);
+        result.ukupnaCena = objekat.ukupnaCena;
+        result.ukupnoVreme = objekat.ukupnoVreme;
+
+        this.updateItem(result);
       }
     );
+  }
+
+    sracunajUkupnuCenuIUkupnoVreme(eksponati: Set<ShowPieceModel> | ShowPieceModel[]){
+    let ukupnaCena = 0;
+    let ukupnoVreme = 0;
+
+    
+    for(let eksponat of Array.from(eksponati)){
+      ukupnaCena+=eksponat.cena;
+      ukupnoVreme+=eksponat.vremeObilaska;
+    }
+
+    return {
+      "ukupnaCena": ukupnaCena,
+      "ukupnoVreme" : ukupnoVreme
+    };
   }
 
   public addExhibitToTour(exhibit: ExhibitModel) {
@@ -126,6 +147,7 @@ export class ToursService extends GenericCRUD<TourModel> {
     .afterClosed()
     .subscribe(
       result => { this.dialogOpen=false;
+        console.log(result);
       }
     );
   }
