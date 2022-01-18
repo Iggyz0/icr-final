@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const dialogFlowFulfillment = require("dialogflow-fulfillment");
+const fs = require("fs");
 
 app.get("/", (req, res) => {
   res.send("operativni smo");
@@ -11,11 +12,18 @@ app.post("/", express.json(), (req, res) => {
     request: req,
     response: res,
   });
-  //   function demoWebHook(agent) {
-  //     agent.add("Saljemo odgovor sa Webhook servera"); //<--- bot ovo vraca kao odgovor
-  //   }
 
+
+  //NOTE: problem 2 - kako da dohvatimo azurne podatke?
   function demoWebHook2(agent) {
+    const postavke  = JSON.parse(fs.readFileSync('../src/assets/Data/Postavke.json'));
+
+
+    //NOTE: problem 1 - kako dohvatiti to sto je korisnik uneo?
+    // console.log(agent.query);
+    for (const postavka of postavke) {
+      console.log(postavka);
+    }
     const payload = {
       richContent: [
         [
@@ -48,8 +56,6 @@ app.post("/", express.json(), (req, res) => {
   intentMap.set("Test", demoWebHook2);
 
   agent.handleRequest(intentMap);
-    console.log(req);
-    console.log(res);
 });
 
 app.listen(333, () => console.log("Radi dbot"));
