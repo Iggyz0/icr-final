@@ -58,6 +58,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
       $('.carousel').carousel();
     });
     this.findUniqueTypesOfExhibitions();
+    this.setupPriceSlider();
   }
 
   findUniqueTypesOfExhibitions() {
@@ -70,6 +71,24 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
 
     this.allShowpieceTypes = uniqueShowpieceTypes;
     
+  }
+
+  findHighestPricedExhibition(exhibitions: ExhibitModel[]): ExhibitModel {
+    return exhibitions.reduce((prev, curr) => {
+      return ((prev.cena > curr.cena) ? prev : curr)
+    }, );
+  }
+
+  setupPriceSlider() {
+    let maxPrice = (this.findHighestPricedExhibition(this.displayedItems)).cena;
+    
+    if (maxPrice != null) {
+      this.maxValuePrice = maxPrice;
+      this.optionsPrice.ceil = maxPrice;
+    } else {
+      this.maxValuePrice = 0;
+      this.maxValuePrice = 10000;
+    }
   }
 
   // -----------------------------------------------------------------   BIG SEARCH START  ----------------------------------------------------------------
@@ -185,7 +204,7 @@ minValuePrice: number = 1;
 maxValuePrice: number = 100000;
 optionsPrice: Options = {
   floor: 0,
-  ceil: 100000,
+  ceil: this.maxValuePrice,
   translate: (value: number, label: LabelType): string => {
     switch (label) {
       case LabelType.Low:

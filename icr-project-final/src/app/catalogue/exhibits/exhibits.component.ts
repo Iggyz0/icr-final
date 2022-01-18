@@ -40,18 +40,40 @@ export class ExhibitsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private exhibitsService: ExhibitsService, private showpieceService: ShowpieceService, private tourService: ToursService) { }
   
   ngAfterViewInit(): void {
-    this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
-    this.items = this.exhibition.eksponati;
-    this.displayedItems = this.items;
-    this.findUniqueCountries();
+    
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(val => { this.exhibitionId = val["id"] });
+    this.route.params.subscribe(val => { 
+      this.exhibitionId = val["id"];
+      this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
+      this.items = this.exhibition.eksponati;
+      this.displayedItems = this.items;
+      this.findUniqueCountries();
+      this.setupPriceSlider(); 
+    });
   }
 
   findUniqueCountries() {
     this.uniqueCountries = [...new Set(this.displayedItems.map((item) => item.zemljaPorekla))];
+  }
+
+  findHighestPricedExhibition(exhibitions: ShowPieceModel[]): ShowPieceModel {
+    return exhibitions.reduce((prev, curr) => {
+      return ((prev.cena > curr.cena) ? prev : curr)
+    }, );
+  }
+
+  setupPriceSlider() {
+    let maxPrice = (this.findHighestPricedExhibition(this.displayedItems)).cena;
+    
+    if (maxPrice != null) {
+      this.maxValuePrice = maxPrice;
+      this.optionsPrice.ceil = maxPrice;
+    } else {
+      this.maxValuePrice = 0;
+      this.maxValuePrice = 10000;
+    }
   }
 
   viewExhibitDetails(id: string) {
