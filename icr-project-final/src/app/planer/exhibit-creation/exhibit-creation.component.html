@@ -3,31 +3,49 @@
     <div fxFlex>
         <h2>Create your custom user-defined exhibit:</h2>
     </div>
-    <button mat-raised-button [mat-dialog-close]="false" (click)="close()">
+    <button mat-raised-button [mat-dialog-close]="false" (click)="close()" color="warn">
       <mat-icon matListIcon>close</mat-icon>
     </button>
   </div>
   <mat-divider style="width: 100%;"></mat-divider>
   <div fxFlex fxFill fxLayout="column" fxLayoutAlign="end center">
     <mat-dialog-content fxFill>
+        <div *ngIf="data.eksponat.size == 0" fxFlex fxFill fxLayout="column" fxLayoutAlign="center center">
+          <p><b>There are no exhibits in this tour. Cannot create an empty tour...</b></p>
+        </div>
         <form
+        *ngIf="data.eksponat.size != 0"
         fxLayout="column"
         fxLayoutAlign="center center"
         #f="ngForm"
         (ngSubmit)="onSubmit(f)"
-        class="formDecoration fixOverlap"
       >
         <div fxFill>
           <p fxFill class="loginHeaderTop">Please fill out the form:</p>
           <mat-divider fxFill class="marginTopFormElements"></mat-divider>
         </div>
+
+        <mat-form-field fxFill appearance="outline" style="padding-top: 1em;">
+          <mat-label>Name of exhibit: </mat-label>
+          <input type="text" name="ime" matInput ngModel required/>
+        </mat-form-field >
+
         <mat-form-field fxFill appearance="outline">
+
           <mat-label>Type of exhibit: </mat-label>
-          <input type="text" name="vrsta" matInput ngModel required/></mat-form-field
-        >
+          <mat-select name="vrsta" [(ngModel)]="typeValue" >
+            <mat-option value="any">Any type</mat-option>
+            <mat-option *ngFor="let type of allTypes" [value]="type">
+              {{ type }}
+            </mat-option>
+          </mat-select>
+
+        </mat-form-field >
+
         <button fxFill mat-raised-button color="primary" type="submit">Create</button>
       </form>
     </mat-dialog-content>
   </div>
   
+  <button *ngIf="data.eksponat.size == 0" fxFill mat-raised-button color="primary" (click)="close()">OK</button>
 </div>

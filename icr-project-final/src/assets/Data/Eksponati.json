@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "naziv": "Ines",
+    "naziv": "Steel Dagger",
     "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
-    "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-    "vrsta": "Jacinthe",
+    "slika": "https://i.imgur.com/OnLVPUA.jpeg",
+    "vrsta": "Weapon",
     "cena": 199,
     "vremeObilaska": 59,
     "zemljaPorekla": "China",
@@ -108,21 +108,21 @@
   },
   {
     "id": 2,
-    "naziv": "Zita",
+    "naziv": "Katanas (swords)",
     "opis": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
-    "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-    "vrsta": "Orlando",
+    "slika": "https://i.imgur.com/pWdcltl.jpeg",
+    "vrsta": "Weapon",
     "cena": 723,
     "vremeObilaska": 253,
-    "zemljaPorekla": "Ecuador",
+    "zemljaPorekla": "Japan",
     "recenzije": []
   },
   {
     "id": 3,
-    "naziv": "Gannie",
+    "naziv": "Statue of a woman",
     "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
-    "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-    "vrsta": "Cosetta",
+    "slika": "https://i.imgur.com/PVT3eha.jpeg",
+    "vrsta": "Statue",
     "cena": 767,
     "vremeObilaska": 454,
     "zemljaPorekla": "Japan",
@@ -207,10 +207,10 @@
   },
   {
     "id": 4,
-    "naziv": "Holden",
+    "naziv": "Holden Mask",
     "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
-    "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-    "vrsta": "Danya",
+    "slika": "https://i.imgur.com/Ztlg6EN.jpg",
+    "vrsta": "Statue",
     "cena": 946,
     "vremeObilaska": 57,
     "zemljaPorekla": "Kazakhstan",
@@ -276,10 +276,10 @@
   },
   {
     "id": 5,
-    "naziv": "Judi",
+    "naziv": "Dinosaur fossil (relic)",
     "opis": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
-    "slika": "http://dummyimage.com/199x100.png/ff4444/ffffff",
-    "vrsta": "Hogan",
+    "slika": "https://i.imgur.com/fFFR24s.jpg",
+    "vrsta": "Fossil",
     "cena": 1235,
     "vremeObilaska": 50,
     "zemljaPorekla": "Uruguay",
@@ -287,13 +287,13 @@
   },
   {
     "id": 6,
-    "naziv": "Hynda",
+    "naziv": "Pharaoh statue",
     "opis": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
-    "slika": "http://dummyimage.com/205x100.png/5fa2dd/ffffff",
-    "vrsta": "Emmye",
+    "slika": "https://i.imgur.com/eFMwKXK.jpg",
+    "vrsta": "Statue",
     "cena": 376,
     "vremeObilaska": 329,
-    "zemljaPorekla": "Tanzania",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 13,
@@ -318,10 +318,10 @@
   },
   {
     "id": 7,
-    "naziv": "Eloisa",
+    "naziv": "Warrior's helmet",
     "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "slika": "http://dummyimage.com/139x100.png/5fa2dd/ffffff",
-    "vrsta": "Portia",
+    "slika": "https://i.imgur.com/HzYD2Yl.jpg",
+    "vrsta": "Weapon",
     "cena": 961,
     "vremeObilaska": 187,
     "zemljaPorekla": "Greece",
@@ -406,13 +406,13 @@
   },
   {
     "id": 8,
-    "naziv": "Gardner",
+    "naziv": "Greek pot",
     "opis": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "slika": "http://dummyimage.com/167x100.png/ff4444/ffffff",
-    "vrsta": "Allison",
+    "slika": "https://i.imgur.com/dYeXQes.jpg",
+    "vrsta": "Pottery",
     "cena": 738,
     "vremeObilaska": 81,
-    "zemljaPorekla": "Brazil",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 18,
@@ -456,13 +456,13 @@
   },
   {
     "id": 9,
-    "naziv": "Agustin",
+    "naziv": "War ship exhibit",
     "opis": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
-    "slika": "http://dummyimage.com/179x100.png/5fa2dd/ffffff",
-    "vrsta": "Tudor",
+    "slika": "https://i.imgur.com/KAuUANR.jpg",
+    "vrsta": "Statue",
     "cena": 782,
     "vremeObilaska": 96,
-    "zemljaPorekla": "Thailand",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 20,
@@ -487,13 +487,13 @@
   },
   {
     "id": 10,
-    "naziv": "Alayne",
+    "naziv": "Roman helmet",
     "opis": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    "slika": "http://dummyimage.com/116x100.png/cc0000/ffffff",
-    "vrsta": "Wolfgang",
+    "slika": "https://i.imgur.com/huV19jT.jpg",
+    "vrsta": "Weapon",
     "cena": 1488,
     "vremeObilaska": 376,
-    "zemljaPorekla": "Ukraine",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": [
       {
         "id": 21,
@@ -518,35 +518,35 @@
   },
   {
     "id": 11,
-    "naziv": "Gavrielle",
+    "naziv": "Roman coin (rusty)",
     "opis": "Maecenas ut massa quis augue luctus tincidunt.",
-    "slika": "http://dummyimage.com/174x100.png/cc0000/ffffff",
-    "vrsta": "Gale",
+    "slika": "https://i.imgur.com/xWZaLZO.jpg",
+    "vrsta": "Currency",
     "cena": 1293,
     "vremeObilaska": 577,
-    "zemljaPorekla": "China",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": []
   },
   {
     "id": 12,
-    "naziv": "Ambrose",
+    "naziv": "The Discobolus of Myron",
     "opis": "Sed sagittis.",
-    "slika": "http://dummyimage.com/161x100.png/ff4444/ffffff",
-    "vrsta": "Burtie",
+    "slika": "https://i.imgur.com/94d575k.jpg",
+    "vrsta": "Statue",
     "cena": 595,
     "vremeObilaska": 576,
-    "zemljaPorekla": "China",
+    "zemljaPorekla": "Greece",
     "recenzije": []
   },
   {
     "id": 13,
-    "naziv": "Phillie",
+    "naziv": "Greek coin (gold)",
     "opis": "Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
-    "slika": "http://dummyimage.com/122x100.png/5fa2dd/ffffff",
-    "vrsta": "Kristel",
+    "slika": "https://i.imgur.com/CmN7X2G.jpg",
+    "vrsta": "Currency",
     "cena": 1140,
     "vremeObilaska": 177,
-    "zemljaPorekla": "Philippines",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 22,
@@ -609,13 +609,13 @@
   },
   {
     "id": 14,
-    "naziv": "Andria",
+    "naziv": "Roman Emperor statue (life-sized)",
     "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
-    "slika": "http://dummyimage.com/133x100.png/dddddd/000000",
-    "vrsta": "Binnie",
+    "slika": "https://i.imgur.com/Rw1kPBO.jpg",
+    "vrsta": "Statue",
     "cena": 117,
     "vremeObilaska": 522,
-    "zemljaPorekla": "Colombia",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": [
       {
         "id": 25,
@@ -661,11 +661,11 @@
     "id": 15,
     "naziv": "Ralph",
     "opis": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-    "slika": "http://dummyimage.com/115x100.png/ff4444/ffffff",
-    "vrsta": "Danya",
+    "slika": "https://i.imgur.com/kmFavj7.jpg",
+    "vrsta": "Pottery",
     "cena": 685,
     "vremeObilaska": 137,
-    "zemljaPorekla": "Philippines",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 27,
@@ -709,13 +709,13 @@
   },
   {
     "id": 16,
-    "naziv": "Audrie",
+    "naziv": "Roman stone ring",
     "opis": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "slika": "http://dummyimage.com/106x100.png/dddddd/000000",
-    "vrsta": "Cheslie",
+    "slika": "https://i.imgur.com/9Cp5WyV.jpg",
+    "vrsta": "Jewelry",
     "cena": 961,
     "vremeObilaska": 583,
-    "zemljaPorekla": "Czech Republic",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": [
       {
         "id": 29,
@@ -797,13 +797,13 @@
   },
   {
     "id": 17,
-    "naziv": "Clovis",
+    "naziv": "Old ring (with mineral)",
     "opis": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.",
-    "slika": "http://dummyimage.com/161x100.png/cc0000/ffffff",
-    "vrsta": "Fanya",
+    "slika": "https://i.imgur.com/bX6mWPk.jpg",
+    "vrsta": "Jewelry",
     "cena": 1329,
     "vremeObilaska": 272,
-    "zemljaPorekla": "France",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": [
       {
         "id": 33,
@@ -904,13 +904,13 @@
   },
   {
     "id": 18,
-    "naziv": "Charlie",
+    "naziv": "Snake ring",
     "opis": "Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, Nonea.",
-    "slika": "http://dummyimage.com/101x100.png/ff4444/ffffff",
-    "vrsta": "Emery",
+    "slika": "https://i.imgur.com/bzh6U5g.jpg",
+    "vrsta": "Jewelry",
     "cena": 673,
     "vremeObilaska": 482,
-    "zemljaPorekla": "Ukraine",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": [
       {
         "id": 38,
@@ -992,13 +992,13 @@
   },
   {
     "id": 19,
-    "naziv": "Arny",
+    "naziv": "Greek woman bracelets",
     "opis": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
-    "slika": "http://dummyimage.com/242x100.png/5fa2dd/ffffff",
-    "vrsta": "Betsy",
+    "slika": "https://i.imgur.com/YZcCxwv.jpg",
+    "vrsta": "Jewelry",
     "cena": 1413,
     "vremeObilaska": 199,
-    "zemljaPorekla": "Indonesia",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 42,
@@ -1061,13 +1061,13 @@
   },
   {
     "id": 20,
-    "naziv": "Louisette",
+    "naziv": "Ancient necklace",
     "opis": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
-    "slika": "http://dummyimage.com/102x100.png/dddddd/000000",
-    "vrsta": "Corrianne",
+    "slika": "https://i.imgur.com/7mRGPN0.jpg",
+    "vrsta": "Jewelry",
     "cena": 303,
     "vremeObilaska": 206,
-    "zemljaPorekla": "China",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 45,
@@ -1149,13 +1149,13 @@
   },
   {
     "id": 21,
-    "naziv": "Virgilio",
+    "naziv": "Ninja weapon (dagger)",
     "opis": "Fusce consequat. Nulla nisl.",
-    "slika": "http://dummyimage.com/247x100.png/dddddd/000000",
-    "vrsta": "Ax",
+    "slika": "https://i.imgur.com/TLg90vI.jpg",
+    "vrsta": "Weapon",
     "cena": 581,
     "vremeObilaska": 558,
-    "zemljaPorekla": "Ukraine",
+    "zemljaPorekla": "Japan",
     "recenzije": [
       {
         "id": 49,
@@ -1180,24 +1180,24 @@
   },
   {
     "id": 22,
-    "naziv": "Katerine",
+    "naziv": "Samurai armor (statue)",
     "opis": "Etiam justo.",
-    "slika": "http://dummyimage.com/208x100.png/5fa2dd/ffffff",
-    "vrsta": "Woodie",
+    "slika": "https://i.imgur.com/j8A3bAL.jpg",
+    "vrsta": "Statue",
     "cena": 905,
     "vremeObilaska": 73,
-    "zemljaPorekla": "Indonesia",
+    "zemljaPorekla": "Japan",
     "recenzije": []
   },
   {
     "id": 23,
-    "naziv": "Diego",
+    "naziv": "Egyptian stone tablet (eye shaped)",
     "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
-    "slika": "http://dummyimage.com/194x100.png/cc0000/ffffff",
-    "vrsta": "Gasparo",
+    "slika": "https://i.imgur.com/LXjPjX3.jpg",
+    "vrsta": "Fossil",
     "cena": 84,
     "vremeObilaska": 600,
-    "zemljaPorekla": "Poland",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 50,
@@ -1279,13 +1279,13 @@
   },
   {
     "id": 24,
-    "naziv": "Georgia",
+    "naziv": "Egyptian 'Desert Ghost'",
     "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "slika": "http://dummyimage.com/206x100.png/ff4444/ffffff",
-    "vrsta": "Hamid",
+    "slika": "https://i.imgur.com/jmRHlcN.jpg",
+    "vrsta": "Fossil",
     "cena": 35,
     "vremeObilaska": 110,
-    "zemljaPorekla": "Colombia",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 54,
@@ -1386,13 +1386,13 @@
   },
   {
     "id": 25,
-    "naziv": "Ellery",
+    "naziv": "Velociraptor fossil",
     "opis": "Proin at turpis a pede posuere nonummy.",
-    "slika": "http://dummyimage.com/133x100.png/5fa2dd/ffffff",
-    "vrsta": "Myrtie",
+    "slika": "https://i.imgur.com/aYMc26H.jpg",
+    "vrsta": "Fossil",
     "cena": 486,
     "vremeObilaska": 361,
-    "zemljaPorekla": "China",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 59,
@@ -1436,13 +1436,13 @@
   },
   {
     "id": 26,
-    "naziv": "Susette",
+    "naziv": "Curved sword",
     "opis": "Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
-    "slika": "http://dummyimage.com/245x100.png/dddddd/000000",
-    "vrsta": "Guthrey",
+    "slika": "https://i.imgur.com/Afnl5re.jpg",
+    "vrsta": "Weapon",
     "cena": 451,
     "vremeObilaska": 222,
-    "zemljaPorekla": "Namibia",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 61,
@@ -1467,13 +1467,13 @@
   },
   {
     "id": 27,
-    "naziv": "Janos",
+    "naziv": "Golden staff",
     "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
-    "slika": "http://dummyimage.com/221x100.png/dddddd/000000",
-    "vrsta": "Kori",
+    "slika": "https://i.imgur.com/CAsiFpJ.jpg",
+    "vrsta": "Weapon",
     "cena": 480,
     "vremeObilaska": 224,
-    "zemljaPorekla": "Indonesia",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 62,
@@ -1536,13 +1536,13 @@
   },
   {
     "id": 28,
-    "naziv": "Jody",
+    "naziv": "Top wear decorator",
     "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
-    "slika": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
-    "vrsta": "Roana",
+    "slika": "https://i.imgur.com/OB1EaN1.jpg",
+    "vrsta": "Wear",
     "cena": 239,
     "vremeObilaska": 294,
-    "zemljaPorekla": "Armenia",
+    "zemljaPorekla": "Egypt",
     "recenzije": [
       {
         "id": 65,
@@ -1643,13 +1643,13 @@
   },
   {
     "id": 29,
-    "naziv": "Donetta",
+    "naziv": "Common greek wear",
     "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
-    "slika": "http://dummyimage.com/105x100.png/ff4444/ffffff",
-    "vrsta": "Arliene",
+    "slika": "https://i.imgur.com/gdreUaC.jpg",
+    "vrsta": "Wear",
     "cena": 1282,
     "vremeObilaska": 307,
-    "zemljaPorekla": "China",
+    "zemljaPorekla": "Greece",
     "recenzije": [
       {
         "id": 70,
@@ -1731,13 +1731,13 @@
   },
   {
     "id": 30,
-    "naziv": "Linda",
+    "naziv": "Roman clothing example",
     "opis": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "slika": "http://dummyimage.com/123x100.png/ff4444/ffffff",
-    "vrsta": "Leroi",
+    "slika": "https://i.imgur.com/kVUmV5s.jpg",
+    "vrsta": "Wear",
     "cena": 1490,
     "vremeObilaska": 414,
-    "zemljaPorekla": "Poland",
+    "zemljaPorekla": "Roman Empire",
     "recenzije": []
   }
 ]

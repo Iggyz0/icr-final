@@ -3,6 +3,7 @@ import {  AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, Vi
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ExhibitModel } from '../models/ExhibitModel';
 import { ExhibitsService } from '../services/exhibits.service';
+import { ShowpieceService } from '../services/showpiece.service';
 import { ToursService } from '../services/tours.service';
 import { UserService } from '../services/user.service';
 
@@ -32,7 +33,21 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     floor: 0,
     ceil: 5,
     step: 1,
-    showTicks: true
+    showTicks: true,
+    translate: (value: number, label: LabelType): string => {
+      switch (label) {
+        case LabelType.Low:
+          return (
+            "<span style='color: orange;'>" + value + '</span>'
+          );
+        case LabelType.High:
+          return (
+            "<span style='color: orange;'>" + value + '</span>'
+          );
+        default:
+          return "<span  style='color: orange;'>" + value + "</span>";
+      }
+    },
   };
 
   numberOfExhibitsValue: number = -1;
@@ -40,37 +55,42 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
 
   constructor(private exhibitsService: ExhibitsService,
     private userService: UserService,
-    private toursService: ToursService) { }
+    private toursService: ToursService,
+    private showpieceService: ShowpieceService) { }
 
-  @ViewChild('picContainer') viewElem!: ElementRef<HTMLElement>;
+  // @ViewChild('picContainer') viewElem!: ElementRef<HTMLElement>;
 
   ngAfterViewInit(): void {
-    const parentElement = this.viewElem.nativeElement;
-    const firstChild = parentElement.children[0];
-    firstChild.classList.add("active");
+    // const parentElement = this.viewElem.nativeElement;
+    // const firstChild = parentElement.children[0];
+    // firstChild.classList.add("active");
   }
   
   ngOnInit(): void {
     this.items = this.exhibitsService.getAllItems();
+
+    for (let i = 0; i < this.items.length; i++) {
+      let oldShowpiecesIds = this.items[i].eksponati.map((prev) => prev.id );
+      let neededShowpieces = this.showpieceService.getAllItems().filter((elem) => { return oldShowpiecesIds.includes(elem.id) });
+      neededShowpieces.forEach((showpiece) => showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length );
+      this.items[i].prosecnaOcena = neededShowpieces.reduce((prev, curr) => prev = prev + (Number.isFinite(curr.ukupnaOcena) ? curr.ukupnaOcena : 0) , 0) / neededShowpieces.length;
+    }
+
     this.displayedItems = this.items;
     // carousel needs to be restarted each time the page reloads
-    $(document).ready(function() {
-      $('.carousel').carousel();
-    });
+    // $(document).ready(function() {
+    //   $('.carousel').carousel();
+    // });
     this.findUniqueTypesOfExhibitions();
     this.setupPriceSlider();
   }
 
   findUniqueTypesOfExhibitions() {
     this.allTypes = [...new Set(this.displayedItems.map((item) => item.vrstaPostavke))];
-
     let showpiecesFromExhibit = [];
     this.items.forEach(exModel => showpiecesFromExhibit.push(...exModel.eksponati));
-
     let uniqueShowpieceTypes = [...new Set(showpiecesFromExhibit.map(showpiece => showpiece.vrsta))];
-
     this.allShowpieceTypes = uniqueShowpieceTypes;
-    
   }
 
   findHighestPricedExhibition(exhibitions: ExhibitModel[]): ExhibitModel {
@@ -81,7 +101,6 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
 
   setupPriceSlider() {
     let maxPrice = (this.findHighestPricedExhibition(this.displayedItems)).cena;
-    
     if (maxPrice != null) {
       this.maxValuePrice = maxPrice;
       this.optionsPrice.ceil = maxPrice;
@@ -122,7 +141,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     if (search == '')
       this.displayedItems = this.items;
     else {
-      arr = this.items.filter(obj => { return obj.vrstaPostavke.toLowerCase().includes(search); });
+      arr = this.items.filter(obj => { return (obj.vrstaPostavke.toLowerCase().includes(search) || obj.ime.toLowerCase().includes(search) ); });
       this.p = 1;
     }
 
@@ -142,6 +161,13 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
       return (
         product.prosecnaOcena <= this.maxValueScore &&
         product.prosecnaOcena >= this.minValueScore
+      );
+    });
+
+    arr = arr.filter((item) => {
+      return (
+        item.cena <= this.maxValuePrice &&
+        item.cena >= this.minValuePrice
       );
     });
 
@@ -221,18 +247,6 @@ optionsPrice: Options = {
   },
 };
 
-searchByPrice() {
-  this.p = 1;
-
-  this.displayedItems = this.items;
-
-  this.displayedItems = this.displayedItems.filter((item) => {
-    return (
-      item.cena <= this.maxValuePrice &&
-      item.cena >= this.minValuePrice
-    );
-  });
-}
 // -------------- SORT BY PRICE END
 
 addExhibitToTour(item : ExhibitModel){

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ShowPieceModel } from 'src/app/models/ShowpieceModel';
 import { ShowpieceService } from 'src/app/services/showpiece.service';
-import { Options } from '@angular-slider/ngx-slider';
+import { LabelType, Options } from '@angular-slider/ngx-slider';
 import { ActivatedRoute } from '@angular/router';
 import { ExhibitsService } from 'src/app/services/exhibits.service';
 import { ExhibitModel } from 'src/app/models/ExhibitModel';
@@ -34,7 +34,21 @@ export class ExhibitsComponent implements OnInit {
     floor: 0,
     ceil: 5,
     step: 1,
-    showTicks: true
+    showTicks: true,
+    translate: (value: number, label: LabelType): string => {
+      switch (label) {
+        case LabelType.Low:
+          return (
+            "<span style='color: orange;'>" + value + '</span>'
+          );
+        case LabelType.High:
+          return (
+            "<span style='color: orange;'>" + value + '</span>'
+          );
+        default:
+          return "<span  style='color: orange;'>" + value + "</span>";
+      }
+    },
   };
 
   constructor(private route: ActivatedRoute, private exhibitsService: ExhibitsService, private showpieceService: ShowpieceService, private tourService: ToursService) { }
@@ -47,7 +61,14 @@ export class ExhibitsComponent implements OnInit {
     this.route.params.subscribe(val => { 
       this.exhibitionId = val["id"];
       this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
-      this.items = this.exhibition.eksponati;
+      let oldShowpiecesIds = this.exhibition.eksponati.map((prev) => prev.id );
+      let neededShowpieces = this.showpieceService.getAllItems().filter((elem) => { return oldShowpiecesIds.includes(elem.id) });
+      neededShowpieces.forEach((showpiece) => {
+        showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length;
+        showpiece.ukupnaOcena = Number.isFinite(showpiece.ukupnaOcena) ? showpiece.ukupnaOcena : 0;
+      });
+      
+      this.items = neededShowpieces;
       this.displayedItems = this.items;
       this.findUniqueCountries();
       this.setupPriceSlider(); 
@@ -66,7 +87,6 @@ export class ExhibitsComponent implements OnInit {
 
   setupPriceSlider() {
     let maxPrice = (this.findHighestPricedExhibition(this.displayedItems)).cena;
-    
     if (maxPrice != null) {
       this.maxValuePrice = maxPrice;
       this.optionsPrice.ceil = maxPrice;
@@ -113,12 +133,14 @@ export class ExhibitsComponent implements OnInit {
       );
     });
 
+    arr = arr.filter((item) => {
+      return (
+        item.cena <= this.maxValuePrice &&
+        item.cena >= this.minValuePrice
+      );
+    });
+
     this.displayedItems = arr;
-
-    // console.log("items: ", this.items);
-    // console.log("displayedItems: ", this.displayedItems);
-    // console.log("arr: ", arr);
-
     this.sortData({
       active: this.sortValue,
       direction: this.sortValueDirection,
@@ -169,40 +191,22 @@ maxValuePrice: number = 1000;
 optionsPrice: Options = {
   floor: 0,
   ceil: 1000,
-  // translate: (value: number, label: LabelType): string => {
-  //   switch (label) {
-  //     case LabelType.Low:
-  //       return (
-  //         "<span style='color: orange;'>Min:</span> <span  style='color: orange;'>$</span>" +
-  //         "<span style='color: orange;'>" +
-  //         value +
-  //         '</span>'
-  //       );
-  //     case LabelType.High:
-  //       return (
-  //         "<span style='color: orange;'>Max:</span> <span  style='color: orange;'>$</span>" +
-  //         "<span style='color: orange;'>" +
-  //         value +
-  //         '</span>'
-  //       );
-  //     default:
-  //       return "<span  style='color: orange;'>$</span>" + value;
-  //   }
-  // },
+  translate: (value: number, label: LabelType): string => {
+    switch (label) {
+      case LabelType.Low:
+        return (
+          "<span style='color: orange;'>" + value + '</span>'
+        );
+      case LabelType.High:
+        return (
+          "<span style='color: orange;'>" + value + '</span>'
+        );
+      default:
+        return "<span  style='color: orange;'>" + value + "</span>";
+    }
+  },
 };
 
-searchByPrice() {
-  this.p = 1;
-
-  this.displayedItems = this.items;
-
-  this.displayedItems = this.displayedItems.filter((item) => {
-    return (
-      item.cena <= this.maxValuePrice &&
-      item.cena >= this.minValuePrice
-    );
-  });
-}
 // -------------- SORT BY PRICE END
 
 }

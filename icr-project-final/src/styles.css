@@ -32,3 +32,13 @@ a:hover, a:active {
 .mat-tab-body-wrapper{
     flex-grow: 1;
 }
+
+/* dialogflow bot messenger customization */
+df-messenger {
+    --df-messenger-bot-message: orange;
+    --df-messenger-button-titlebar-color: #3f3c47;
+    --df-messenger-chat-background-color: #fafafa;
+    --df-messenger-font-color: white;
+    --df-messenger-send-icon: orange;
+    --df-messenger-user-message: orange;
+}

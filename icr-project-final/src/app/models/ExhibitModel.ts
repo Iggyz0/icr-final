@@ -4,6 +4,7 @@ import { ShowPieceModel } from './ShowpieceModel';
 
 export interface ExhibitModel extends BaseModel {
   ime?: string;
+  slika?: string;
   vrstaPostavke: string;
   eksponati: ShowPieceModel[]; 
   brojEksponata?: number; 
