@@ -7,41 +7,46 @@ app.get("/", (req, res) => {
   res.send("operativni smo");
 });
 
+const default_bot_response = "Here is what I've found...";
+
 app.post("/", express.json(), (req, res) => {
   const agent = new dialogFlowFulfillment.WebhookClient({
     request: req,
     response: res,
   });
 
+  function imePostavkeHook(agent) {
+    //setup
+    const postavke = JSON.parse(
+      fs.readFileSync("../src/assets/Data/Postavke.json")
+    );
+    let richContents = [];
 
-  //NOTE: problem 2 - kako da dohvatimo azurne podatke?
-  function demoWebHook2(agent) {
-    const postavke  = JSON.parse(fs.readFileSync('../src/assets/Data/Postavke.json'));
-
-
-    //NOTE: problem 1 - kako dohvatiti to sto je korisnik uneo?
+    // console.log(postavke);
     // console.log(agent.query);
+    const what_user_sent = agent.query.toLowerCase().trim();
     for (const postavka of postavke) {
-      console.log(postavka);
+      if ( what_user_sent.includes(postavka.ime.toLowerCase()) || what_user_sent.includes(postavka.vrstaPostavke.toLowerCase()) ) {
+        richContents.push({
+          type: "info",
+          title: postavka.ime,
+          subtitle: postavka.vrstaPostavke,
+          actionLink: "/catalogue/exhibits/" + postavka.id,
+          image: {
+            src: {
+              rawUrl: postavka.slika
+            }
+          }
+        });
+      }
     }
+
     const payload = {
-      richContent: [
-        [
-          {
-            type: "info",
-            subtitle: "Radim, al subtitle!",
-            title: "Radim!",
-            actionLink: "https://example.com",
-            image: {
-              src: {
-                rawUrl: "http://dummyimage.com/249x100.png/cc0000/ffffff",
-              },
-            },
-          },
-        ],
-      ],
+      richContent: [richContents]
     };
 
+    // console.log(payload);
+    agent.add(default_bot_response)	
     agent.add(
       new dialogFlowFulfillment.Payload(agent.UNSPECIFIED, payload, {
         sendAsMessage: true,
@@ -53,7 +58,7 @@ app.post("/", express.json(), (req, res) => {
   //mora da se trigeruje tacno specifican intent - tzv. "Mapiranje" intenta (1 intent se mapira na vise fraza?)
   var intentMap = new Map();
   //   intentMap.set("imeIntenta", demoWebHook); //intent "imeIntenta" se izmapira na funkciju demoWebHook
-  intentMap.set("Test", demoWebHook2);
+  intentMap.set("Pretraga_vrsta_i_imena_postavke", imePostavkeHook);
 
   agent.handleRequest(intentMap);
 });
