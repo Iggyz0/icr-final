@@ -14,6 +14,9 @@ import { LocalStorageService } from 'src/app/services/localstorage.service';
 })
 export class ExhibitCreationComponent implements OnInit {
 
+  allTypes: string[] = [];
+  typeValue: string = "";
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: TourModel,
     private matDialogRef: MatDialogRef<ExhibitCreationComponent>,
@@ -22,6 +25,7 @@ export class ExhibitCreationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.findUniqueTypesOfExhibitions();
   }
 
   close(){
@@ -30,14 +34,12 @@ export class ExhibitCreationComponent implements OnInit {
 
   onSubmit( form : NgForm){
 
-    console.log("usao u onSubmit()");
-    
-
     let cenaCalc = Array.from(this.data.eksponat).reduce( (prev, curr) => prev+=curr.cena , 0)
     let procenjenoVremeObilaskaCalc = Array.from(this.data.eksponat).reduce( (prev,curr) => prev+=curr.vremeObilaska, 0);
     let prosecnaOcenCalc = this.calculateProsecnaOcena();
     
     let ExhibitModel: ExhibitModel = {
+      ime: form.value.ime,
       cena: cenaCalc,
       createdBy: this.localStorage.getLocalStorageItem('username'),
       id: -1,
@@ -62,6 +64,14 @@ export class ExhibitCreationComponent implements OnInit {
     }
     sum=sum/this.data.eksponat.size;
     return sum;
+  }
+
+  findUniqueTypesOfExhibitions() {
+    this.allTypes = [...new Set(this.getAllExhibits().map((item) => item.vrstaPostavke))];
+  }
+
+  getAllExhibits(): ExhibitModel[] {
+    return this.exhibitsService.getAllItems();
   }
 
 }

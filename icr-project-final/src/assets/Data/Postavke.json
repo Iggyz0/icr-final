@@ -1,96 +1,105 @@
 [
     {
         "id": 1,
-        "vrstaPostavke": "Dinos",
+        "ime": "Ancient clothing",
+        "vrstaPostavke": "Wear",
+        "slika": "https://i.imgur.com/ACSgSxd.jpg",
         "eksponati": [
             {
-                "id": 1,
-                "naziv": "T-rex",
-                "opis": "bigus",
-                "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-                "vrsta": "dinosaurus",
-                "cena": 50,
-                "vremeObilaska": 300,
-                "zemljaPorekla": "Yugoslavia",
-                "recenzije": [
-                    {
-                        "user": 
-                        {
-                            "id": 3
-                        }
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "naziv": "Pterodactyl",
-                "opis": "bigusFlapus",
-                "slika": "https://i.natgeofe.com/n/a4c68200-5304-427b-9c85-40d4aac9d48c/79063.jpg",
-                "vrsta": "dinosaurus",
-                "cena": 500,
-                "vremeObilaska": 700,
-                "zemljaPorekla": "Germany",
-                "recenzije": [
-                    {
-                        "user": 
-                        {
-                            "id": 2
-                        }
-                    }
-                ]
-            }
+                "id": 28,
+                "naziv": "Top wear decorator",
+                "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+                "slika": "https://i.imgur.com/OB1EaN1.jpg",
+                "vrsta": "Wear",
+                "cena": 239,
+                "vremeObilaska": 294,
+                "zemljaPorekla": "Egypt",
+                "recenzije": []
+              },
+              {
+                "id": 29,
+                "naziv": "Common greek wear",
+                "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
+                "slika": "https://i.imgur.com/gdreUaC.jpg",
+                "vrsta": "Wear",
+                "cena": 1282,
+                "vremeObilaska": 307,
+                "zemljaPorekla": "Greece",
+                "recenzije": []
+              },
+              {
+                "id": 30,
+                "naziv": "Roman clothing example",
+                "opis": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+                "slika": "https://i.imgur.com/kVUmV5s.jpg",
+                "vrsta": "Wear",
+                "cena": 1490,
+                "vremeObilaska": 414,
+                "zemljaPorekla": "Roman Empire",
+                "recenzije": []
+              }
         ], 
-        "brojEksponata": 2,
-        "cena": 550,
-        "procenjenoVremeObilaska": 1000, 
+        "brojEksponata": 3,
+        "cena": 3011,
+        "procenjenoVremeObilaska": 1015, 
         "recenzijePostavke": [],
-        "prosecnaOcena": 4
+        "prosecnaOcena": 0
     },
     {
         "id": 2,
-        "vrstaPostavke": "Weapons",
+        "ime": "Fossils from around the globe",
+        "vrstaPostavke": "Fossil",
+        "slika": "https://i.imgur.com/00Ejwv8.jpg",
         "eksponati": [
             {
-                "id": 3,
-                "naziv": "Weapon1",
-                "opis": "Sharpus",
-                "slika": "https://cdn.pixabay.com/photo/2020/06/17/19/40/godzilla-5310877_960_720.png",
-                "vrsta": "RustusMaximux",
-                "cena": 50,
-                "vremeObilaska": 300,
-                "zemljaPorekla": "Yugoslavia",
-                "recenzije": [
-                    {
-                        "user": 
-                        {
-                            "id": 3
-                        }
-                    }
-                ]
+                "id": 5,
+                "naziv": "Dinosaur fossil (relic)",
+                "opis": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
+                "slika": "https://i.imgur.com/fFFR24s.jpg",
+                "vrsta": "Fossil",
+                "cena": 1235,
+                "vremeObilaska": 50,
+                "zemljaPorekla": "Uruguay",
+                "recenzije": []
             },
             {
-                "id": 4,
-                "naziv": "Weapon2",
-                "opis": "BluntusTupus",
-                "slika": "https://i.natgeofe.com/n/a4c68200-5304-427b-9c85-40d4aac9d48c/79063.jpg",
-                "vrsta": "Wood",
-                "cena": 500,
-                "vremeObilaska": 700,
-                "zemljaPorekla": "France",
-                "recenzije": [
-                    {
-                        "user": 
-                        {
-                            "id": 2
-                        }
-                    }
-                ]
-            }
+                "id": 23,
+                "naziv": "Egyptian stone tablet (eye shaped)",
+                "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
+                "slika": "https://i.imgur.com/LXjPjX3.jpg",
+                "vrsta": "Fossil",
+                "cena": 84,
+                "vremeObilaska": 600,
+                "zemljaPorekla": "Egypt",
+                "recenzije": []
+              },
+              {
+                "id": 24,
+                "naziv": "Egyptian 'Desert Ghost'",
+                "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+                "slika": "https://i.imgur.com/jmRHlcN.jpg",
+                "vrsta": "Fossil",
+                "cena": 35,
+                "vremeObilaska": 110,
+                "zemljaPorekla": "Egypt",
+                "recenzije": []
+              },
+              {
+                "id": 25,
+                "naziv": "Velociraptor fossil",
+                "opis": "Proin at turpis a pede posuere nonummy.",
+                "slika": "https://i.imgur.com/aYMc26H.jpg",
+                "vrsta": "Fossil",
+                "cena": 486,
+                "vremeObilaska": 361,
+                "zemljaPorekla": "Egypt",
+                "recenzije": []
+              }
         ], 
-        "brojEksponata": 2,
-        "cena": 550,
-        "procenjenoVremeObilaska": 1000, 
+        "brojEksponata": 4,
+        "cena": 1840,
+        "procenjenoVremeObilaska": 1121, 
         "recenzijePostavke": [],
-        "prosecnaOcena": 3
+        "prosecnaOcena": 0
     }
 ]

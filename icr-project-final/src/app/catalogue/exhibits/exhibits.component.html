@@ -45,7 +45,7 @@
                 (highValueChange)="maxValuePrice = $event"
                 [options]="optionsPrice"
                 ngModel
-                (ngModelChange)="searchByPrice()"
+                (ngModelChange)="search()"
                 >
                 </ngx-slider>
             </div>
@@ -120,7 +120,7 @@
                             <div fxLayoutAlign="row nowrap"> 
                                 <div fxLayoutAlign="center center">
                                 <star-rating fxFlex
-                                [value]="3"
+                                [value]="item.ukupnaOcena"
                                 [totalstars]="5"
                                 checkedcolor="#ffd740"
                                 uncheckedcolor="gray"
@@ -129,7 +129,7 @@
                                 ></star-rating>
                                 </div>
                                 <div fxLayoutAlign="center center" class="text-align-center">
-                                ({{ 3 | number: '1.0-1' }})
+                                ({{ item.ukupnaOcena || 0 | number: '1.0-1' }})
                                 </div>
                             </div>
                             <p>Tour time: <span class="tourTime">{{ item.vremeObilaska/60 | number: '1.0-0' }}min</span></p>

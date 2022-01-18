@@ -53,8 +53,8 @@ a{
 }
 
 .borderTopHover:hover {
-    border-top: 2px solid #ffd740;
-    color: #ffd740;
+    border-top: 2px solid orange;
+    color: orange;
     /* animation-name: goldenLinks;
     animation-duration: 0.3s; */
     transition: 0.2s ease-in;
@@ -100,6 +100,6 @@ mat-toolbar a, .titleInToolbar {
 }
 
 .activeRouteLink {
-    border-top: 2px solid #ffd740;
-    color: #ffd740 !important;
+    border-top: 2px solid orange;
+    color: orange !important;
 }
