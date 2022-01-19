@@ -40,5 +40,5 @@ df-messenger {
     --df-messenger-chat-background-color: #fafafa;
     --df-messenger-font-color: white;
     --df-messenger-send-icon: orange;
-    --df-messenger-user-message: orange;
+    --df-messenger-user-message: #3f3c47;
 }

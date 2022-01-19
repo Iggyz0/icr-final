@@ -60,13 +60,23 @@ export class ExhibitsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(val => { 
       this.exhibitionId = val["id"];
-      this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
-      let oldShowpiecesIds = this.exhibition.eksponati.map((prev) => prev.id );
-      let neededShowpieces = this.showpieceService.getAllItems().filter((elem) => { return oldShowpiecesIds.includes(elem.id) });
-      neededShowpieces.forEach((showpiece) => {
-        showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length;
-        showpiece.ukupnaOcena = Number.isFinite(showpiece.ukupnaOcena) ? showpiece.ukupnaOcena : 0;
-      });
+      let neededShowpieces;
+
+      if(this.exhibitionId.trim().toLowerCase() == "all") {
+        neededShowpieces = this.showpieceService.getAllItems();
+        neededShowpieces.forEach((showpiece) => {
+          showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length;
+          showpiece.ukupnaOcena = Number.isFinite(showpiece.ukupnaOcena) ? showpiece.ukupnaOcena : 0;
+        });
+      } else {
+        this.exhibition = this.exhibitsService.findItemByID(parseInt(this.exhibitionId));
+        let oldShowpiecesIds = this.exhibition.eksponati.map((prev) => prev.id );
+        neededShowpieces = this.showpieceService.getAllItems().filter((elem) => { return oldShowpiecesIds.includes(elem.id) });
+        neededShowpieces.forEach((showpiece) => {
+          showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length;
+          showpiece.ukupnaOcena = Number.isFinite(showpiece.ukupnaOcena) ? showpiece.ukupnaOcena : 0;
+        });
+      }
       
       this.items = neededShowpieces;
       this.displayedItems = this.items;

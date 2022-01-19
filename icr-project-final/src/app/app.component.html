@@ -7,8 +7,8 @@
 >
   <div fxFlex fxFlexFill class="app-content" fxLayout="column wrap">
     <mat-toolbar
+      style="width: 100%;"
       class="transparentBg"
-      color="primary"
       fxLayout="row wrap"
       fxLayoutGap="1em"
       fxLayoutAlign="start center"
@@ -19,14 +19,14 @@
       <!-- <span fxHide.gt-md (click)="sidenav.open()" fxLayoutAlign="center center">
         <mat-icon class="hoverPointer">menu</mat-icon>
       </span> -->
-      <div fxFlex="33%" fxLayout="row nowrap" fxLayoutAlign="center center">
+      <div fxFlex="33%" fxLayout="row wrap" fxLayoutAlign="start center">
         <div class="logo">
           <a routerLink="/"><img src="../assets/logo-2-him.png" /></a>
         </div>
         <!-- <div class="logo">
           <img src="../assets/title-logo-style.png" />
         </div> -->
-        <span class="titleInToolbar"> Historically Inaccurate Museum </span>
+        <span class="titleInToolbar">Historically Inaccurate Museum</span>
       </div>
 
       <span class="example-spacer"></span>
@@ -38,8 +38,17 @@
           class="borderTopHover toolbarLinks"
           routerLink="/catalogue"
           
-          >Catalogue</a
+          >On display</a
         >
+
+        <a  
+          id="catalogue"
+          class="borderTopHover toolbarLinks"
+          routerLink="/catalogue/exhibits/all"
+          
+          >All exhibits</a
+        >
+
         <a
           id="signup"
           class="borderTopHover toolbarLinks"
@@ -57,7 +66,7 @@
           >Login</a
         >
         <a id="aboutUs" class="borderTopHover toolbarLinks" routerLink="/aboutUs" >
-          About us
+          About
         </a>
         <a
           id="profile"
@@ -80,7 +89,7 @@
         <div>
           <mat-slide-toggle (change)="toggleTheme()" [checked]="isDarkTheme">
             <mat-icon *ngIf="isDarkTheme">dark_mode</mat-icon>
-            <mat-icon *ngIf="!isDarkTheme">light_mode</mat-icon>
+            <mat-icon *ngIf="!isDarkTheme" style="color: white;">light_mode</mat-icon>
           </mat-slide-toggle>
         </div>
       </div>
