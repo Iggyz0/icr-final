@@ -1,285 +1,285 @@
 [
-    {
+  {
+    "id": 1,
+    "ime": "Ancient clothing",
+    "vrstaPostavke": "Wear",
+    "slika": "https://i.imgur.com/ACSgSxd.jpg",
+    "eksponati": [
+      {
+        "id": 28,
+        "naziv": "Top wear decorator",
+        "opis": "It's a top wear decoration to be worn over the regular clothes.",
+        "slika": "https://i.imgur.com/OB1EaN1.jpg",
+        "vrsta": "Wear",
+        "cena": 239,
+        "vremeObilaska": 294,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      },
+      {
+        "id": 29,
+        "naziv": "Common greek wear",
+        "opis": "What commonfolk in ancient Greece used to wear.",
+        "slika": "https://i.imgur.com/gdreUaC.jpg",
+        "vrsta": "Wear",
+        "cena": 1282,
+        "vremeObilaska": 307,
+        "zemljaPorekla": "Greece",
+        "recenzije": []
+      },
+      {
+        "id": 30,
+        "naziv": "Roman clothing example",
+        "opis": "This is what ancient Romans used to wear, comparable to Greeks...",
+        "slika": "https://i.imgur.com/kVUmV5s.jpg",
+        "vrsta": "Wear",
+        "cena": 1490,
+        "vremeObilaska": 414,
+        "zemljaPorekla": "Roman Empire",
+        "recenzije": []
+      }
+    ],
+    "brojEksponata": 3,
+    "cena": 3011,
+    "procenjenoVremeObilaska": 1015,
+    "recenzijePostavke": [],
+    "prosecnaOcena": 0
+  },
+  {
+    "id": 2,
+    "ime": "Fossils from around the globe",
+    "vrstaPostavke": "Fossil",
+    "slika": "https://i.imgur.com/00Ejwv8.jpg",
+    "eksponati": [
+      {
+        "id": 5,
+        "naziv": "Dinosaur fossil (relic)",
+        "opis": "This is a dinosaur fossil found in Urugay. A relic of a bygone age.",
+        "slika": "https://i.imgur.com/fFFR24s.jpg",
+        "vrsta": "Fossil",
+        "cena": 1235,
+        "vremeObilaska": 50,
+        "zemljaPorekla": "Uruguay",
+        "recenzije": []
+      },
+      {
+        "id": 23,
+        "naziv": "Egyptian stone tablet (eye shaped)",
+        "opis": "This is where ancient pharaoh sealed his soul into.",
+        "slika": "https://i.imgur.com/LXjPjX3.jpg",
+        "vrsta": "Fossil",
+        "cena": 84,
+        "vremeObilaska": 600,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      },
+      {
+        "id": 24,
+        "naziv": "Egyptian 'Desert Ghost'",
+        "opis": "An interesting remains of an animal from Egyptian deserts",
+        "slika": "https://i.imgur.com/jmRHlcN.jpg",
+        "vrsta": "Fossil",
+        "cena": 35,
+        "vremeObilaska": 110,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      },
+      {
+        "id": 25,
+        "naziv": "Velociraptor fossil",
+        "opis": "Remains of an ancient lizard. Found around today's Egypt",
+        "slika": "https://i.imgur.com/aYMc26H.jpg",
+        "vrsta": "Fossil",
+        "cena": 486,
+        "vremeObilaska": 361,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      }
+    ],
+    "brojEksponata": 4,
+    "cena": 1840,
+    "procenjenoVremeObilaska": 1121,
+    "recenzijePostavke": [],
+    "prosecnaOcena": 0
+  },
+  {
+    "id": 3,
+    "ime": "Weapons of old",
+    "vrstaPostavke": "Weapon",
+    "slika": "https://i.imgur.com/cmiiUqi.jpeg",
+    "eksponati": [
+      {
         "id": 1,
-        "ime": "Ancient clothing",
-        "vrstaPostavke": "Wear",
-        "slika": "https://i.imgur.com/ACSgSxd.jpg",
-        "eksponati": [
-            {
-                "id": 28,
-                "naziv": "Top wear decorator",
-                "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
-                "slika": "https://i.imgur.com/OB1EaN1.jpg",
-                "vrsta": "Wear",
-                "cena": 239,
-                "vremeObilaska": 294,
-                "zemljaPorekla": "Egypt",
-                "recenzije": []
-              },
-              {
-                "id": 29,
-                "naziv": "Common greek wear",
-                "opis": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea.",
-                "slika": "https://i.imgur.com/gdreUaC.jpg",
-                "vrsta": "Wear",
-                "cena": 1282,
-                "vremeObilaska": 307,
-                "zemljaPorekla": "Greece",
-                "recenzije": []
-              },
-              {
-                "id": 30,
-                "naziv": "Roman clothing example",
-                "opis": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-                "slika": "https://i.imgur.com/kVUmV5s.jpg",
-                "vrsta": "Wear",
-                "cena": 1490,
-                "vremeObilaska": 414,
-                "zemljaPorekla": "Roman Empire",
-                "recenzije": []
-              }
-        ], 
-        "brojEksponata": 3,
-        "cena": 3011,
-        "procenjenoVremeObilaska": 1015, 
-        "recenzijePostavke": [],
-        "prosecnaOcena": 0
-    },
-    {
+        "naziv": "Steel Dagger",
+        "opis": "This is a steel dagger from China.",
+        "slika": "https://i.imgur.com/OnLVPUA.jpeg",
+        "vrsta": "Weapon",
+        "cena": 199,
+        "vremeObilaska": 59,
+        "zemljaPorekla": "China",
+        "recenzije": []
+      },
+      {
         "id": 2,
-        "ime": "Fossils from around the globe",
-        "vrstaPostavke": "Fossil",
-        "slika": "https://i.imgur.com/00Ejwv8.jpg",
-        "eksponati": [
-            {
-                "id": 5,
-                "naziv": "Dinosaur fossil (relic)",
-                "opis": "In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
-                "slika": "https://i.imgur.com/fFFR24s.jpg",
-                "vrsta": "Fossil",
-                "cena": 1235,
-                "vremeObilaska": 50,
-                "zemljaPorekla": "Uruguay",
-                "recenzije": []
-            },
-            {
-                "id": 23,
-                "naziv": "Egyptian stone tablet (eye shaped)",
-                "opis": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.",
-                "slika": "https://i.imgur.com/LXjPjX3.jpg",
-                "vrsta": "Fossil",
-                "cena": 84,
-                "vremeObilaska": 600,
-                "zemljaPorekla": "Egypt",
-                "recenzije": []
-              },
-              {
-                "id": 24,
-                "naziv": "Egyptian 'Desert Ghost'",
-                "opis": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                "slika": "https://i.imgur.com/jmRHlcN.jpg",
-                "vrsta": "Fossil",
-                "cena": 35,
-                "vremeObilaska": 110,
-                "zemljaPorekla": "Egypt",
-                "recenzije": []
-              },
-              {
-                "id": 25,
-                "naziv": "Velociraptor fossil",
-                "opis": "Proin at turpis a pede posuere nonummy.",
-                "slika": "https://i.imgur.com/aYMc26H.jpg",
-                "vrsta": "Fossil",
-                "cena": 486,
-                "vremeObilaska": 361,
-                "zemljaPorekla": "Egypt",
-                "recenzije": []
-              }
-        ], 
-        "brojEksponata": 4,
-        "cena": 1840,
-        "procenjenoVremeObilaska": 1121, 
-        "recenzijePostavke": [],
-        "prosecnaOcena": 0
-    },
-    {
-      "id": 3,
-      "ime": "Weapons of old",
-      "vrstaPostavke": "Weapon",
-      "slika": "https://i.imgur.com/cmiiUqi.jpeg",
-      "eksponati": [
-        {
-          "id": 1,
-          "naziv": "Steel Dagger",
-          "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
-          "slika": "https://i.imgur.com/OnLVPUA.jpeg",
-          "vrsta": "Weapon",
-          "cena": 199,
-          "vremeObilaska": 59,
-          "zemljaPorekla": "China",
-          "recenzije": []
-        },
-        {
-          "id": 2,
-          "naziv": "Katanas (swords)",
-          "opis": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
-          "slika": "https://i.imgur.com/pWdcltl.jpeg",
-          "vrsta": "Weapon",
-          "cena": 723,
-          "vremeObilaska": 253,
-          "zemljaPorekla": "Japan",
-          "recenzije": []
-        },
-        {
-          "id": 7,
-          "naziv": "Warrior's helmet",
-          "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-          "slika": "https://i.imgur.com/HzYD2Yl.jpg",
-          "vrsta": "Weapon",
-          "cena": 961,
-          "vremeObilaska": 187,
-          "zemljaPorekla": "Greece",
-          "recenzije": []
-        },
-        {
-          "id": 10,
-          "naziv": "Roman helmet",
-          "opis": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-          "slika": "https://i.imgur.com/huV19jT.jpg",
-          "vrsta": "Weapon",
-          "cena": 1488,
-          "vremeObilaska": 376,
-          "zemljaPorekla": "Roman Empire",
-          "recenzije": []
-        },
-        {
-          "id": 21,
-          "naziv": "Ninja weapon (dagger)",
-          "opis": "Fusce consequat. Nulla nisl.",
-          "slika": "https://i.imgur.com/TLg90vI.jpg",
-          "vrsta": "Weapon",
-          "cena": 581,
-          "vremeObilaska": 558,
-          "zemljaPorekla": "Japan",
-          "recenzije": []
-        },
-        {
-          "id": 26,
-          "naziv": "Curved sword",
-          "opis": "Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
-          "slika": "https://i.imgur.com/Afnl5re.jpg",
-          "vrsta": "Weapon",
-          "cena": 451,
-          "vremeObilaska": 222,
-          "zemljaPorekla": "Egypt",
-          "recenzije": []
-        },
-        {
-          "id": 27,
-          "naziv": "Golden staff",
-          "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
-          "slika": "https://i.imgur.com/CAsiFpJ.jpg",
-          "vrsta": "Weapon",
-          "cena": 480,
-          "vremeObilaska": 224,
-          "zemljaPorekla": "Egypt",
-          "recenzije": []
-        }
-      ], 
-      "brojEksponata": 7,
-      "cena": 4883,
-      "procenjenoVremeObilaska": 1879, 
-      "recenzijePostavke": [],
-      "prosecnaOcena": 0
-    },
-    {
-      "id": 3,
-      "ime": "Art and statues",
-      "vrstaPostavke": "Statue",
-      "slika": "https://i.imgur.com/unFr7gI.jpeg",
-      "eksponati": [
-        {
-          "id": 3,
-          "naziv": "Statue of a woman",
-          "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
-          "slika": "https://i.imgur.com/PVT3eha.jpeg",
-          "vrsta": "Statue",
-          "cena": 767,
-          "vremeObilaska": 454,
-          "zemljaPorekla": "Japan",
-          "recenzije": []
-        },
-        {
-          "id": 4,
-          "naziv": "Holden Mask",
-          "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
-          "slika": "https://i.imgur.com/Ztlg6EN.jpg",
-          "vrsta": "Statue",
-          "cena": 946,
-          "vremeObilaska": 57,
-          "zemljaPorekla": "Kazakhstan",
-          "recenzije": []
-        },
-        {
-          "id": 6,
-          "naziv": "Pharaoh statue",
-          "opis": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
-          "slika": "https://i.imgur.com/eFMwKXK.jpg",
-          "vrsta": "Statue",
-          "cena": 376,
-          "vremeObilaska": 329,
-          "zemljaPorekla": "Egypt",
-          "recenzije": []
-        },
-        {
-          "id": 9,
-          "naziv": "War ship exhibit",
-          "opis": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
-          "slika": "https://i.imgur.com/KAuUANR.jpg",
-          "vrsta": "Statue",
-          "cena": 782,
-          "vremeObilaska": 96,
-          "zemljaPorekla": "Greece",
-          "recenzije": []
-        },
-        {
-          "id": 12,
-          "naziv": "The Discobolus of Myron",
-          "opis": "Sed sagittis.",
-          "slika": "https://i.imgur.com/94d575k.jpg",
-          "vrsta": "Statue",
-          "cena": 595,
-          "vremeObilaska": 576,
-          "zemljaPorekla": "Greece",
-          "recenzije": []
-        },
-        {
-          "id": 14,
-          "naziv": "Roman Emperor statue (life-sized)",
-          "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
-          "slika": "https://i.imgur.com/Rw1kPBO.jpg",
-          "vrsta": "Statue",
-          "cena": 117,
-          "vremeObilaska": 522,
-          "zemljaPorekla": "Roman Empire",
-          "recenzije": []
-        },
-        {
-          "id": 22,
-          "naziv": "Samurai armor (statue)",
-          "opis": "Etiam justo.",
-          "slika": "https://i.imgur.com/j8A3bAL.jpg",
-          "vrsta": "Statue",
-          "cena": 905,
-          "vremeObilaska": 73,
-          "zemljaPorekla": "Japan",
-          "recenzije": []
-        }
-      ], 
-      "brojEksponata": 7,
-      "cena": 4488,
-      "procenjenoVremeObilaska": 2107, 
-      "recenzijePostavke": [],
-      "prosecnaOcena": 0
-    }
+        "naziv": "Katanas (swords)",
+        "opis": "These katanas were found in the tomb of Japanese Emperor",
+        "slika": "https://i.imgur.com/pWdcltl.jpeg",
+        "vrsta": "Weapon",
+        "cena": 723,
+        "vremeObilaska": 253,
+        "zemljaPorekla": "Japan",
+        "recenzije": []
+      },
+      {
+        "id": 7,
+        "naziv": "Warrior's helmet",
+        "opis": "A spartman helmet.",
+        "slika": "https://i.imgur.com/HzYD2Yl.jpg",
+        "vrsta": "Weapon",
+        "cena": 961,
+        "vremeObilaska": 187,
+        "zemljaPorekla": "Greece",
+        "recenzije": []
+      },
+      {
+        "id": 10,
+        "naziv": "Roman helmet",
+        "opis": "Helmet of a soldier of Roman Empire.",
+        "slika": "https://i.imgur.com/huV19jT.jpg",
+        "vrsta": "Weapon",
+        "cena": 1488,
+        "vremeObilaska": 376,
+        "zemljaPorekla": "Roman Empire",
+        "recenzije": []
+      },
+      {
+        "id": 21,
+        "naziv": "Ninja weapon (dagger)",
+        "opis": "Weapons from the time when Japan had real life Ninjas and they apparently used these as melee combat weapons.",
+        "slika": "https://i.imgur.com/TLg90vI.jpg",
+        "vrsta": "Weapon",
+        "cena": 581,
+        "vremeObilaska": 558,
+        "zemljaPorekla": "Japan",
+        "recenzije": []
+      },
+      {
+        "id": 26,
+        "naziv": "Curved sword",
+        "opis": "An Egyptian khopesh sword",
+        "slika": "https://i.imgur.com/Afnl5re.jpg",
+        "vrsta": "Weapon",
+        "cena": 451,
+        "vremeObilaska": 222,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      },
+      {
+        "id": 27,
+        "naziv": "Golden staff",
+        "opis": "An ancient golden staff, probably used by highest parts of Egyptian hierarchy.",
+        "slika": "https://i.imgur.com/CAsiFpJ.jpg",
+        "vrsta": "Weapon",
+        "cena": 480,
+        "vremeObilaska": 224,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      }
+    ],
+    "brojEksponata": 7,
+    "cena": 4883,
+    "procenjenoVremeObilaska": 1879,
+    "recenzijePostavke": [],
+    "prosecnaOcena": 0
+  },
+  {
+    "id": 3,
+    "ime": "Art and statues",
+    "vrstaPostavke": "Statue",
+    "slika": "https://i.imgur.com/unFr7gI.jpeg",
+    "eksponati": [
+      {
+        "id": 3,
+        "naziv": "Statue of a woman",
+        "opis": "Statue of a woman, found in Japan.",
+        "slika": "https://i.imgur.com/PVT3eha.jpeg",
+        "vrsta": "Statue",
+        "cena": 767,
+        "vremeObilaska": 454,
+        "zemljaPorekla": "Japan",
+        "recenzije": []
+      },
+      {
+        "id": 4,
+        "naziv": "Holden Mask",
+        "opis": "This mask was found in Kazakhstan.",
+        "slika": "https://i.imgur.com/Ztlg6EN.jpg",
+        "vrsta": "Statue",
+        "cena": 946,
+        "vremeObilaska": 57,
+        "zemljaPorekla": "Kazakhstan",
+        "recenzije": []
+      },
+      {
+        "id": 6,
+        "naziv": "Pharaoh statue",
+        "opis": "This pharaoh statue was found in ancient pyramids of Gyza.",
+        "slika": "https://i.imgur.com/eFMwKXK.jpg",
+        "vrsta": "Statue",
+        "cena": 376,
+        "vremeObilaska": 329,
+        "zemljaPorekla": "Egypt",
+        "recenzije": []
+      },
+      {
+        "id": 9,
+        "naziv": "War ship exhibit",
+        "opis": "This is a replica of an ancient Greek warship.",
+        "slika": "https://i.imgur.com/KAuUANR.jpg",
+        "vrsta": "Statue",
+        "cena": 782,
+        "vremeObilaska": 96,
+        "zemljaPorekla": "Greece",
+        "recenzije": []
+      },
+      {
+        "id": 12,
+        "naziv": "The Discobolus of Myron",
+        "opis": "Sed sagittis.",
+        "slika": "https://i.imgur.com/94d575k.jpg",
+        "vrsta": "Statue",
+        "cena": 595,
+        "vremeObilaska": 576,
+        "zemljaPorekla": "Greece",
+        "recenzije": []
+      },
+      {
+        "id": 14,
+        "naziv": "Roman Emperor statue (life-sized)",
+        "opis": "Romanus Emperus.",
+        "slika": "https://i.imgur.com/Rw1kPBO.jpg",
+        "vrsta": "Statue",
+        "cena": 117,
+        "vremeObilaska": 522,
+        "zemljaPorekla": "Roman Empire",
+        "recenzije": []
+      },
+      {
+        "id": 22,
+        "naziv": "Samurai armor (statue)",
+        "opis": "Cha ching!",
+        "slika": "https://i.imgur.com/j8A3bAL.jpg",
+        "vrsta": "Statue",
+        "cena": 905,
+        "vremeObilaska": 73,
+        "zemljaPorekla": "Japan",
+        "recenzije": []
+      }
+    ],
+    "brojEksponata": 7,
+    "cena": 4488,
+    "procenjenoVremeObilaska": 2107,
+    "recenzijePostavke": [],
+    "prosecnaOcena": 0
+  }
 ]
