@@ -30,8 +30,11 @@ export class SignupComponent implements OnInit {
       omiljenePostavke: [],
       planer: []
     })){
-
-      this.router.navigateByUrl('/login');
+      this.snackBar.open("Successfully registered! You will be redirected to the login page.", "", { duration: 2500});
+      setTimeout(() => {
+        forma.reset();
+        this.router.navigateByUrl('/login');
+      }, 2500);
     }
     else{
       this.snackBar.open("The user already exists!", "", { duration: 2500});

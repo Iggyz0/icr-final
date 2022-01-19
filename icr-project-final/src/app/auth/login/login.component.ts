@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     if (korisnik && korisnik.password === forma.value.password) {
       this.authService.logIn(korisnik);
 
+      this.snackBar.open('Login successful!', '', { duration: 2500 });
       this.router.navigateByUrl('/welcome');
     } else {
       this.snackBar.open('Trazeni korisnik ne postoji', '', { duration: 2500 });

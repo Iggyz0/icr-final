@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { EditreviewComponent } from '../myreviews/editreview/editreview.component';
 import { LocalStorageService } from './localstorage.service';
 import { ShowPieceModel } from '../models/ShowpieceModel';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +22,8 @@ export class ReviewService extends GenericCRUD<ReviewModel> {
     private readingJSON: ReadingJSONService,
     private showpieceService: ShowpieceService,
     private dialog: MatDialog,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private matSnackbar: MatSnackBar
   ){
     super(readingJSON);
 
@@ -39,6 +41,7 @@ export class ReviewService extends GenericCRUD<ReviewModel> {
     showpieceReviewed.recenzije.push(review);
     this.showpieceService.updateItem(showpieceReviewed);
     this.showpieceService.calculateScore(showpieceId);
+    this.matSnackbar.open("Review posted!", "OK", { duration: 2500 });
   }
 
   public handleUpdateReview(review: ReviewModel, showpiece: ShowPieceModel) {
@@ -50,6 +53,7 @@ export class ReviewService extends GenericCRUD<ReviewModel> {
 
     showpiece.recenzije = newReviews;
     if (this.showpieceService.updateItem(showpiece)) {
+      this.matSnackbar.open("Review updated!", "OK", { duration: 2500 });
       return showpiece;
     }
 

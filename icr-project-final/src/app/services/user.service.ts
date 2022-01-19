@@ -7,6 +7,7 @@ import { TourModel } from '../models/TourModel';
 import { ShowPieceModel } from '../models/ShowpieceModel';
 import { ExhibitModel } from '../models/ExhibitModel';
 import { LocalStorageService } from './localstorage.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class UserService extends GenericCRUD<UserModel> {
   fajl: string = 'users.json';
   planerID = 1;
 
-  constructor(readingJSON: ReadingJSONService, private localStorage: LocalStorageService) {
+  constructor(readingJSON: ReadingJSONService, private localStorage: LocalStorageService, private matSnackbar: MatSnackBar) {
     super(readingJSON);
 
     this.readFromFile();
@@ -33,12 +34,6 @@ export class UserService extends GenericCRUD<UserModel> {
       return null;
     }
   }
-
-  // public readFromFile(): void{
-  //   this.readingJSON.getJSON(this.fajl).subscribe(
-  //     result => this.items = result
-  //   );
-  // }
 
   public findUserByUsername(username: string): UserModel | undefined {
     return this.items.find((user) => user.username === username);
@@ -123,6 +118,7 @@ export class UserService extends GenericCRUD<UserModel> {
     user.planer = user.planer.sort((tour1, tour2) => tour1.id - tour2.id);
 
     if (this.updateItem(user)) {
+      this.matSnackbar.open("Added exhibit to tour!", "OK", { duration: 2500 });
       return tour;
     }
 
@@ -229,6 +225,7 @@ export class UserService extends GenericCRUD<UserModel> {
     user.planer = user.planer.sort((tour1, tour2) => tour1.id - tour2.id);
 
     if (this.updateItem(user)) {
+      this.matSnackbar.open("Added exhibition to tour!", "OK", { duration: 2500 });
       return user;
     }
 
