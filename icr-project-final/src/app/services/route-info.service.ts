@@ -21,6 +21,14 @@ export class RouteInfoService {
       if (event instanceof NavigationEnd) {
         this.previousActiveLink = this.currentActiveLink;
         this.currentActiveLink = this.getActiveUrlPath();
+
+        if(this.previousActiveLink.trim().toLowerCase().includes("all")) {
+          this.previousActiveLink = "/all";
+        }
+
+        if(this.currentActiveLink.trim().toLowerCase().includes("all")) {
+          this.currentActiveLink = "/all";
+        }
         
         let prev = this.getHtmlElement(this.previousActiveLink.substring(1));
         let cur = this.getHtmlElement(this.currentActiveLink.substring(1));
