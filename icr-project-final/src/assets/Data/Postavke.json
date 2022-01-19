@@ -101,5 +101,185 @@
         "procenjenoVremeObilaska": 1121, 
         "recenzijePostavke": [],
         "prosecnaOcena": 0
+    },
+    {
+      "id": 3,
+      "ime": "Weapons of old",
+      "vrstaPostavke": "Weapon",
+      "slika": "https://i.imgur.com/cmiiUqi.jpeg",
+      "eksponati": [
+        {
+          "id": 1,
+          "naziv": "Steel Dagger",
+          "opis": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.",
+          "slika": "https://i.imgur.com/OnLVPUA.jpeg",
+          "vrsta": "Weapon",
+          "cena": 199,
+          "vremeObilaska": 59,
+          "zemljaPorekla": "China",
+          "recenzije": []
+        },
+        {
+          "id": 2,
+          "naziv": "Katanas (swords)",
+          "opis": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
+          "slika": "https://i.imgur.com/pWdcltl.jpeg",
+          "vrsta": "Weapon",
+          "cena": 723,
+          "vremeObilaska": 253,
+          "zemljaPorekla": "Japan",
+          "recenzije": []
+        },
+        {
+          "id": 7,
+          "naziv": "Warrior's helmet",
+          "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id Nonea ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+          "slika": "https://i.imgur.com/HzYD2Yl.jpg",
+          "vrsta": "Weapon",
+          "cena": 961,
+          "vremeObilaska": 187,
+          "zemljaPorekla": "Greece",
+          "recenzije": []
+        },
+        {
+          "id": 10,
+          "naziv": "Roman helmet",
+          "opis": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+          "slika": "https://i.imgur.com/huV19jT.jpg",
+          "vrsta": "Weapon",
+          "cena": 1488,
+          "vremeObilaska": 376,
+          "zemljaPorekla": "Roman Empire",
+          "recenzije": []
+        },
+        {
+          "id": 21,
+          "naziv": "Ninja weapon (dagger)",
+          "opis": "Fusce consequat. Nulla nisl.",
+          "slika": "https://i.imgur.com/TLg90vI.jpg",
+          "vrsta": "Weapon",
+          "cena": 581,
+          "vremeObilaska": 558,
+          "zemljaPorekla": "Japan",
+          "recenzije": []
+        },
+        {
+          "id": 26,
+          "naziv": "Curved sword",
+          "opis": "Vivamus vel Nonea eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, Nonea. Nunc purus.",
+          "slika": "https://i.imgur.com/Afnl5re.jpg",
+          "vrsta": "Weapon",
+          "cena": 451,
+          "vremeObilaska": 222,
+          "zemljaPorekla": "Egypt",
+          "recenzije": []
+        },
+        {
+          "id": 27,
+          "naziv": "Golden staff",
+          "opis": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",
+          "slika": "https://i.imgur.com/CAsiFpJ.jpg",
+          "vrsta": "Weapon",
+          "cena": 480,
+          "vremeObilaska": 224,
+          "zemljaPorekla": "Egypt",
+          "recenzije": []
+        }
+      ], 
+      "brojEksponata": 7,
+      "cena": 4883,
+      "procenjenoVremeObilaska": 1879, 
+      "recenzijePostavke": [],
+      "prosecnaOcena": 0
+    },
+    {
+      "id": 3,
+      "ime": "Art and statues",
+      "vrstaPostavke": "Statue",
+      "slika": "https://i.imgur.com/unFr7gI.jpeg",
+      "eksponati": [
+        {
+          "id": 3,
+          "naziv": "Statue of a woman",
+          "opis": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum.",
+          "slika": "https://i.imgur.com/PVT3eha.jpeg",
+          "vrsta": "Statue",
+          "cena": 767,
+          "vremeObilaska": 454,
+          "zemljaPorekla": "Japan",
+          "recenzije": []
+        },
+        {
+          "id": 4,
+          "naziv": "Holden Mask",
+          "opis": "Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
+          "slika": "https://i.imgur.com/Ztlg6EN.jpg",
+          "vrsta": "Statue",
+          "cena": 946,
+          "vremeObilaska": 57,
+          "zemljaPorekla": "Kazakhstan",
+          "recenzije": []
+        },
+        {
+          "id": 6,
+          "naziv": "Pharaoh statue",
+          "opis": "Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio.",
+          "slika": "https://i.imgur.com/eFMwKXK.jpg",
+          "vrsta": "Statue",
+          "cena": 376,
+          "vremeObilaska": 329,
+          "zemljaPorekla": "Egypt",
+          "recenzije": []
+        },
+        {
+          "id": 9,
+          "naziv": "War ship exhibit",
+          "opis": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo.",
+          "slika": "https://i.imgur.com/KAuUANR.jpg",
+          "vrsta": "Statue",
+          "cena": 782,
+          "vremeObilaska": 96,
+          "zemljaPorekla": "Greece",
+          "recenzije": []
+        },
+        {
+          "id": 12,
+          "naziv": "The Discobolus of Myron",
+          "opis": "Sed sagittis.",
+          "slika": "https://i.imgur.com/94d575k.jpg",
+          "vrsta": "Statue",
+          "cena": 595,
+          "vremeObilaska": 576,
+          "zemljaPorekla": "Greece",
+          "recenzije": []
+        },
+        {
+          "id": 14,
+          "naziv": "Roman Emperor statue (life-sized)",
+          "opis": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+          "slika": "https://i.imgur.com/Rw1kPBO.jpg",
+          "vrsta": "Statue",
+          "cena": 117,
+          "vremeObilaska": 522,
+          "zemljaPorekla": "Roman Empire",
+          "recenzije": []
+        },
+        {
+          "id": 22,
+          "naziv": "Samurai armor (statue)",
+          "opis": "Etiam justo.",
+          "slika": "https://i.imgur.com/j8A3bAL.jpg",
+          "vrsta": "Statue",
+          "cena": 905,
+          "vremeObilaska": 73,
+          "zemljaPorekla": "Japan",
+          "recenzije": []
+        }
+      ], 
+      "brojEksponata": 7,
+      "cena": 4488,
+      "procenjenoVremeObilaska": 2107, 
+      "recenzijePostavke": [],
+      "prosecnaOcena": 0
     }
 ]

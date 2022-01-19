@@ -75,12 +75,12 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
       neededShowpieces.forEach((showpiece) => showpiece.ukupnaOcena = (showpiece.recenzije.reduce((prev, curr) => { return prev = prev + curr.rating }, 0)) / showpiece.recenzije.length );
       this.items[i].prosecnaOcena = neededShowpieces.reduce((prev, curr) => prev = prev + (Number.isFinite(curr.ukupnaOcena) ? curr.ukupnaOcena : 0) , 0) / neededShowpieces.length;
     }
-
-    this.displayedItems = this.items;
+    
     // carousel needs to be restarted each time the page reloads
     // $(document).ready(function() {
-    //   $('.carousel').carousel();
-    // });
+      //   $('.carousel').carousel();
+      // });
+    this.displayedItems = this.items;
     this.findUniqueTypesOfExhibitions();
     this.setupPriceSlider();
   }

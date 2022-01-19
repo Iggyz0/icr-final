@@ -102,7 +102,7 @@
             <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="1em" style="margin-left: 1em;">
                 <div style="width: calc(100% / 4.5); min-width: 329px; height: 450px; max-height: 450px;" class="cardContainer" fxLayout="column nowrap" fxLayoutAlign="center start" *ngFor="let item of displayedItems | paginate: { itemsPerPage: 12, currentPage: p }">
                     <mat-card fxFlex fxLayout="column nowrap" fxLayoutAlign="center center" fxFill>
-                        <img fxFlex="60%" fxFill mat-card-image src="{{item.slika}}" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden;">
+                        <img fxFlex="60%" fxFill mat-card-image src="{{item.slika}}" alt="Photo" width="200px" height="300px" style="object-fit: contain; overflow: hidden; ">
     
                         <mat-card-title fxFlex fxFill fxLayoutAlign="start center">
                             {{item.naziv}}
