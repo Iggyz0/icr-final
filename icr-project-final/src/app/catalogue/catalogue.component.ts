@@ -1,5 +1,5 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import {  AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import {  AfterViewInit, Component, OnInit } from '@angular/core';
 import { Sort, SortDirection } from '@angular/material/sort';
 import { ExhibitModel } from '../models/ExhibitModel';
 import { ExhibitsService } from '../services/exhibits.service';
@@ -58,12 +58,11 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     private toursService: ToursService,
     private showpieceService: ShowpieceService) { }
 
-  // @ViewChild('picContainer') viewElem!: ElementRef<HTMLElement>;
-
   ngAfterViewInit(): void {
-    // const parentElement = this.viewElem.nativeElement;
-    // const firstChild = parentElement.children[0];
-    // firstChild.classList.add("active");
+    $(document).ready(function() {
+      $('.carousel').carousel();
+      // document.querySelectorAll(".picContainer").forEach(container => container.firstElementChild.classList.add("active"));
+    });
   }
   
   ngOnInit(): void {
@@ -77,9 +76,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     }
     
     // carousel needs to be restarted each time the page reloads
-    // $(document).ready(function() {
-      //   $('.carousel').carousel();
-      // });
+    
     this.displayedItems = this.items;
     this.findUniqueTypesOfExhibitions();
     this.setupPriceSlider();
@@ -112,6 +109,7 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
 
   // -----------------------------------------------------------------   BIG SEARCH START  ----------------------------------------------------------------
   search() {
+    
     let search = this.searchValue.trim().toLowerCase();
     let arr = this.items;
     this.p = 1;
@@ -172,6 +170,12 @@ export class CatalogueComponent implements OnInit, AfterViewInit  {
     });
 
     this.displayedItems = arr;
+
+    $(document).ready(function() {
+      $('.carousel').carousel();
+      // document.querySelectorAll(".picContainer").forEach(container => container.firstElementChild.classList.add("active"));
+    });
+
     this.sortData({
       active: this.sortValue,
       direction: this.sortValueDirection,
