@@ -13,7 +13,6 @@
       fxLayoutGap="1em"
       fxLayoutAlign="start center"
       (scroll)="onScroll()"
-      [ngClass]="navbarfixed&&!isWelcomePage ? 'fixedToolbar fixedToolbarColor' : 'notFixedToolbar notFixedToolbarColor' "
       [ngClass]="navbarfixed ? 'fixedToolbar fixedToolbarColor' : 'notFixedToolbar fixedToolbarColor' "
     >
       <!-- <span fxHide.gt-md (click)="sidenav.open()" fxLayoutAlign="center center">
